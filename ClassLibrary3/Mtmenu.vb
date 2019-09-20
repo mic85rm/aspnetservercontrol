@@ -176,7 +176,6 @@ Public Class Mtmenu
         'If useDiffCssForCrrntItem Then
         '  If (CType(aList(i), MenuItem)).Text = currentItemId Then s.Append("class='" & currentItemClass & "' ")
         'End If
-
         s.Append(">")
         s.Append((CType(aList(i), MenuItem)).Text)
         's.Append("<span>" & (CType(aList(i), MenuItem)).Text & "</span> ")
