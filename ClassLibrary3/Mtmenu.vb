@@ -172,7 +172,6 @@ Public Class Mtmenu
         's.Append("<a href ='" & (CType(aList(i), MenuItem)).NavigateUrl & "' style='text-decoration:none;' ")
         s.Append("<a href ='" & (CType(aList(i), MenuItem)).NavigateUrl & "' ")
         's.Append("title='" & (CType(aList(i), MenuItem)).Text & "' ")
-
         'If useDiffCssForCrrntItem Then
         '  If (CType(aList(i), MenuItem)).Text = currentItemId Then s.Append("class='" & currentItemClass & "' ")
         'End If
