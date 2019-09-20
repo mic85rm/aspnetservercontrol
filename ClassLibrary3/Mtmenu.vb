@@ -14,8 +14,6 @@ Public Class Mtmenu
   Inherits WebControl
 
 
-
-
   <Description("The image associated with the control"),
     Category("Appearance")>
   Public _mtdatatable As DataTable
@@ -129,10 +127,6 @@ Public Class Mtmenu
     End Try
     Return menuitems
   End Function
-
-
-
-
 
 
   'Public Function ShowMenu() As List(Of MenuItem)
