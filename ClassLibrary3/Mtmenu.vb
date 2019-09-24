@@ -107,7 +107,7 @@ Public Class Mtmenu
         Dim itm As MenuItem = New MenuItem()
         itm.Text = (dr("Descrizione")).ToString
         'itm.NavigateUrl = "~/" & dr("Comando")
-        itm.NavigateUrl = "/" & dr("Comando")
+        itm.NavigateUrl = Page.ResolveUrl("~/") & dr("Comando")
         itm.ToolTip = dr("ToolTip") & ""
         itm.Value = dr("id").ToString()
         menuitems.Add(itm)
@@ -117,7 +117,7 @@ Public Class Mtmenu
           Dim mi As MenuItem = New MenuItem()
           mi.Text = (dr2("Descrizione")).ToString()
           'mi.NavigateUrl = "~/" & dr2("Comando")
-          mi.NavigateUrl = "/" & dr2("Comando")
+          mi.NavigateUrl = Page.ResolveUrl("~/") & dr2("Comando")
           mi.ToolTip = dr2("ToolTip") & ""
           itm.ChildItems.Add(mi)
         Next
