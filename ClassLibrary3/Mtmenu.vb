@@ -13,7 +13,6 @@ Imports System.Web.UI.WebControls
 Public Class Mtmenu
   Inherits WebControl
 
-
   <Description("The image associated with the control"),
     Category("Appearance")>
   Public _mtdatatable As DataTable
