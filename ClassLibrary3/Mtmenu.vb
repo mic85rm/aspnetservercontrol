@@ -7,7 +7,6 @@ Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 
-
 <ToolboxData("<{0}:Mtmenu runat=server></{0}:Mtmenu>")>
 <ToolboxBitmap(GetType(Mtmenu), "menu.bmp")>
 Public Class Mtmenu
@@ -37,7 +36,6 @@ Public Class Mtmenu
   '    _mtdataset = value
   '  End Set
   'End Property
-
 
   Public _menucss As String
   Public Property MenuCss() As String
