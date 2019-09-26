@@ -3,13 +3,13 @@
 Public Class WebForm1
   Inherits System.Web.UI.Page
   ReadOnly conString As SqlConnection = New SqlConnection(ConfigurationManager.AppSettings("db"))
-  Private Const K_SP_MENU As String = "BSP_sysGetMenuFunzioniWP"
+  Private Const K_SP_MENU As String = "BSP_sysGetMenuFunzioni"
   Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
     Dim parametri() As SqlParameter = New SqlParameter() _
         {
-          New SqlParameter("@idutente", SqlDbType.Int) With {.Value = 2},
-          New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
-        }
+          New SqlParameter("@IDSysProfilo", SqlDbType.Int) With {.Value = 1}}
+    'New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
+
     Dim dt As DataTable = New DataTable()
     Dim ds As DataSet = New DataSet()
     dt = SelectQuery(conString, K_SP_MENU, parametri)
@@ -25,9 +25,12 @@ Public Class WebForm1
     'End If
     ' Mtmenu1.MenuClass = "menucss"
     ' Mtmenu1.MenuId = "container"
-    Mtmenu1.MenuCss = "menu.css"
+
+
+    ' Mtmenu1.MenuCss = "menu.css"
     'Mtmenu1.MTDataset = ds
     Mtmenu1.MTDatatable = dt
+    Mtmenu1.BindMenuData()
     ' Mtmenu1.ShowMenuDT()
     ' MenuFunzione2.CaricaMenu(ds)
 

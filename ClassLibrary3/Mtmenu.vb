@@ -88,43 +88,145 @@ Public Class Mtmenu
     End Try
   End Sub
 
-  Private Function ShowMenuDT() As List(Of MenuItem)
-    Dim menuitems As List(Of MenuItem) = New List(Of MenuItem)
-    Dim ds As DataSet = New DataSet()
-    Try
-      If Not MTDatatable Is Nothing AndAlso MTDatatable.Rows.Count > 0 Then
-        ds.Tables.Add(MTDatatable)
-        ds.DataSetName = "Menus"
-        ds.Tables(0).TableName = "Menu"
-        Dim relation As New DataRelation("ParentChild", MTDatatable.Columns("ID"), MTDatatable.Columns("IDPadre"), True)
-        relation.Nested = True
-        ds.Relations.Add(relation)
-      End If
-      Dim drs() As DataRow
-      drs = ds.Tables(0).Select("IDPadre Is null")
-      For Each dr As DataRow In drs
-        Dim itm As MenuItem = New MenuItem()
-        itm.Text = (dr("Descrizione")).ToString
-        'itm.NavigateUrl = "~/" & dr("Comando")
-        itm.NavigateUrl = Page.ResolveUrl("~/") & dr("Comando")
-        itm.ToolTip = dr("ToolTip") & ""
-        itm.Value = dr("id").ToString()
-        menuitems.Add(itm)
-        Dim drs2() As DataRow
-        drs2 = ds.Tables(0).Select("IDPadre = " & itm.Value.ToString())
-        For Each dr2 As DataRow In drs2
-          Dim mi As MenuItem = New MenuItem()
-          mi.Text = (dr2("Descrizione")).ToString()
-          'mi.NavigateUrl = "~/" & dr2("Comando")
-          mi.NavigateUrl = Page.ResolveUrl("~/") & dr2("Comando")
-          mi.ToolTip = dr2("ToolTip") & ""
-          itm.ChildItems.Add(mi)
-        Next
-      Next
-    Catch ex As Exception
+  'Private Function ShowMenuDT() As List(Of MenuItem)
+  '  Dim menuitems As List(Of MenuItem) = New List(Of MenuItem)
+  '  Dim ds As DataSet = New DataSet()
+  '  Try
+  '    If Not MTDatatable Is Nothing AndAlso MTDatatable.Rows.Count > 0 Then
+  '      ds.Tables.Add(MTDatatable)
+  '      ds.DataSetName = "Menus"
+  '      ds.Tables(0).TableName = "Menu"
+  '      Dim relation As New DataRelation("ParentChild", MTDatatable.Columns("ID"), MTDatatable.Columns("IDPadre"), True)
+  '      relation.Nested = True
+  '      ds.Relations.Add(relation)
+  '    Else
 
-    End Try
-    Return menuitems
+  '    End If
+  '    Dim drs() As DataRow
+  '    drs = ds.Tables(0).Select("IDPadre Is null")
+  '    For Each dr As DataRow In drs
+  '      Dim itm As MenuItem = New MenuItem()
+  '      itm.Text = (dr("Descrizione")).ToString
+  '      'itm.NavigateUrl = "~/" & dr("Comando")
+  '      itm.NavigateUrl = Page.ResolveUrl("~/") & dr("Comando")
+  '      itm.ToolTip = dr("ToolTip") & ""
+  '      itm.Value = dr("id").ToString()
+  '      menuitems.Add(itm)
+  '      Dim drs2() As DataRow
+  '      drs2 = ds.Tables(0).Select("IDPadre = " & itm.Value.ToString())
+  '      For Each dr2 As DataRow In drs2
+  '        Dim mi As MenuItem = New MenuItem()
+  '        mi.Text = (dr2("Descrizione")).ToString()
+  '        'mi.NavigateUrl = "~/" & dr2("Comando")
+  '        mi.NavigateUrl = Page.ResolveUrl("~/") & dr2("Comando")
+  '        mi.ToolTip = dr2("ToolTip") & ""
+  '        itm.ChildItems.Add(mi)
+  '      Next
+  '    Next
+  '  Catch ex As Exception
+
+  '  End Try
+  '  Return menuitems
+  'End Function
+
+
+
+  'Private Function ShowMenuDT() As List(Of MenuItem)
+  '  Dim menuitems As List(Of MenuItem) = New List(Of MenuItem)
+  '  Dim ds As DataSet = New DataSet()
+  '  Try
+  '    If Not MTDatatable Is Nothing AndAlso MTDatatable.Rows.Count > 0 Then
+  '      ds.Tables.Add(MTDatatable)
+  '      ds.DataSetName = "Menus"
+  '      ds.Tables(0).TableName = "Menu"
+  '      Dim relation As New DataRelation("ParentChild", MTDatatable.Columns("ID"), MTDatatable.Columns("IDPadre"), True)
+  '      relation.Nested = True
+  '      ds.Relations.Add(relation)
+  '    Else
+
+  '    End If
+
+  '    For Each row As DataRow In MTDatatable.Rows
+  '      If IsDBNull(row.Item("idpadre")) Then
+  '        Dim itm As MenuItem = New MenuItem()
+  '        itm.Text = (row.Item("Descrizione")).ToString
+  '        'itm.NavigateUrl = "~/" & dr("Comando")
+  '        itm.NavigateUrl = Page.ResolveUrl("~/") & row.Item("Comando")
+  '        itm.ToolTip = row.Item("ToolTip") & ""
+  '        itm.Value = row.Item("id").ToString()
+  '        menuitems.Add(itm)
+  '        Dim drs2() As DataRow
+  '        drs2 = ds.Tables(0).Select("IDPadre = " & itm.Value.ToString())
+  '        For Each dr2 As DataRow In drs2
+  '          Dim mi As MenuItem = New MenuItem()
+  '          mi.Text = (dr2("Descrizione")).ToString()
+  '          'mi.NavigateUrl = "~/" & dr2("Comando")
+  '          mi.NavigateUrl = Page.ResolveUrl("~/") & dr2("Comando")
+  '          mi.ToolTip = dr2("ToolTip") & ""
+  '          mi.Value = dr2("id").ToString()
+  '          itm.ChildItems.Add(mi)
+  '          row.Delete()
+  '        Next
+  '      Else
+  '        If MTDatatable.Rows.((row.Item("idpadre"))) <> String.Empty Then
+
+  '        End If
+  '      End If
+  '    Next row
+
+
+
+  '  Catch ex As Exception
+
+  '  End Try
+  '  Return menuitems
+  'End Function
+
+
+  Private Function ShowMenuDT() As List(Of MenuItem)
+    Dim ds As DataSet = New DataSet()
+    Dim itm As List(Of MenuItem) = New List(Of MenuItem)
+    If Not MTDatatable Is Nothing AndAlso MTDatatable.Rows.Count > 0 Then
+      ds.Tables.Add(MTDatatable)
+      ds.DataSetName = "Menus"
+      ds.Tables(0).TableName = "Menu"
+      Dim relation As New DataRelation("ParentChild", MTDatatable.Columns("ID"), MTDatatable.Columns("IDPadre"), True)
+      relation.Nested = True
+      ds.Relations.Add(relation)
+    End If
+    Dim drs() As DataRow
+    Dim mi As MenuItem = Nothing
+    Dim mf As MenuItem = Nothing
+    drs = ds.Tables(0).Select("IDPadre is null")
+
+    For Each dr As DataRow In drs
+      mi = New MenuItem(dr("Descrizione"))
+      mi.NavigateUrl = "~/" & dr("Comando")
+      mi.ToolTip = dr("ToolTip") & ""
+
+      mi = CaricaFigli(ds, mi, dr("ID"))
+
+      itm.Add(mi)
+    Next
+
+  End Function
+
+
+  Private Function CaricaFigli(ByVal ds As DataSet, ByVal nodo As MenuItem, ByVal menuID As Integer) As MenuItem
+    Dim drs() As DataRow
+    Dim mi As MenuItem = New MenuItem()
+    drs = ds.Tables(0).Select("IDPadre = " & menuID)
+    For Each dr As DataRow In drs
+      mi.Text = (dr("Descrizione")).ToString()
+      'mi.NavigateUrl = "~/" & dr2("Comando")
+      mi.NavigateUrl = Page.ResolveUrl("~/") & dr("Comando")
+      mi.ToolTip = dr("ToolTip") & ""
+      mi.Value = dr("id").ToString()
+      mi = CaricaFigli(ds, mi, dr("ID"))
+
+      nodo.ChildItems.Add(mi)
+    Next
+    Return nodo
   End Function
 
 
@@ -223,8 +325,45 @@ Public Class Mtmenu
 
 
 
+  Public Function BindMenuData()
+    Dim ds As DataSet = New DataSet()
+    Dim listmenu As List(Of menudinamico) = New List(Of menudinamico)
+    For Each row As DataRow In MTDatatable.Rows
+      Dim menu As menudinamico = New menudinamico()
+      menu.id = row.Item("id")
+      If Not IsDBNull(row.Item("idpadre")) Then
+        menu.idpadre = row.Item("idpadre")
+      Else
+        menu.idpadre = 0
+      End If
+      menu.descrizione = row.Item("descrizione").ToString()
+      menu.tooltip = row.Item("tooltip").ToString
+      menu.comando = Page.ResolveUrl("~/") & row.Item("Comando").ToString()
+      menu.ordine = row.Item("ordine")
+      menu.active = row.Item("auth")
+      listmenu.Add(menu)
+    Next row
+  End Function
+
+
+
+
+
 
 End Class
 
+
+
+
+Class menudinamico
+  Public Property id As Integer
+  Public Property descrizione As String
+  Public Property comando As String 'url
+  Public Property tooltip As String
+  Public Property idpadre As Integer
+  Public Property ordine As Integer
+  Public Property active As Boolean
+  Public list As menudinamico
+End Class
 
 
