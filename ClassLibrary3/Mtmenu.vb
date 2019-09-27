@@ -321,7 +321,6 @@ Public Class Mtmenu
     Return s.ToString()
   End Function
 
-
   Public Function BindMenuData()
     Dim ds As DataSet = New DataSet()
     Dim listmenu As List(Of menudinamico) = New List(Of menudinamico)
