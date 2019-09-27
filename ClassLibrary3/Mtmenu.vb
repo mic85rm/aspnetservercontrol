@@ -7,6 +7,7 @@ Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
 
+
 <ToolboxData("<{0}:Mtmenu runat=server></{0}:Mtmenu>")>
 <ToolboxBitmap(GetType(Mtmenu), "menu.bmp")>
 Public Class Mtmenu
@@ -321,7 +322,7 @@ Public Class Mtmenu
     Return s.ToString()
   End Function
 
-  Public Function BindMenuData()
+  Public Sub BindMenuData()
     Dim ds As DataSet = New DataSet()
     Dim listmenu As List(Of menudinamico) = New List(Of menudinamico)
     For Each row As DataRow In MTDatatable.Rows
@@ -339,10 +340,21 @@ Public Class Mtmenu
       menu.active = row.Item("auth")
       listmenu.Add(menu)
     Next row
+    Dim menuTree As List(Of menudinamico) = GetMenuTree(listmenu, 0)
+  End Sub
+
+  Private Function GetMenuTree(ByVal list As List(Of menudinamico), ByVal parentId As Integer) As List(Of menudinamico)
+    Dim obj As menudinamico = New menudinamico
+    Return list.Where(Function(x) x.idpadre = parentId).Select(Function(x) New menudinamico() With {
+                  .id = x.id,
+                  .active = x.active,
+                  .comando = x.comando,
+                  .descrizione = x.descrizione,
+                   .idpadre = x.idpadre,
+                   .ordine = x.ordine,
+                   .tooltip = x.tooltip,
+                   .list = GetMenuTree(list, x.id)}).ToList()
   End Function
-
-
-
 
 
 
@@ -359,7 +371,7 @@ Class menudinamico
   Public Property idpadre As Integer
   Public Property ordine As Integer
   Public Property active As Boolean
-  Public list As menudinamico
+  Public Property list As List(Of menudinamico)
 End Class
 
 
