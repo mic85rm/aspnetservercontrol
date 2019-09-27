@@ -1,5 +1,7 @@
 ﻿@media only screen and (min-width: 1025px) {
-
+    button {
+        display: none;
+    }
     #container {
         color: #276DA9;
         background-color: #e5e5e5;
@@ -11,7 +13,7 @@
     nav {
         /*margin: 35px 0;*/
         background-color: #e5e5e5;
-        font-size: 14pt;
+        font-size: 16pt;
     }
 
         nav ul {
@@ -58,8 +60,8 @@
             z-index: 100 !important;
             /*TRASPARENZA*/
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
-  opacity: 0.90;
+            filter: alpha(opacity=90);
+            opacity: 0.90;
             /*BORDO ARROTONDATO*/
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
@@ -96,7 +98,7 @@
 
         nav ul ul ul li {
             position: relative;
-            top: -25px;   /* adesso */
+            top: -25px; /* adesso */
             left: 180px;
         }
 
@@ -108,40 +110,64 @@
 
 @media only screen and (max-width: 600px) {
 
+
+    button {
+        /*makes the button visible*/
+        display: block;
+        /*since we are here, we can style it a little bit!*/
+        padding: 2vw;
+        font-size: 3vh;
+        background-color: #AFE0FF;
+        border: none;
+        /*outline none removes the default blue border that appears anytime you click on the button*/
+        outline: none;
+        cursor: pointer;
+    }
+
+    #container {
+        color: #276DA9;
+        background-color: #e5e5e5;
+        min-height: 0px;
+        width: calc(100% - 1px);
+        float: left;
+        
+    }
+
     ul {
         padding: 0;
         list-style-type: none;
     }
 
-        nav ul,li {
-            float: none;
-            list-style-type: none;
-            display:block;
-        }
-
-   nav ul li, nav ul li a {
-        padding-right: 0;
-        padding-left: 0;
-        width: 100%;
+    nav ul, li {
+        float: none;
+        list-style-type: none;
+        display: block;
     }
+
+        nav ul li, nav ul li a {
+            padding-right: 0;
+            padding-left: 0;
+            width: 100%;
+        }
 
     nav li {
         background-color: #e5e5e5;
-        float:left;
+        float: left;
     }
 
- ul{
-     margin:10px;
- }
+    ul {
+        margin: 0px;
+    }
 
-        nav ul li ul li{
-           display:none;
-        }
-     nav ul li:hover ul li{
-         display:block;
-         margin:0px;
-         padding:0px;
-           }
+    nav ul li ul li {
+        display: none;
+    }
+
+    nav ul li:hover ul li {
+        display: block;
+        margin: 0px;
+        padding: 0px;
+    }
 
 
     nav a {
@@ -155,14 +181,11 @@
         border-bottom: 2px solid #E5E5E5 !important;
         padding-top: 3px;
         margin: 2px;
+        text-align: center;
+        width: 100%;
+        min-width: 180px;
     }
-
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-
-
 }
-
-
