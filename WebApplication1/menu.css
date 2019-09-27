@@ -1,5 +1,5 @@
 ﻿@media only screen and (min-width: 1025px) {
-    button {
+    btnrespnav {
         display: none;
     }
     #container {
@@ -84,11 +84,9 @@
             display: list-item;
             /*display: none;
             position: relative;
-        
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;
-            
             outline: 0;
             outline: thin dotted \9 !important;
             -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(82,168,236,0.6);
@@ -98,7 +96,7 @@
 
         nav ul ul ul li {
             position: relative;
-            top: -25px; /* adesso */
+            top: -30px; 
             left: 180px;
         }
 
@@ -111,7 +109,7 @@
 @media only screen and (max-width: 600px) {
 
 
-    button {
+    btnrespnav {
         /*makes the button visible*/
         display: block;
         /*since we are here, we can style it a little bit!*/

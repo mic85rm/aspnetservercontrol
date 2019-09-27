@@ -20,7 +20,7 @@
  
     <form id="form1" runat="server">
 
-        <asp:Button ID="Button1" runat="server" Text="Button" CausesValidation="false"/>
+        <asp:Button ID="btnrespnav" runat="server" Text="Button"   />
         <cc2:Mtmenu ID="Mtmenu1" runat="server"  />
        
 
