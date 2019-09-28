@@ -32,20 +32,11 @@ Partial Public Class WebForm1
     Protected WithEvents Mtmenu1 As Global.ClassLibrary3.Mtmenu
     
     '''<summary>
-    '''Controllo Table1.
+    '''Controllo UserControl1.
     '''</summary>
     '''<remarks>
     '''Campo generato automaticamente.
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
-    Protected WithEvents Table1 As Global.System.Web.UI.WebControls.Table
-    
-    '''<summary>
-    '''Controllo Menu.
-    '''</summary>
-    '''<remarks>
-    '''Campo generato automaticamente.
-    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-    '''</remarks>
-    Protected WithEvents Menu As Global.System.Web.UI.WebControls.Menu
+    Protected WithEvents UserControl1 As Global.System.Web.UI.UserControl
 End Class

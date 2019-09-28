@@ -95,7 +95,6 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="menu.css" />
     <Content Include="navbar.js" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config" />

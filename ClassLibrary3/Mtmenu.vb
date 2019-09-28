@@ -71,16 +71,22 @@ Public Class Mtmenu
     End Property
 
 
+    Protected Overrides Sub AddAttributesToRender(writer As HtmlTextWriter)
+
+    End Sub
+
+
+
+
     Protected Overrides Sub RenderContents(ByVal writer As HtmlTextWriter)
-        'writer.Write("<link href=""" + MenuCss + """ rel = ""stylesheet"" />")
-        writer.Write(System.Environment.NewLine)
         writer.Write("<div class=""" + MenuCss + """ id=""" + Idmenu + """>")
         writer.Write(System.Environment.NewLine)
-        writer.Write("<ul class=""" + StaticMenuStyleCssClass + """>")
+        'writer.Write("<ul class=""" + StaticMenuStyleCssClass + """>")
+        writer.Write("<ul role=""menubar"">")
         writer.Write(convertitore(menuTree))
         writer.Write(System.Environment.NewLine)
-    writer.Write("</ul>")
-    writer.Write(System.Environment.NewLine)
+        writer.Write("</ul>")
+        writer.Write(System.Environment.NewLine)
         writer.Write("</div>")
     End Sub
 
@@ -130,20 +136,20 @@ Public Class Mtmenu
             If item.Mlist.Count = 0 And item.visitato = False Then
                 s.Append(System.Environment.NewLine)
                 If item.idpadre = 0 Then
-                    s.Append("<li>")
+                    s.Append("<li role=""menuitem"">")
                     s.Append("<a title=""" + item.tooltip + """  class=""" + StaticMenuStyleCssClass + """ href ='" + item.comando + "'>")
-                Else
-                    s.Append("<li>")
+        Else
+                    s.Append("<li role=""menuitem"">")
                     s.Append("<a title=""" + item.tooltip + """   class=""" + DynamicMenuStyleCssClass + """ href ='" + item.comando + "'>")
                 End If
                 s.Append(item.descrizione)
                 s.Append("</a></li>")
             ElseIf item.Mlist.Count > 0 And item.visitato = False Then
                 If item.idpadre = 0 Then
-                    s.Append("<li>")
+                    s.Append("<li role=""menuitem"">")
                     s.Append("<a title=""" + item.tooltip + """  class=""" + StaticMenuStyleCssClass + """ href ='" + item.comando + "'>")
                 Else
-                    s.Append("<li>")
+                    s.Append("<li role=""menuitem"">")
                     s.Append("<a title=""" + item.tooltip + """  class=""" + DynamicMenuStyleCssClass + """ href ='" + item.comando + "'>")
                 End If
                 s.Append(item.descrizione)

@@ -1,44 +1,6 @@
 ﻿@media only screen and (min-width: 1025px) {
 
 
-    .MenuBArts ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: auto;
-    }
-
-        .MenuBArts ul.dynamic {
-            z-index: 1;
-            margin-left: 5px;
-            margin-top: 5px;
-        }
-
-    .MenuBArts a {
-        text-decoration: none;
-        white-space: nowrap;
-        display: block;
-    }
-
-        .MenuBArts a.static {
-            padding-left: 0.15em;
-            padding-right: 0.15em;
-        }
-
-        .MenuBArts a.popout {
-            background-image: url("/WebResource.axd?d=YAYach_zykzn7tRotFpEUq3eF0Kow_Psv-UDuSOMdgip8vh45Va6IrepSW8uMltERzeOPnSON3iMDcSKk_cqQoadMh0omsj71o6Iy0ll5co1&t=637040871997459735");
-            background-repeat: no-repeat;
-            background-position: right center;
-            padding-right: 14px;
-        }
-
-        .MenuBArts a.static.selected {
-            text-decoration: none;
-            border-style: none;
-        }
-
-
-
     /* CLASSI PER IL MENU */
     .MenuBArts-Container {
         color: #276DA9;
@@ -63,12 +25,12 @@
         width: 48px;
     }
 
-    .MenuBArts > ul > li {
+    .MenuBArts-Menu > ul > li {
         display: inline-block;
         list-style: none;
     }
 
-    .MenuBArts ul li ul {
+    .MenuBArts-Menu ul li ul {
         display: none;
     }
 
@@ -90,7 +52,6 @@
         border-bottom: 2px solid #E5E5E5 !important;
         padding-top: 3px;
         margin: 2px;
-        text-decoration: none;
     }
 
         .MenuBArts-Node a:hover {
