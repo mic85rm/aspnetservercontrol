@@ -82,7 +82,7 @@ Public Class Mtmenu
         writer.Write("<div class=""" + MenuCss + """ id=""" + Idmenu + """>")
         writer.Write(System.Environment.NewLine)
         'writer.Write("<ul class=""" + StaticMenuStyleCssClass + """>")
-        writer.Write("<ul role=""menubar"">")
+        writer.Write("<ul id=""navigation"" class=""slimmenu"">")
         writer.Write(convertitore(menuTree))
         writer.Write(System.Environment.NewLine)
         writer.Write("</ul>")

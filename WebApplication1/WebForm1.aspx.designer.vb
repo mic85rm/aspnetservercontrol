@@ -30,13 +30,4 @@ Partial Public Class WebForm1
     '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
     '''</remarks>
     Protected WithEvents Mtmenu1 As Global.ClassLibrary3.Mtmenu
-    
-    '''<summary>
-    '''Controllo UserControl1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generato automaticamente.
-    '''Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-    '''</remarks>
-    Protected WithEvents UserControl1 As Global.System.Web.UI.UserControl
 End Class

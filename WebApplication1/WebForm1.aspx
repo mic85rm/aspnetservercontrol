@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebForm1.aspx.vb" Inherits="WebApplication1.WebForm1" %>
 
 <%@ Register Assembly="ClassLibrary3" Namespace="ClassLibrary3" TagPrefix="cc2" %>
-<%@ Register Src="~/UserControl1.ascx" TagPrefix="uc1" TagName="UserControl1" %>
+
 
 
 
@@ -11,10 +11,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <title></title>
-    <script src="navbar.js"></script>
-    <link href="StyleSheet1.css" rel="stylesheet" />
     
+    <script src="jquery.slimmenu.min.js"></script>
+    <title></title>
+   <%-- <script src="navbar.js"></script>
+    <link href="StyleSheet1.css" rel="stylesheet" />--%>
+    <link rel="stylesheet" href="slimmenu.min.css" type="text/css"/>
+
 </head>
 <body>
   
@@ -25,10 +28,19 @@
         
         <cc2:Mtmenu ID="Mtmenu1" runat="server" />
 
-
+            <script>
+    $('#navigation').slimmenu(
+{
+    resizeWidth: '1000',
+    collapserTitle: 'Main Menu',
+    animSpeed: 'medium',
+    easingEffect: null,
+    indentChildren: false,
+    childrenIndenter: '&nbsp;'
+            });
+        </script>
        
 
-        <uc1:usercontrol1 runat="server" id="UserControl1" />
 
     </form>
 </body>

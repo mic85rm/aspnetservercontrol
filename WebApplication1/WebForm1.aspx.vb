@@ -14,10 +14,10 @@ Public Class WebForm1
     Dim dt As DataTable = New DataTable()
       Dim ds As DataSet = New DataSet()
       dt = SelectQuery(conString, K_SP_MENU, parametri)
-        Mtmenu1.Idmenu = "Menu"
-        Mtmenu1.MenuCss = "MenuBArts"
-        Mtmenu1.StaticMenuStyleCssClass = "MenuBArts-Node"
-        Mtmenu1.DynamicMenuStyleCssClass = "MenuBArts-ChildNode"
+        'Mtmenu1.Idmenu = "Menu"
+        'Mtmenu1.MenuCss = "MenuBArts"
+        'Mtmenu1.StaticMenuStyleCssClass = "MenuBArts-Node"
+        'Mtmenu1.DynamicMenuStyleCssClass = "MenuBArts-ChildNode"
         Mtmenu1.MTDatatable = dt
         Mtmenu1.BindMenuData()
         If Not dt Is Nothing AndAlso dt.Rows.Count > 0 Then
