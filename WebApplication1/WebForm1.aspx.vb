@@ -6,12 +6,12 @@ Public Class WebForm1
   Private Const K_SP_MENU As String = "BSP_sysGetMenuFunzioni"
   Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-    Dim parametri() As SqlParameter = New SqlParameter() _
+        Dim parametri() As SqlParameter = New SqlParameter() _
   {
     New SqlParameter("@IDSysProfilo", SqlDbType.Int) With {.Value = 1}}
-    'New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
+        'New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
 
-    Dim dt As DataTable = New DataTable()
+        Dim dt As DataTable = New DataTable()
       Dim ds As DataSet = New DataSet()
       dt = SelectQuery(conString, K_SP_MENU, parametri)
         'Mtmenu1.Idmenu = "Menu"

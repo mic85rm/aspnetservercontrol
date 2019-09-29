@@ -15,6 +15,13 @@
 .collapse-button .icon-bar{display:block;height:2px;width:18px;margin:2px 0;background-color:#F5F5F5;border-radius:1px}
 ul.slimmenu{width:100%;margin:0;padding:0;list-style-type:none}
 ul.slimmenu:before,ul.slimmenu:after{content:'';display:table}
+ul {
+    color: #276DA9;
+    background-color: #e5e5e5;
+    min-height: 0px;
+    width: calc(100% - 1px);
+    float: left;
+}
 ul.slimmenu:after{clear:both}
 ul.slimmenu.collapsed li{display:block;width:100%;box-sizing:border-box;-moz-box-sizing:border-box;
                          -webkit-box-sizing:border-box}
@@ -23,32 +30,45 @@ ul.slimmenu.collapsed li a{display:block;border-bottom:1px solid rgba(0,0,0,0.07
                            box-sizing:border-box;-moz-box-sizing:border-box
                                ;-webkit-box-sizing:border-box}
 ul.slimmenu.collapsed li .sub-toggle{height:40px}
-ul.slimmenu li{position:relative;float:left;display:inline-block;background-color:#AAA
-
-}ul.slimmenu li ul{margin:0;list-style-type:none}
+    ul.slimmenu li {
+        position: relative;
+        float: left;
+        display: inline-block;
+        background-color: #AAA;
+        text-align:left;
+    }ul.slimmenu li ul{margin:0;list-style-type:none}
  ul.slimmenu li ul li{background:#bbbbbb
 
  }ul.slimmenu li>ul{position:absolute;left:0;top:100%;z-index:999;display:none;width:100%}
   ul.slimmenu li>ul>li ul{position:absolute;left:100%;top:0;z-index:999;display:none;width:100%}
-    ul.slimmenu li a {
-        text-decoration: none;
-        display: block;
-        padding: 12px 64px 12px 16px;
-        color: #333;
-        font-size: 16px;
-        font-weight: 400;
-        transition: background-color 0.5s ease-out;
-        -o-transition: background-color 0.5s ease-out;
-        -moz-transition: background-color 0.5s ease-out;
-        -webkit-transition: background-color 0.5s ease-out
-    }
-  ul.slimmenu li a:hover{text-decoration:none;background-color:#999}
-  ul.slimmenu li .sub-toggle{background:none repeat scroll 0 0 rgba(0,0,0,0.075);
+        ul.slimmenu li a {
+            color: #276DA9;
+            background-color: #e5e5e5;
+            min-height: 0px;
+            width: calc(100% - 1px);
+            float: left;
+            text-decoration: none;
+            display: block;
+            /*padding: 12px 64px 12px 16px;*/
+            font-family: 'Century Gothic', 'Segoe UI', Arial, Helvetica, sans-serif;
+            font-size: 16pt;
+            font-weight: 400;
+            transition: background-color 0.5s ease-out;
+            -o-transition: background-color 0.5s ease-out;
+            -moz-transition: background-color 0.5s ease-out;
+            -webkit-transition: background-color 0.5s ease-out
+        }
+        ul.slimmenu li a:hover {
+            text-decoration: none;
+            color: #276DA9 !important;
+            border-bottom: 2px solid #276DA9 !important;
+        }
+  ul.slimmenu li .sub-toggle{
                              position:absolute;right:0;top:0;z-index:999;width:48px;
                              height:100%;text-align:center;cursor:pointer}
   ul.slimmenu li .sub-toggle:before{content:'';display:inline-block;
                                     height:100%;margin-right:-0.25em;
                                     vertical-align:middle}
-  ul.slimmenu li .sub-toggle>i{display:inline-block;color:#333;font-size:18px;vertical-align:middle}
-  ul.slimmenu>li{border-left:1px solid #999}
+  ul.slimmenu li .sub-toggle>i{display:inline-block;color:#333;font-size:18pt;vertical-align:middle;}
+  ul.slimmenu>li{}
   ul.slimmenu>li:first-child,ul.slimmenu>li.has-submenu+li{border-left:0}
