@@ -1,0 +1,81 @@
+﻿/* Dropdown Button */
+.MTdropbtn {
+    /*background-color: #4CAF50;*/
+    /*color: white;*/
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  
+}
+
+
+.MTCheckbox {
+    display:inline-block;
+    vertical-align: text-top;
+    margin-top: 6px;
+    
+}
+
+input[type='checkbox'] {
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 6px;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    display: inline-block;
+}
+
+.displayNone {
+  display: none;
+}
+
+
+    /* Dropdown button on hover & focus */
+    .MTdropbtn:hover, .MTdropbtn:focus {
+        background-color: #3e8e41;
+    }
+
+/* The container <div> - needed to position the dropdown content */
+.MTdropdown {
+    position: relative;
+    display: inline-block;
+    /*border: 5px solid red;*/
+}
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.MTdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+    /* Links inside the dropdown */
+    .MTdropdown-content li {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .MTdropdown-content li:hover {
+            background-color: #f1f1f1;
+            cursor:pointer;
+        }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}

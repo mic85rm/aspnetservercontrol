@@ -6,21 +6,26 @@ Public Class WebForm1
   Private Const K_SP_MENU As String = "BSP_sysGetMenuFunzioni"
   Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        Dim parametri() As SqlParameter = New SqlParameter() _
+
+    provaIDboh.CheckedInterno = True
+
+
+
+    Dim parametri() As SqlParameter = New SqlParameter() _
   {
     New SqlParameter("@IDSysProfilo", SqlDbType.Int) With {.Value = 1}}
         'New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
 
         Dim dt As DataTable = New DataTable()
       Dim ds As DataSet = New DataSet()
-      dt = SelectQuery(conString, K_SP_MENU, parametri)
-        'Mtmenu1.Idmenu = "Menu"
-        'Mtmenu1.MenuCss = "MenuBArts"
-        'Mtmenu1.StaticMenuStyleCssClass = "MenuBArts-Node"
-        'Mtmenu1.DynamicMenuStyleCssClass = "MenuBArts-ChildNode"
-        Mtmenu1.MTDatatable = dt
-        Mtmenu1.BindMenuData()
-        If Not dt Is Nothing AndAlso dt.Rows.Count > 0 Then
+    ' dt = SelectQuery(conString, K_SP_MENU, parametri)
+    'Mtmenu1.Idmenu = "Menu"
+    'Mtmenu1.MenuCss = "MenuBArts"
+    'Mtmenu1.StaticMenuStyleCssClass = "MenuBArts-Node"
+    'Mtmenu1.DynamicMenuStyleCssClass = "MenuBArts-ChildNode"
+    'Mtmenu1.MTDatatable = dt
+    'Mtmenu1.BindMenuData()
+    If Not dt Is Nothing AndAlso dt.Rows.Count > 0 Then
             ds.Tables.Add(dt)
             ds.DataSetName = "Menus"
             ds.Tables(0).TableName = "Menu"
@@ -75,9 +80,11 @@ Public Class WebForm1
 #End Region
 
 
+  'Public Sub provacheck() Handles provaIDboh.
+  '  provaIDboh.ID = "dacodice"
+  'End Sub
 
-
-    Public Function SelectQuery(ByVal conn As SqlConnection, ByVal commandText As String, ParamArray commandParameters As SqlParameter()) As DataTable
+  Public Function SelectQuery(ByVal conn As SqlConnection, ByVal commandText As String, ParamArray commandParameters As SqlParameter()) As DataTable
     Using sda As SqlDataAdapter = New SqlDataAdapter()
 
       Using command = New SqlCommand(commandText, conn)
@@ -93,4 +100,7 @@ Public Class WebForm1
     End Using
   End Function
 
+  Protected Sub ciao_CheckBoxClicked(sender As Object, e As EventArgs)
+
+  End Sub
 End Class
