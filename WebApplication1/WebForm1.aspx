@@ -24,19 +24,20 @@
 
  
     <form id="form1" runat="server">
-      <asp:CheckBox ID="speriamodino" runat="server" />
+      <asp:CheckBox ID="speriamodino" runat="server" Checked="true" />
       <asp:DropDownList runat="server" AutoPostBack="true">
-        <asp:ListItem Text="2" Value="1"> 
+  <%--      <asp:ListItem Text="2" Value="1"> 
           
         </asp:ListItem>
         <asp:ListItem Text="3" Value="4">
 
-        </asp:ListItem>
+        </asp:ListItem>--%>
       </asp:DropDownList>
-        <cc2:MTCheckbox  runat="server" ID="provaIDboh"      >
-          <DropdownItems>
-            <cc2:MTCheckboxItem  Testo="CIAO" valore="q"/>
-          </DropdownItems>
+        <cc2:MTCheckbox  runat="server" ID="provaIDboh" OnValoreRestituito="provaIDboh_ValoreRestituito"       >
+          <MTDropdownItems>
+            <cc2:MTCheckboxItem      />
+            <cc2:MTCheckboxItem  Testo="ciao" />
+          </MTDropdownItems>
         </cc2:MTCheckbox>  
 
       

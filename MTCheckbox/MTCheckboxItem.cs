@@ -13,8 +13,8 @@ namespace MTCheckbox
   {
     private string _itemTestoVisualizzato;
     private string _itemValore;
-    private bool __itemSelezionato;
-     public event EventHandler ElementoCliccato;
+    //private bool __itemSelezionato;
+    
 
     [
     Category("Behavior"),
@@ -52,23 +52,23 @@ namespace MTCheckbox
       }
     }
 
-    [
-    Category("Behavior"),
-    DefaultValue(""),
-    Description("Valore selezionato ritorna booleano"),
-    NotifyParentProperty(true),
-    ]
-    public virtual bool IsSelected
-    {
-      get
-      {
-        return __itemSelezionato;
-      }
-      set
-      {
-        __itemSelezionato = value;
-      }
-    }
+    //[
+    //Category("Behavior"),
+    //DefaultValue(""),
+    //Description("Valore selezionato ritorna booleano"),
+    //NotifyParentProperty(true),
+    //]
+    //public virtual bool IsSelected
+    //{
+    //  get
+    //  {
+    //    return __itemSelezionato;
+    //  }
+    //  set
+    //  {
+    //    __itemSelezionato = value;
+    //  }
+    //}
   }
 }
 

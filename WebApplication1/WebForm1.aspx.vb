@@ -6,7 +6,7 @@ Public Class WebForm1
   Private Const K_SP_MENU As String = "BSP_sysGetMenuFunzioni"
   Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-
+    speriamodino.Checked = False
     provaIDboh.CheckedInterno = True
 
 
@@ -102,5 +102,9 @@ Public Class WebForm1
 
   Protected Sub ciao_CheckBoxClicked(sender As Object, e As EventArgs)
 
+  End Sub
+
+  Protected Sub provaIDboh_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
+    Dim valore = e.ValoreRestituito
   End Sub
 End Class

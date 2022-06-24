@@ -17,7 +17,7 @@ namespace MTCheckbox
     {
 
     //public delegate void CheckboxClickHandler(object sender, EventArgs e);
-    private MTCheckboxItemCollection dropdownItems;
+    private MTCheckboxItemCollection MTdropdownItems;
     //private MTCheckboxItem item;
     private Panel  PannelloContenitore;
     private CheckBox MTChk;
@@ -25,14 +25,15 @@ namespace MTCheckbox
     private Panel FrecciaINBasso;
     private HtmlGenericControl iHtml;
     private HtmlGenericControl liHtml;
+    //private ImageButton ImageButton;
     private Panel PannelloItem;
     private Panel MTCheckboxControllo;
     private Panel MTCheckboxWidth;
-
+    private Button button;
     //private HtmlInputCheckBox checkBoxMT;
+    private bool _itemChecked;
 
 
-   
 
 
     [Bindable(true)]
@@ -41,16 +42,14 @@ namespace MTCheckbox
     [Localizable(true)]
     private Boolean checkedInterno; // field
 
-    public Boolean CheckedInterno   // property
+    public virtual Boolean CheckedInterno   // property
     {
-      get { return checkedInterno; }   // get method
-      set { checkedInterno = value; }  // set method
+      get { return _itemChecked; }   // get method
+      set { _itemChecked = value; }  // set method
     }
 
 
-
-
-
+  
 
 
 
@@ -76,15 +75,15 @@ namespace MTCheckbox
 
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
     [PersistenceMode(PersistenceMode.InnerProperty)]
-    public MTCheckboxItemCollection DropdownItems
+    public MTCheckboxItemCollection MTDropdownItems
     {
       get
       {
-        if (dropdownItems == null)
+        if (MTdropdownItems == null)
         {
-          dropdownItems = new MTCheckboxItemCollection();
+          MTdropdownItems = new MTCheckboxItemCollection();
         }
-        return dropdownItems;
+        return MTdropdownItems;
       }
     }
 
@@ -93,7 +92,7 @@ namespace MTCheckbox
     {
       if (obj is MTCheckboxItem)
       {
-        this.DropdownItems.Add((MTCheckboxItem)obj);
+        this.MTDropdownItems.Add((MTCheckboxItem)obj);
         return;
       }
     }
@@ -171,7 +170,7 @@ namespace MTCheckbox
         this.MTChk = new CheckBox();
         this.MTChk.ID = "MTcheckbox";
         //this.MTChk.CheckedChanged += MTChk_CheckedChanged;
-        //  this.MTChk.Checked = CheckedInterno;
+          this.MTChk.Checked = CheckedInterno;
         //I am creating a delegate (pointer) to HandleSomethingHappened
         //and adding it to SomethingHappened's list of "Event Handlers".
         
@@ -190,7 +189,7 @@ namespace MTCheckbox
         this.FrecciaINBasso = new Panel();
         //this.Visible = true;
         this.FrecciaINBasso.Attributes.Add("onmouseover", "myFunction();");
-        if (dropdownItems != null)
+        if (MTdropdownItems != null)
         {
           this.FrecciaINBasso.CssClass = "arrow-down";
         }
@@ -210,15 +209,44 @@ namespace MTCheckbox
         this.PannelloItem.Attributes.Add("onmouseleave", "myFunction2();");
 
         
-        if (dropdownItems != null)
+        if (MTdropdownItems != null)
         {
-          foreach (MTCheckboxItem item in dropdownItems)
+          int i = 1;
+          foreach (MTCheckboxItem item in MTdropdownItems)
           {
+            if (item.Testo!=null) { 
             this.liHtml = new HtmlGenericControl("li");
-            this.liHtml.Attributes.Add("Onclick", string.Format("cliccaMTChkbox('{0}')",this.ID.ToString()));
-            this.liHtml.Attributes.Add("value", item.Valore);
-            this.liHtml.InnerText = item.Testo;
-           
+             
+            //this.liHtml.Attributes.Add("Onclick", string.Format("cliccaMTChkbox('{0}')",this.ID.ToString()));
+            //this.liHtml.Attributes.Add("value", item.Valore);
+            //this.liHtml.InnerText = item.Testo;
+            this.button = new Button();
+            this.button.CssClass = "unstyled-button";
+            this.button.ID = string.Format("btn{0}",i);
+            this.button.Click += Button_Click;
+            this.button.Text = item.Testo;
+            this.button.CommandArgument = item.Valore;
+            this.liHtml.Controls.Add(button);
+            this.PannelloItem.Controls.Add(liHtml);
+            i++;
+            }
+            else
+            {
+              this.liHtml = new HtmlGenericControl("li");
+              this.liHtml.Attributes.Add("style", "width:100%;");
+              //this.liHtml.Attributes.Add("Onclick", string.Format("cliccaMTChkbox('{0}')",this.ID.ToString()));
+              //this.liHtml.Attributes.Add("value", item.Valore);
+              //this.liHtml.InnerText = item.Testo;
+              this.button = new Button();
+              this.button.CssClass = "unstyled-button";
+              this.button.ID = string.Format("btn{0}", i);
+              //this.button.Click += Button_Click;
+              this.button.Text = "Se non vuoi che venga visualizzato cancella MTCheckboxItem  che non ha il campo Testo";
+              //this.button.CommandArgument = item.Valore;
+              this.liHtml.Controls.Add(button);
+              this.PannelloItem.Controls.Add(liHtml);
+              i++;
+            }
           }
         }
 
@@ -233,7 +261,7 @@ namespace MTCheckbox
 
         this.MTCheckboxWidth.Controls.Add(MTChk);
         this.MTCheckboxWidth.Controls.Add(FrecciaINBasso);
-        this.PannelloItem.Controls.Add(liHtml);
+        
         this.MTCheckboxWidth.Controls.Add(iHtml);
         this.MTCheckboxWidth.Controls.Add(PannelloItem);
 
@@ -251,9 +279,20 @@ namespace MTCheckbox
 
     }
 
+    private void Button_Click(object sender, EventArgs e)
+    {
+      MTChk.Checked = true;
+      Button prova =(Button) sender;
+      MTCheckboxEventArgs eventValore = new MTCheckboxEventArgs(prova.CommandArgument);
+      OnValoreRestituito(eventValore);
+
+    }
+
     private void MTChk_CheckedChanged(object sender, EventArgs e)
     {
       checkedInterno = MTChk.Checked;
+      
+
     }
 
     protected override void Render(HtmlTextWriter writer)
