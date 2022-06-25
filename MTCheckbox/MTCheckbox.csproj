@@ -51,9 +51,6 @@
     <EmbeddedResource Include="Scripts\MTCheckbox.js" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Scripts\jquery-3.6.0.min.js" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Css\MTCheckbox.css" />
   </ItemGroup>
   <ItemGroup>

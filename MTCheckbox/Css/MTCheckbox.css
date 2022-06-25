@@ -18,13 +18,13 @@
     
 }
 
-input[type='checkbox'] {
+/*input[type='checkbox'] {
   display: inline-block;
   vertical-align: text-top;
   margin-top: 6px;
-}
+}*/
 
-.arrow-down {
+.MTarrow-down {
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
@@ -33,7 +33,7 @@ input[type='checkbox'] {
     display: inline-block;
 }
 
-.displayNone {
+.MTdisplayNone {
   display: none;
 }
 
@@ -60,12 +60,13 @@ input[type='checkbox'] {
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    
+    /*border:1px solid red;*/
+    z-index:3;
 }
 
 
 
-.unstyled-button {
+.MTunstyled-button {
   /*border: 1px solid red;*/
   border:none;
   padding: 0;
@@ -95,6 +96,6 @@ input[type='checkbox'] {
         }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {
+.MTshow {
     display: block;
 }

@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace MTCheckbox
 {
-  [DefaultEvent("Submit")]
+  
   [ToolboxData("<{0}:MTCheckbox runat=server></{0}:MTCheckbox>")]
     public class MTCheckbox:WebControl,INamingContainer,IPostBackEventHandler
     {
@@ -102,6 +102,8 @@ namespace MTCheckbox
     {
       try
       {
+        //string prova = this.ClientID;
+
         //InizializzaPannelloContenitore();
         InizializzaControllo();
         //this.PannelloContenitore.Controls.Clear();
@@ -110,8 +112,9 @@ namespace MTCheckbox
         this.Controls.Clear();
         //this.Controls.Add(PannelloContenitore);
         this.Controls.Add(MTCheckboxControllo);
-
-       
+        //this.PannelloItem.Attributes.Add("onmouseleave", string.Format("myFunction2('{0}');", this.ClientID.ToString()));
+        this.MTCheckboxWidth.Attributes.Add("onmouseleave", string.Format("myFunction2('{0}');", this.ClientID.ToString()));
+        this.FrecciaINBasso.Attributes.Add("onmouseenter", string.Format("myFunction('{0}');", this.ClientID.ToString()));
       }
       catch (Exception)
       {
@@ -169,8 +172,9 @@ namespace MTCheckbox
       {
         this.MTChk = new CheckBox();
         this.MTChk.ID = "MTcheckbox";
+        this.MTChk.InputAttributes.Add("class", "MTCheckbox");
         //this.MTChk.CheckedChanged += MTChk_CheckedChanged;
-          this.MTChk.Checked = CheckedInterno;
+        this.MTChk.Checked = CheckedInterno;
         //I am creating a delegate (pointer) to HandleSomethingHappened
         //and adding it to SomethingHappened's list of "Event Handlers".
         
@@ -186,17 +190,7 @@ namespace MTCheckbox
         //this.MTChk.Attributes.Add("name", "MTcheckbox");
 
 
-        this.FrecciaINBasso = new Panel();
-        //this.Visible = true;
-        this.FrecciaINBasso.Attributes.Add("onmouseover", "myFunction();");
-        if (MTdropdownItems != null)
-        {
-          this.FrecciaINBasso.CssClass = "arrow-down";
-        }
-        else
-        {
-          this.FrecciaINBasso.CssClass = "displayNone";
-        }
+       
 
         this.iHtml = new HtmlGenericControl("i");
         this.iHtml.Visible = true;
@@ -206,9 +200,24 @@ namespace MTCheckbox
         this.PannelloItem = new Panel();
         this.PannelloItem.ID = "myDropdown";
         this.PannelloItem.CssClass = "MTdropdown-content";
-        this.PannelloItem.Attributes.Add("onmouseleave", "myFunction2();");
+        //this.PannelloItem.Attributes.Add("onmouseleave", string.Format("myFunction2('{0}');",this.ID.ToString()));
 
-        
+
+
+        this.FrecciaINBasso = new Panel();
+        //this.Visible = true;
+        //this.FrecciaINBasso.Attributes.Add("onmouseover", string.Format("myFunction('{0}');", this.ID.ToString()));
+        if (MTdropdownItems != null)
+        {
+          this.FrecciaINBasso.CssClass = "MTarrow-down";
+        }
+        else
+        {
+          this.FrecciaINBasso.CssClass = "MTdisplayNone";
+        }
+
+
+
         if (MTdropdownItems != null)
         {
           int i = 1;
@@ -221,7 +230,7 @@ namespace MTCheckbox
             //this.liHtml.Attributes.Add("value", item.Valore);
             //this.liHtml.InnerText = item.Testo;
             this.button = new Button();
-            this.button.CssClass = "unstyled-button";
+            this.button.CssClass = "MTunstyled-button";
             this.button.ID = string.Format("btn{0}",i);
             this.button.Click += Button_Click;
             this.button.Text = item.Testo;
@@ -230,23 +239,23 @@ namespace MTCheckbox
             this.PannelloItem.Controls.Add(liHtml);
             i++;
             }
-            else
-            {
-              this.liHtml = new HtmlGenericControl("li");
-              this.liHtml.Attributes.Add("style", "width:100%;");
-              //this.liHtml.Attributes.Add("Onclick", string.Format("cliccaMTChkbox('{0}')",this.ID.ToString()));
-              //this.liHtml.Attributes.Add("value", item.Valore);
-              //this.liHtml.InnerText = item.Testo;
-              this.button = new Button();
-              this.button.CssClass = "unstyled-button";
-              this.button.ID = string.Format("btn{0}", i);
-              //this.button.Click += Button_Click;
-              this.button.Text = "Se non vuoi che venga visualizzato cancella MTCheckboxItem  che non ha il campo Testo";
-              //this.button.CommandArgument = item.Valore;
-              this.liHtml.Controls.Add(button);
-              this.PannelloItem.Controls.Add(liHtml);
-              i++;
-            }
+            //else
+            //{
+            //  this.liHtml = new HtmlGenericControl("li");
+            //  this.liHtml.Attributes.Add("style", "width:100%;");
+            //  //this.liHtml.Attributes.Add("Onclick", string.Format("cliccaMTChkbox('{0}')",this.ID.ToString()));
+            //  //this.liHtml.Attributes.Add("value", item.Valore);
+            //  //this.liHtml.InnerText = item.Testo;
+            //  this.button = new Button();
+            //  this.button.CssClass = "unstyled-button";
+            //  this.button.ID = string.Format("btn{0}", i);
+            //  //this.button.Click += Button_Click;
+            //  this.button.Text = "Se non vuoi che venga visualizzato cancella MTCheckboxItem  che non ha il campo Testo";
+            //  //this.button.CommandArgument = item.Valore;
+            //  this.liHtml.Controls.Add(button);
+            //  this.PannelloItem.Controls.Add(liHtml);
+            //  i++;
+            //}
           }
         }
 
@@ -270,7 +279,7 @@ namespace MTCheckbox
 
         return true;
       }
-      catch (Exception)
+      catch (Exception a)
       {
 
         return false;
@@ -369,7 +378,7 @@ namespace MTCheckbox
 
     protected override void OnPreRender(EventArgs e)
         {
-            Page.ClientScript.RegisterClientScriptResource(typeof(MTCheckbox), "MTCheckbox.Scripts.jquery-3.6.0.min.js");
+            //Page.ClientScript.RegisterClientScriptResource(typeof(MTCheckbox), "MTCheckbox.Scripts.jquery-3.6.0.min.js");
             Page.ClientScript.RegisterClientScriptResource(typeof(MTCheckbox), "MTCheckbox.Scripts.MTCheckbox.js");
             Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Image.sortdown.png");
 

@@ -1,36 +1,38 @@
-﻿function myFunction() {
-  /*alert(document.getElementsByClassName("MTdropdown-content").item(1));*/
-   /*document.getElementById("myDropdown").classList.toggle("show");*/
-  document.getElementsByClassName("MTdropdown-content").item(1).classList.toggle("show");
-  
-}
-
-function myFunction2() {
-/*  document.getElementById("myDropdown").classList.remove("show");*/
-  document.getElementsByClassName("MTdropdown-content").item(1).classList.remove("show");
-}
-
-function cliccaMTChkbox(nameofcontrol) {
-  /*document.getElementById("MTcheckbox").checked=true;*/
-  /*alert(document.getElementsByClassName("MTdropdown-content").length);*/
-  //document.getElementsByClassName("MTCheckbox").item(0).checked = true;
-  //__doPostBack(document.getElementsByClassName("MTCheckbox").item(0).id,'');
-  /*var stringa = '<%=' + nameofcontrol + '_' + 'MTcheckbox.ClientID%>';*/
-  var stringa = nameofcontrol + '_' + 'MTcheckbox';
-  /*alert(stringa);*/
+﻿function myFunction(nomecontrollo) {
+ /* alert(nomecontrollo);*/
+  var stringa = nomecontrollo + '_' + 'myDropdown';
   var x = document.getElementById(stringa);
-  x.checked = true;
-  __doPostBack(x, '');
+  x.classList.toggle("MTshow");
+  /*  document.getElementsByClassName("MTdropdown-content").item(1).classList.toggle("show");*/
+  //document.getElementById('<%=myDropdown.ClientID %>').classList.toggle("show");
+  //alert('<%=myDropdown.ClientID %>');
 }
 
-
-function __doPostBack(eventTarget, eventArgument) {
-  if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
-    theForm.__EVENTTARGET.value = eventTarget;
-    theForm.__EVENTARGUMENT.value = eventArgument;
-    theForm.submit();
-  }
+function myFunction2(controlname) {
+/*  alert(controlname);*/
+  var stringa2 = controlname + '_' + 'myDropdown';
+  var x2 = document.getElementById(stringa2);
+  x2.classList.remove("MTshow");
+  /*  document.getElementsByClassName("MTdropdown-content").item(1).classList.remove("show");*/
+  /*document.getElementById('<%=myDropdown.ClientID %>').classList.remove("show");*/
 }
+
+//function cliccaMTChkbox(nameofcontrol) {
+ 
+//  var stringa = nameofcontrol + '_' + 'MTcheckbox';
+//  var x = document.getElementById(stringa);
+//  x.checked = true;
+//  __doPostBack(x, '');
+//}
+
+
+//function __doPostBack(eventTarget, eventArgument) {
+//  if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+//    theForm.__EVENTTARGET.value = eventTarget;
+//    theForm.__EVENTARGUMENT.value = eventArgument;
+//    theForm.submit();
+//  }
+//}
 
 // Close the dropdown menu if the user clicks outside of it
 //window.onmouseleave = function (event) {

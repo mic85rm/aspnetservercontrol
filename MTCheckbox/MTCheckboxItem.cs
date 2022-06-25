@@ -9,7 +9,7 @@ using System.Web.UI;
 namespace MTCheckbox
 {
   [ToolboxData("<{0}:MTCheckboxItem runat=server></{0}:MTCheckboxItem>")]
-  public class MTCheckboxItem
+  public class MTCheckboxItem:INamingContainer
   {
     private string _itemTestoVisualizzato;
     private string _itemValore;

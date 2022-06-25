@@ -107,4 +107,12 @@ Public Class WebForm1
   Protected Sub provaIDboh_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
     Dim valore = e.ValoreRestituito
   End Sub
+
+  Protected Sub Unnamed_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
+
+  End Sub
+
+  Protected Sub Unnamed_ValoreRestituito1(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
+
+  End Sub
 End Class

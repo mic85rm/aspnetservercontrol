@@ -10,14 +10,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <%-- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    
-    <script src="jquery.slimmenu.min.js"></script>--%>
+   
+
     <title></title>
-   <%-- <script src="navbar.js"></script>
-    <link href="StyleSheet1.css" rel="stylesheet" />--%>
-<%--    <link rel="stylesheet" href="slimmenu.min.css" type="text/css"/>--%>
-   <%-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />--%>
+  
 </head>
 <body>
   
@@ -39,8 +35,32 @@
             <cc2:MTCheckboxItem  Testo="ciao" />
           </MTDropdownItems>
         </cc2:MTCheckbox>  
+      <br />
+      <cc2:MTCheckbox runat="server" OnValoreRestituito="Unnamed_ValoreRestituito">
 
-      
+      </cc2:MTCheckbox>
+       <br />
+      <cc2:MTCheckbox runat="server" OnValoreRestituito="Unnamed_ValoreRestituito1" CheckedInterno="true">
+        <MTDropdownItems>
+
+        </MTDropdownItems>
+      </cc2:MTCheckbox>
+       <br />
+      <cc2:MTCheckbox runat="server" >
+        <MTDropdownItems>
+          <cc2:MTCheckboxItem      />
+            <cc2:MTCheckboxItem  Testo="ciao" />
+        </MTDropdownItems>
+      </cc2:MTCheckbox>
+       <br />
+
+
+      <cc2:MTCheckbox runat="server">
+           <MTDropdownItems>
+          <cc2:MTCheckboxItem   Testo="ciao" Valore="q"   />
+            <cc2:MTCheckboxItem  Testo="ciao" Valore="q" />
+        </MTDropdownItems>
+      </cc2:MTCheckbox>
 
       <%--  <cc2:Mtmenu ID="Mtmenu1" runat="server" />--%>
 
