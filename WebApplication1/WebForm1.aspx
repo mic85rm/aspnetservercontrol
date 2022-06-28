@@ -20,47 +20,19 @@
 
  
     <form id="form1" runat="server">
-      <asp:CheckBox ID="speriamodino" runat="server" Checked="true" />
-      <asp:DropDownList runat="server" AutoPostBack="true">
-  <%--      <asp:ListItem Text="2" Value="1"> 
-          
-        </asp:ListItem>
-        <asp:ListItem Text="3" Value="4">
-
-        </asp:ListItem>--%>
-      </asp:DropDownList>
-        <cc2:MTCheckbox  runat="server" ID="provaIDboh" OnValoreRestituito="provaIDboh_ValoreRestituito"       >
-          <MTDropdownItems>
-            <cc2:MTCheckboxItem      />
-            <cc2:MTCheckboxItem  Testo="ciao" />
-          </MTDropdownItems>
-        </cc2:MTCheckbox>  
-      <br />
-      <cc2:MTCheckbox runat="server" OnValoreRestituito="Unnamed_ValoreRestituito">
-
-      </cc2:MTCheckbox>
-       <br />
-      <cc2:MTCheckbox runat="server" OnValoreRestituito="Unnamed_ValoreRestituito1" CheckedInterno="true">
-        <MTDropdownItems>
-
-        </MTDropdownItems>
-      </cc2:MTCheckbox>
-       <br />
-      <cc2:MTCheckbox runat="server" >
-        <MTDropdownItems>
-          <cc2:MTCheckboxItem      />
-            <cc2:MTCheckboxItem  Testo="ciao" />
-        </MTDropdownItems>
-      </cc2:MTCheckbox>
-       <br />
 
 
-      <cc2:MTCheckbox runat="server">
-           <MTDropdownItems>
-          <cc2:MTCheckboxItem   Testo="ciao" Valore="q"   />
-            <cc2:MTCheckboxItem  Testo="ciao" Valore="q" />
-        </MTDropdownItems>
-      </cc2:MTCheckbox>
+<%--      <asp:checkbox runat="server"></asp:checkbox>--%>
+
+    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true" FormaCheckbox="Rotonda">
+      <MTDropdownItems>
+        <cc2:MTCheckboxItem Testo="a" Valore="1" />
+      </MTDropdownItems>
+    </cc2:MTCheckbox>
+   <%--    <cc2:MTCheckbox runat="server" ID="MTCheckbox1"></cc2:MTCheckbox>
+       <cc2:MTCheckbox runat="server" ID="MTCheckbox2"></cc2:MTCheckbox>
+       <cc2:MTCheckbox runat="server" ID="MTCheckbox3"></cc2:MTCheckbox>
+       <cc2:MTCheckbox runat="server" ID="MTCheckbox4"></cc2:MTCheckbox>--%>
 
       <%--  <cc2:Mtmenu ID="Mtmenu1" runat="server" />--%>
 

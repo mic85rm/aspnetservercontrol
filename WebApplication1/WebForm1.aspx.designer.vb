@@ -23,20 +23,11 @@ Partial Public Class WebForm1
   Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
   '''<summary>
-  '''speriamodino control.
+  '''ab control.
   '''</summary>
   '''<remarks>
   '''Auto-generated field.
   '''To modify move field declaration from designer file to code-behind file.
   '''</remarks>
-  Protected WithEvents speriamodino As Global.System.Web.UI.WebControls.CheckBox
-
-  '''<summary>
-  '''provaIDboh control.
-  '''</summary>
-  '''<remarks>
-  '''Auto-generated field.
-  '''To modify move field declaration from designer file to code-behind file.
-  '''</remarks>
-  Protected WithEvents provaIDboh As Global.MTCheckbox.MTCheckbox
+  Protected WithEvents ab As Global.MTCheckbox.MTCheckbox
 End Class

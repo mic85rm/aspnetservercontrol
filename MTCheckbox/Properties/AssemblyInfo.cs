@@ -39,3 +39,4 @@ using System.Web.UI;
 [assembly: WebResource("MTCheckbox.Scripts.MTCheckbox.js", "text/javascript", PerformSubstitution = true)]
 //[assembly: WebResource("MTCheckbox.Scripts.jquery-3.6.0.min.js", "text/javascript", PerformSubstitution = true)]
 [assembly: WebResource("MTCheckbox.Image.sortdown.png", "image/png")]
+[assembly: TagPrefix("Composite_control", "MT")]

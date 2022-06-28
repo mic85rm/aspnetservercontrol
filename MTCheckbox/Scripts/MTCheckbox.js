@@ -1,6 +1,6 @@
-﻿function myFunction(nomecontrollo) {
+﻿function MTMostraSottopannello(nomecontrollo) {
  /* alert(nomecontrollo);*/
-  var stringa = nomecontrollo + '_' + 'myDropdown';
+  var stringa = nomecontrollo + '_' + 'MTmyDropdown';
   var x = document.getElementById(stringa);
   x.classList.toggle("MTshow");
   /*  document.getElementsByClassName("MTdropdown-content").item(1).classList.toggle("show");*/
@@ -8,9 +8,9 @@
   //alert('<%=myDropdown.ClientID %>');
 }
 
-function myFunction2(controlname) {
+function MTNascondiSottopannello(controlname) {
 /*  alert(controlname);*/
-  var stringa2 = controlname + '_' + 'myDropdown';
+  var stringa2 = controlname + '_' + 'MTmyDropdown';
   var x2 = document.getElementById(stringa2);
   x2.classList.remove("MTshow");
   /*  document.getElementsByClassName("MTdropdown-content").item(1).classList.remove("show");*/
