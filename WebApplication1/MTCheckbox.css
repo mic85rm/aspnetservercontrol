@@ -1,19 +1,21 @@
 ﻿/* Dropdown Button */
 .MTdropbtn {
-  /*background-color: #4CAF50;*/
-  /*color: white;*/
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+    /*background-color: #4CAF50;*/
+    /*color: white;*/
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  
 }
 
 
 
 .MTCheckbox {
-  display: inline-block;
-  vertical-align: text-top;
-  margin-top: 6px;
+    display:inline-block;
+    vertical-align: text-top;
+    margin-top: 6px;
+    
 }
 
 /*input[type='checkbox'] {
@@ -22,6 +24,16 @@
   margin-top: 6px;
 }*/
 
+.MTarrow-right:hover {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    display: inline-block;
+    vertical-align:middle;
+}
+
 .MTarrow-down {
   width: 0;
   height: 0;
@@ -29,34 +41,35 @@
   border-right: 5px solid transparent;
   border-top: 5px solid #000;
   display: inline-block;
+  
 }
+
 
 .MTarrow-right {
   width: 0;
   height: 0;
   border-top: 5px solid transparent;
-  border-left: 10px solid #000;
+  border-left: 5px solid #000;
   border-bottom: 5px solid transparent;
   display: inline-block;
+  vertical-align: middle;
 }
-
-
 
 .MTdisplayNone {
   display: none;
 }
 
 
-/* Dropdown button on hover & focus */
-.MTdropbtn:hover, .MTdropbtn:focus {
-  background-color: #3e8e41;
-}
+    /* Dropdown button on hover & focus */
+    .MTdropbtn:hover, .MTdropbtn:focus {
+        background-color: #3e8e41;
+    }
 
 /* The container <div> - needed to position the dropdown content */
 .MTdropdown {
-  position: relative;
-  display: inline-block;
-  /*border: 5px solid red;*/
+    position: relative;
+    display: inline-block;
+    /*border: 5px solid red;*/
 }
 
 
@@ -64,52 +77,49 @@
 
 /* Dropdown Content (Hidden by Default) */
 .MTdropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  /*border:1px solid red;*/
-  z-index: 100000000 !important;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*border:1px solid red;*/
+    z-index:3;
 }
 
 
 
 .MTunstyled-button {
   /*border: 1px solid red;*/
-  border: none;
+  border:none;
   padding: 0;
   background: none;
   cursor: pointer;
   text-align: left;
-  text-indent: 20px;
-  z-index: 917;
-  height: 100%;
-  width: 100%;
-  margin-left: -3px !important;
-  margin-right: -3px !important;
-  font-size: 0.78vw;
+  text-indent:20px;
+  z-index:999;
+  height:100%;
+  width:100%;
 }
 
-/* Links inside the dropdown */
-.MTdropdown-content li {
-  color: black;
-  /*padding: 12px 16px;*/
-  height: 48px;
-  width: 222px;
-  text-decoration: none;
-  display: block;
-}
+    /* Links inside the dropdown */
+    .MTdropdown-content li {
+        color: black;
+        /*padding: 12px 16px;*/
+        height:48px;
+        width:192px;
+        text-decoration: none;
+        display: block;
+    }
 
-  /* Change color of dropdown links on hover */
-  .MTdropdown-content li:hover {
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
+        /* Change color of dropdown links on hover */
+        .MTdropdown-content li:hover {
+            background-color: #f1f1f1;
+            cursor:pointer;
+        }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .MTshow {
-  display: block;
+    display: block;
 }
 
 
@@ -124,7 +134,7 @@
     border-radius: 50%;
     cursor: pointer;
     height: 12px;
-    left: 12px;
+    left: 0;
     position: absolute;
     top: 0;
     width: 12px;
@@ -152,7 +162,7 @@
     .MTround input[type="checkbox"]:checked + label {
       background-color: #3c3e3c;
       border-color: #3c3e3c;
-      margin-top: 4px;
+      margin-top:4px;
     }
 
       .MTround input[type="checkbox"]:checked + label:after {

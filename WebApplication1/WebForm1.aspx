@@ -10,8 +10,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   
-
+  <script src="MTCheckbox.js"></script>
+  <link href="MTCheckbox.css" rel="stylesheet" />
     <title></title>
   
 </head>
@@ -24,7 +24,7 @@
 
 <%--      <asp:checkbox runat="server"></asp:checkbox>--%>
 
-    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true" FormaCheckbox="Rotonda">
+    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true" FormaCheckbox="Rotonda"   MTAutoPostBack="true"  OnValoreRestituito="ab_ValoreRestituito"   >
       <MTDropdownItems>
         <cc2:MTCheckboxItem Testo="a" Valore="1" />
       </MTDropdownItems>

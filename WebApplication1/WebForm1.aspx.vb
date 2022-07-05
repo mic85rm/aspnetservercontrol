@@ -12,36 +12,7 @@ Public Class WebForm1
     If Not Me.IsPostBack Then
       'speriamodino.Checked = False
 
-      Dim michele As MTCheckbox.MTCheckbox = New MTCheckbox.MTCheckbox()
-      Dim itemmichele = New MTCheckbox.MTCheckboxItem
-      itemmichele.Testo = "funziona"
-      itemmichele.Valore = "a"
-      michele.MTDropdownItems.Add(itemmichele)
-      michele.ID = "provamichelewow"
-      michele.Visible = True
-
-      'Dim michele2 As New MTCheckbox.MTCheckbox
-
-      'michele2.ID = "stavoltasi"
-
-      'michele2.CheckedInterno = True
-      'michele2.Visible = True
-
-      Dim michela As New Label()
-      michela.Text = "ciao"
-
-      Dim miche As New DropDownList
-
-      Me.Form.Controls.Add(miche)
-
-
     End If
-    Dim michele2 As New MTCheckbox.MTCheckbox
-
-    michele2.ID = "stavoltasi"
-
-    michele2.Selezionato = True
-    michele2.Visible = True
 
     'Form.Controls.Add(michele2)
 
@@ -150,5 +121,11 @@ Public Class WebForm1
 
   Protected Sub a_DataBinding(sender As Object, e As EventArgs)
 
+  End Sub
+
+  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
+    If e.ValoreRestituito = 1 Then
+
+    End If
   End Sub
 End Class

@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MTCheckbox</RootNamespace>
     <AssemblyName>MTCheckbox</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MTCheckbox.cs" />
+    <Compile Include="MTCheckboxEventArgs.cs" />
     <Compile Include="MTCheckboxItem.cs" />
     <Compile Include="MTCheckboxItemCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

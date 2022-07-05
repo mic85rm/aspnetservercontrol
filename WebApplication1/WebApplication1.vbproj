@@ -49,7 +49,8 @@
     <Reference Include="ClassLibrary3">
       <HintPath>..\ClassLibrary3\bin\Debug\ClassLibrary3.dll</HintPath>
     </Reference>
-    <Reference Include="MTCheckbox">
+    <Reference Include="MTCheckbox, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\MTCheckbox\bin\Debug\MTCheckbox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -99,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jquery.slimmenu.min.js" />
+    <Content Include="MTCheckbox.css" />
+    <Content Include="MTCheckbox.js" />
     <Content Include="navbar.js" />
     <Content Include="slimmenu.min.css" />
     <Content Include="StyleSheet1.css" />

@@ -29,7 +29,10 @@ namespace MTCheckbox
     private Button button;
     private bool _itemChecked;
     private Forma _rotondoQuadrato;
+    private string _MTCSSClass;
+    private string _MTJS;
     HtmlGenericControl labelRound;
+    private Boolean _MTAutoPostBack;
 
     public enum Forma
     {
@@ -79,6 +82,42 @@ namespace MTCheckbox
 
 
 
+
+    [Bindable(false)]
+    [Category("Option")]
+    [DefaultValue("MTCheckbox.Css.MTCheckbox.css")]
+    [Localizable(true)]
+    [CssClassProperty]
+    public virtual string MTCssClass  // property
+    {
+      get { return _MTCSSClass; }   // get method
+      set { _MTCSSClass = value; }  // set method
+    }
+
+    [Bindable(false)]
+    [Category("Option")]
+    [DefaultValue("MTCheckbox.Scripts.MTCheckbox.js")]
+    [Localizable(true)]
+    [CssClassProperty]
+    public virtual string MTJS  // property
+    {
+      get { return _MTJS; }   // get method
+      set { _MTJS = value; }  // set method
+    }
+
+
+    [Bindable(false)]
+    [Category("Option")]
+    [DefaultValue(false)]
+    public virtual Boolean MTCheckBoxAutoPostBack  // property
+    {
+      get { return _MTAutoPostBack; }   // get method
+      set { _MTAutoPostBack = value; }  // set method
+    }
+
+
+
+
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
     [PersistenceMode(PersistenceMode.InnerProperty)]
     public MTCheckboxItemCollection MTDropdownItems
@@ -122,6 +161,8 @@ namespace MTCheckbox
         {
           labelRound.Attributes.Add("for", string.Format("{0}_MTcheckbox", this.ClientID.ToString().Trim()));//nuovo
         }
+          
+        
         Controls.Add(MTCheckboxControllo);
         
         base.CreateChildControls();
@@ -147,6 +188,7 @@ namespace MTCheckbox
         this.MTChk.ID = "MTcheckbox";
         this.MTChk.InputAttributes.Add("class", "MTCheckbox");
         this.MTChk.Checked = Selezionato;
+        this.MTChk.AutoPostBack = MTCheckBoxAutoPostBack;
 
         this.iHtml = new HtmlGenericControl("i");
         this.iHtml.Visible = true;
@@ -312,15 +354,15 @@ namespace MTCheckbox
     protected override void OnPreRender(EventArgs e)
         {
            
-            Page.ClientScript.RegisterClientScriptResource(typeof(MTCheckbox), "MTCheckbox.Scripts.MTCheckbox.js");
-            Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Image.sortdown.png");
+            //Page.ClientScript.RegisterClientScriptResource(typeof(MTCheckbox), "MTCheckbox.Scripts.MTCheckbox.js");
+            //Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Image.sortdown.png");
 
 
-            HtmlLink cssSource = new HtmlLink();
-            cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
-            cssSource.Attributes["rel"] = "stylesheet";
-            cssSource.Attributes["type"] = "text/css";
-            Page.Header.Controls.Add(cssSource); 
+            //HtmlLink cssSource = new HtmlLink();
+            //cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
+            //cssSource.Attributes["rel"] = "stylesheet";
+            //cssSource.Attributes["type"] = "text/css";
+            //Page.Header.Controls.Add(cssSource); 
     
         }
 
@@ -342,23 +384,23 @@ namespace MTCheckbox
   }
 
 
-  public class MTCheckboxEventArgs : EventArgs
-  {
-    private string _valoreRestituito;
+  //public class MTCheckboxEventArgs : EventArgs
+  //{
+  //  private string _valoreRestituito;
 
-    public MTCheckboxEventArgs(string valoreRestituito)
-    {
-      this._valoreRestituito = valoreRestituito;
-    }
+  //  public MTCheckboxEventArgs(string valoreRestituito)
+  //  {
+  //    this._valoreRestituito = valoreRestituito;
+  //  }
 
-    public string ValoreRestituito
-    {
-      get
-      {
-        return this._valoreRestituito;
-      }
-    }
-  }
+  //  public string ValoreRestituito
+  //  {
+  //    get
+  //    {
+  //      return this._valoreRestituito;
+  //    }
+  //  }
+  //}
 
 
   public delegate void MTCheckboxEventArgsHandler(object sender, MTCheckboxEventArgs e);
