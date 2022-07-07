@@ -104,24 +104,20 @@ Public Class WebForm1
 
   End Sub
 
-  Protected Sub provaIDboh_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
-    Dim valore = e.ValoreRestituito
-  End Sub
 
-  Protected Sub Unnamed_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
-
-  End Sub
-
-  Protected Sub Unnamed_ValoreRestituito1(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
-
-  End Sub
 
   Protected Sub a_DataBinding(sender As Object, e As EventArgs)
 
   End Sub
 
-  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxEventArgs)
-    If e.ValoreRestituito = 1 Then
+  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxMenuEventArgs)
+    If e.ValoreRestituito = "1" Then
+
+    End If
+  End Sub
+
+  Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckbox.MTCheckboxCHKEventArgs)
+    If e.ChkSelezionata = False Then
 
     End If
   End Sub

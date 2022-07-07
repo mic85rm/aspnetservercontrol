@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MTCheckbox.cs" />
-    <Compile Include="MTCheckboxEventArgs.cs" />
+    <Compile Include="MTCheckboxCHKEventArgs.cs" />
+    <Compile Include="MTCheckboxMenuEventArgs.cs" />
     <Compile Include="MTCheckboxItem.cs" />
     <Compile Include="MTCheckboxItemCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -25,7 +25,7 @@
         <ContentTemplate>
 <%--      <asp:checkbox runat="server"></asp:checkbox>--%>
 
-    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true"  MTCheckBoxAutoPostBack="false"    OnValoreRestituito="ab_ValoreRestituito"   >
+    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true"  AutoPostBack="true" OnValoreRestituito="ab_ValoreRestituito"   OnCheckSelezionata="ab_CheckSelezionata"     >
       <MTDropdownItems>
         <cc2:MTCheckboxItem Testo="a" Valore="1" />
       </MTDropdownItems>

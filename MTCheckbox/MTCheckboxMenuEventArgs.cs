@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace MTCheckbox
 {
-  public class MTCheckboxEventArgs : EventArgs
+  public class MTCheckboxMenuEventArgs : EventArgs
   {
     private string _valoreRestituito;
 
-    public MTCheckboxEventArgs(string valoreRestituito)
+    public MTCheckboxMenuEventArgs(string valoreRestituito)
     {
       this._valoreRestituito = valoreRestituito;
     }
