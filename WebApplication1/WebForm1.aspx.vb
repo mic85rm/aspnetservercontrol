@@ -9,10 +9,7 @@ Public Class WebForm1
   'Public Overrides Sub VerifyRenderingInServerForm(control As Control)
   'End Sub
   Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-    If Not Me.IsPostBack Then
-      'speriamodino.Checked = False
 
-    End If
 
     'Form.Controls.Add(michele2)
 

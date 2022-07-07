@@ -23,6 +23,15 @@ Partial Public Class WebForm1
   Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
   '''<summary>
+  '''SM control.
+  '''</summary>
+  '''<remarks>
+  '''Auto-generated field.
+  '''To modify move field declaration from designer file to code-behind file.
+  '''</remarks>
+  Protected WithEvents SM As Global.System.Web.UI.ScriptManager
+
+  '''<summary>
   '''ab control.
   '''</summary>
   '''<remarks>

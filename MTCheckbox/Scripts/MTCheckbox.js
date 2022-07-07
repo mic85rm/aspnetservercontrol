@@ -1,5 +1,5 @@
 ﻿function MTMostraSottopannello(nomecontrollo) {
- /* alert(nomecontrollo);*/
+  /* alert(nomecontrollo);*/
   var stringa = nomecontrollo + '_' + 'MTmyDropdown';
   var x = document.getElementById(stringa);
   x.classList.toggle("MTshow");
@@ -9,7 +9,7 @@
 }
 
 function MTNascondiSottopannello(controlname) {
-/*  alert(controlname);*/
+  /*  alert(controlname);*/
   var stringa2 = controlname + '_' + 'MTmyDropdown';
   var x2 = document.getElementById(stringa2);
   x2.classList.remove("MTshow");
@@ -18,7 +18,7 @@ function MTNascondiSottopannello(controlname) {
 }
 
 //function cliccaMTChkbox(nameofcontrol) {
- 
+
 //  var stringa = nameofcontrol + '_' + 'MTcheckbox';
 //  var x = document.getElementById(stringa);
 //  x.checked = true;

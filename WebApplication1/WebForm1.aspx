@@ -20,15 +20,18 @@
 
  
     <form id="form1" runat="server">
-
-
+      <asp:ScriptManager ID="SM" runat="server" EnablePageMethods="true" EnableScriptGlobalization="true" AsyncPostBackTimeout="10000000"></asp:ScriptManager>
+      <asp:UpdatePanel runat="server" UpdateMode="Always">
+        <ContentTemplate>
 <%--      <asp:checkbox runat="server"></asp:checkbox>--%>
 
-    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true" FormaCheckbox="Rotonda"   MTAutoPostBack="true"  OnValoreRestituito="ab_ValoreRestituito"   >
+    <cc2:MTCheckbox runat="server" ID="ab"   Selezionato="true"  MTCheckBoxAutoPostBack="false"    OnValoreRestituito="ab_ValoreRestituito"   >
       <MTDropdownItems>
         <cc2:MTCheckboxItem Testo="a" Valore="1" />
       </MTDropdownItems>
     </cc2:MTCheckbox>
+          </ContentTemplate>
+        </asp:UpdatePanel>
    <%--    <cc2:MTCheckbox runat="server" ID="MTCheckbox1"></cc2:MTCheckbox>
        <cc2:MTCheckbox runat="server" ID="MTCheckbox2"></cc2:MTCheckbox>
        <cc2:MTCheckbox runat="server" ID="MTCheckbox3"></cc2:MTCheckbox>
