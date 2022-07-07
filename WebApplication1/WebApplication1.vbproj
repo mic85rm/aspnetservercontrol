@@ -100,8 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jquery.slimmenu.min.js" />
-    <Content Include="MTCheckbox.css" />
-    <Content Include="MTCheckbox.js" />
     <Content Include="navbar.js" />
     <Content Include="slimmenu.min.css" />
     <Content Include="StyleSheet1.css" />

@@ -35,6 +35,9 @@ namespace MTCheckbox
     private HtmlGenericControl labelRound;
     private Boolean _MTAutoPostBack;
 
+
+
+    public const string SCRIPTLIBRARY_SCRIPT_RESOURCE = "MTCheckbox.Scripts.MTCheckbox.js";
     public enum Forma
     {
       Quadrata,
@@ -84,27 +87,27 @@ namespace MTCheckbox
 
 
 
-    [Bindable(false)]
-    [Category("Option")]
-    [DefaultValue("MTCheckbox.Css.MTCheckbox.css")]
-    [Localizable(true)]
-    [CssClassProperty]
-    public virtual string MTCssClass  // property
-    {
-      get { return _MTCSSClass; }   // get method
-      set { _MTCSSClass = value; }  // set method
-    }
+    //[Bindable(false)]
+    //[Category("Option")]
+    //[DefaultValue("MTCheckbox.Css.MTCheckbox.css")]
+    //[Localizable(true)]
+    //[CssClassProperty]
+    //public virtual string MTCssClass  // property
+    //{
+    //  get { return _MTCSSClass; }   // get method
+    //  set { _MTCSSClass = value; }  // set method
+    //}
 
-    [Bindable(false)]
-    [Category("Option")]
-    [DefaultValue("MTCheckbox.Scripts.MTCheckbox.js")]
-    [Localizable(true)]
-    [CssClassProperty]
-    public virtual string MTJS  // property
-    {
-      get { return _MTJS; }   // get method
-      set { _MTJS = value; }  // set method
-    }
+    //[Bindable(false)]
+    //[Category("Option")]
+    //[DefaultValue("MTCheckbox.Scripts.MTCheckbox.js")]
+    //[Localizable(true)]
+    //[CssClassProperty]
+    //public virtual string MTJS  // property
+    //{
+    //  get { return _MTJS; }   // get method
+    //  set { _MTJS = value; }  // set method
+    //}
 
 
     [Bindable(false)]
@@ -166,6 +169,22 @@ namespace MTCheckbox
         
         Controls.Add(MTCheckboxControllo);
         
+        
+
+
+
+        HtmlLink cssSource = new HtmlLink();
+        cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
+        cssSource.Attributes["rel"] = "stylesheet";
+        cssSource.Attributes["type"] = "text/css";
+        //Page.Header.Controls.Add(cssSource);
+        Controls.Add(cssSource);
+
+        
+
+  
+
+
         base.CreateChildControls();
       }
       catch (Exception a)
@@ -362,19 +381,16 @@ namespace MTCheckbox
 
 
     protected override void OnPreRender(EventArgs e)
-        {
-           
-            //Page.ClientScript.RegisterClientScriptResource(typeof(MTCheckbox), "MTCheckbox.Scripts.MTCheckbox.js");
-            //Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Image.sortdown.png");
+    {
+      
+
+      base.OnPreRender(e);
+      string scriptStr = "<script src="+ Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Scripts.MTCheckbox.js")+" type=\"text/javascript\">";
+      ClientScriptManager csm = Page.ClientScript;
+      csm.RegisterClientScriptBlock(this.Page.GetType(), "MyScriptTag", scriptStr);
 
 
-            //HtmlLink cssSource = new HtmlLink();
-            //cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
-            //cssSource.Attributes["rel"] = "stylesheet";
-            //cssSource.Attributes["type"] = "text/css";
-            //Page.Header.Controls.Add(cssSource); 
-    
-        }
+    }
 
     public void RaisePostBackEvent(string eventArgument)
     {

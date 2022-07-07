@@ -117,7 +117,7 @@ Public Class WebForm1
   End Sub
 
   Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckbox.MTCheckboxCHKEventArgs)
-    If e.ChkSelezionata = False Then
+    If e.CheckSelezionata = False Then
 
     End If
   End Sub
