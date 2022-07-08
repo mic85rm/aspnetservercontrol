@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientScriptProxy.cs" />
     <Compile Include="MTCheckbox.cs" />
     <Compile Include="MTCheckboxCHKEventArgs.cs" />
     <Compile Include="MTCheckboxMenuEventArgs.cs" />

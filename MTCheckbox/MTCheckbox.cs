@@ -11,6 +11,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
+
 namespace MTCheckbox
 {
   [ParseChildren(true)]
@@ -35,8 +36,10 @@ namespace MTCheckbox
     private string _MTJS;
     private HtmlGenericControl labelRound;
     private Boolean _MTAutoPostBack;
+    ClientScriptProxy ClientScriptProxy;
 
-
+    public delegate void MTCheckboxMenuEventArgsHandler(object sender, MTCheckboxMenuEventArgs e);
+    public delegate void MTCheckboxCHKEventArgsHandler(object sender, MTCheckboxCHKEventArgs e);
 
     public const string SCRIPTLIBRARY_SCRIPT_RESOURCE = "MTCheckbox.Scripts.MTCheckbox.js";
     public enum Forma
@@ -178,21 +181,14 @@ namespace MTCheckbox
         cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
         cssSource.Attributes["rel"] = "stylesheet";
         cssSource.Attributes["type"] = "text/css";
-        //Page.Header.Controls.Add(cssSource);
-        Controls.Add(cssSource);
-        
-        // GenerateJsTag(this.Page, Page.ClientScript.GetWebResourceUrl(this.GetType(), SCRIPTLIBRARY_SCRIPT_RESOURCE));
+        Page.Header.Controls.Add(cssSource);
+       // Page.Controls.Add(cssSource);
 
-        //var jsLink = new HtmlGenericControl { TagName = "script", InnerHtml = " function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}" };
-        //jsLink.Attributes.Add("type", "text/javascript");
-        //Controls.Add(jsLink);
-        //Page.Controls.AddAt(Page.Controls.Count-2,jsLink);
-        //Page page = HttpContext.Current.CurrentHandler as Page;
-        //page.Header.Controls.Add(jsLink);
-        //page.Controls.Add(jsLink);
-        //page.ClientScript.RegisterClientScriptInclude("MTJS3", page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Scripts.MTCheckbox.js"));
-        //page.ClientScript.RegisterStartupScript(page.GetType(),"MTJS", "<script> function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}</script>");
-        //ScriptManager.RegisterStartupScript(page, page.GetType(), "MTJS2", "function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}", true);
+        this.ClientScriptProxy.RegisterClientScriptResource(this, this.GetType(), SCRIPTLIBRARY_SCRIPT_RESOURCE);
+
+
+
+     
         base.CreateChildControls();
       }
       catch (Exception a)
@@ -345,71 +341,20 @@ namespace MTCheckbox
 
     }
 
-    //protected override void Render(HtmlTextWriter writer)
-    //{
-    //  writer.Indent = 4;
+    
 
-    //  //if (Page != null)
-    //  //{
-    //  //  if (!Page.Controls.Contains(this))
-    //  //  {
-    //  //    Page.VerifyRenderingInServerForm(this);
-    //  //  }
-    //  //  else { return; }
-    //  //}
-    //  this.RenderContents(writer);
-    //  this.EnsureChildControls();
+    protected override void OnInit(EventArgs e)
 
-    //  //base.Render(writer);
+    {
+
+      this.ClientScriptProxy = ClientScriptProxy.Current;
+
+      base.OnInit(e);
+
+    }
 
 
-    //}
-
-    //protected override void RenderContents(HtmlTextWriter writer)
-    //{
-    //  writer.Indent = 4;
-
-
-    //  //this.RenderContents(writer);
-    //  this.EnsureChildControls();
-
-    //  //base.Render(writer);
-
-
-    //}
-
-
-    //protected override void AddAttributesToRender(HtmlTextWriter writer)
-    //{
-    //  base.AddAttributesToRender(writer);
-
-
-
-    //}
-
-    //protected override void OnInit(EventArgs e)
-    //{
-    //  Page.ClientScript.RegisterStartupScript(this.GetType(), "MTJS", "<script> function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}</script>");
-    //}
-
-    //protected override void OnLoad(EventArgs e)
-    //{
-    //  Page.ClientScript.RegisterStartupScript(this.GetType(), "MTJS", "<script> function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}</script>");
-    //}
-
-
-    //protected override void OnPreRender(EventArgs e)
-    //{
-
-    //  Page.ClientScript.RegisterStartupScript(this.GetType(), "MTJS", "<script> function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}</script>");
-    //  base.OnPreRender(e);
-    //  //string scriptStr = "<script src="+ Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Scripts.MTCheckbox.js")+" type=\"text/javascript\">";
-    //  //ClientScriptManager csm = Page.ClientScript;
-    //  //csm.RegisterClientScriptBlock(this.Page.GetType(), "MyScriptTag", scriptStr);
-
-    //  Page.ClientScript.RegisterStartupScript(this.GetType(), "MTJS", "<script> function MTMostraSottopannello(nomecontrollo){var stringa = nomecontrollo + \'_\' + \'MTmyDropdown\'; var x = document.getElementById(stringa);x.classList.toggle(\"MTshow\");}function MTNascondiSottopannello(controlname){var stringa2 = controlname + '_' + 'MTmyDropdown';var x2 = document.getElementById(stringa2);x2.classList.remove(\"MTshow\");}</script>");
-    //}
-
+ 
     public void RaisePostBackEvent(string eventArgument)
     {
       
@@ -440,27 +385,7 @@ namespace MTCheckbox
 
 
 
-//public class MTCheckboxEventArgs : EventArgs
-//{
-//  private string _valoreRestituito;
 
-//  public MTCheckboxEventArgs(string valoreRestituito)
-//  {
-//    this._valoreRestituito = valoreRestituito;
-//  }
-
-//  public string ValoreRestituito
-//  {
-//    get
-//    {
-//      return this._valoreRestituito;
-//    }
-//  }
-//}
-
-
-public delegate void MTCheckboxMenuEventArgsHandler(object sender, MTCheckboxMenuEventArgs e);
-public delegate void MTCheckboxCHKEventArgsHandler(object sender, MTCheckboxCHKEventArgs e);
 
 
 
