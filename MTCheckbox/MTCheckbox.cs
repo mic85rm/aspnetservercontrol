@@ -1,18 +1,12 @@
-﻿using MTCheckbox;
-using MTCheckbox.WebControls;
+﻿using MTCheckboxNS.WebControls;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 
-namespace MTCheckbox
+namespace MTCheckboxNS
 {
   [ParseChildren(true)]
   
@@ -163,6 +157,7 @@ namespace MTCheckbox
         InizializzaControllo();
         int conta = Controls.Count;
         this.Controls.Clear();
+     
         this.MTCheckboxWidth.Attributes.Add("onmouseleave", string.Format("MTNascondiSottopannello('{0}');", this.ClientID.ToString()));
         this.FrecciaINBasso.Attributes.Add("onmouseenter", string.Format("MTMostraSottopannello('{0}');", this.ClientID.ToString()));
         if (_rotondoQuadrato == Forma.Rotonda)

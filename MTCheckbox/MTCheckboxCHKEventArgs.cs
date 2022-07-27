@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MTCheckbox
+namespace MTCheckboxNS
 {
   public class MTCheckboxCHKEventArgs : EventArgs
   {

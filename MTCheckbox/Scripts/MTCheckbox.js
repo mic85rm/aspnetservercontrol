@@ -1,8 +1,22 @@
 ﻿function MTMostraSottopannello(nomecontrollo) {
   /* alert(nomecontrollo);*/
   var stringa = nomecontrollo + '_' + 'MTmyDropdown';
+  /*console.log(stringa);*/
   var x = document.getElementById(stringa);
-  x.classList.toggle("MTshow");
+  /*console.log(x);*/
+  /* var x = document.getElementById('<%=nomecontrollo.ClientID %>');*/
+  if (x) {
+    x.classList.toggle("MTshow");
+  }
+    else {
+    var stringac = nomecontrollo + '_' + 'MTmyDropdown' + '_' + nomecontrollo.substr(nomecontrollo.length - 1);
+    //console.log(nomecontrollo);
+    //console.log(stringac);
+    var x = document.getElementById(stringac);
+  /*  console.log(stringac);*/
+    x.classList.toggle("MTshow");
+    }
+  
   /*  document.getElementsByClassName("MTdropdown-content").item(1).classList.toggle("show");*/
   //document.getElementById('<%=myDropdown.ClientID %>').classList.toggle("show");
   //alert('<%=myDropdown.ClientID %>');
@@ -12,7 +26,18 @@ function MTNascondiSottopannello(controlname) {
   /*  alert(controlname);*/
   var stringa2 = controlname + '_' + 'MTmyDropdown';
   var x2 = document.getElementById(stringa2);
-  x2.classList.remove("MTshow");
+  if (x2) {
+  /*var x2 = document.getElementById('<%=stringa2.ClientID %>');*/
+    x2.classList.remove("MTshow");
+  }
+  else {
+    var stringac2 = controlname + '_' + 'MTmyDropdown' + '_' + controlname.substr(controlname.length - 1);
+    //console.log(nomecontrollo);
+    //console.log(stringac);
+    var x2 = document.getElementById(stringac2);
+    /*console.log(stringac);*/
+    x2.classList.toggle("MTshow");
+  }
   /*  document.getElementsByClassName("MTdropdown-content").item(1).classList.remove("show");*/
   /*document.getElementById('<%=myDropdown.ClientID %>').classList.remove("show");*/
 }

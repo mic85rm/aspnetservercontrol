@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
+Imports MTCheckboxNS
 
 Public Class WebForm1
-  Inherits System.Web.UI.Page
+  Inherits UI.Page
   ReadOnly conString As SqlConnection = New SqlConnection(ConfigurationManager.AppSettings("db"))
   Private Const K_SP_MENU As String = "BSP_sysGetMenuFunzioni"
 
@@ -110,13 +111,13 @@ Public Class WebForm1
 
   End Sub
 
-  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxMenuEventArgs)
+  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckboxNS.MTCheckboxMenuEventArgs)
     If e.ValoreRestituito = "1" Then
 
     End If
   End Sub
 
-  Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckbox.MTCheckboxCHKEventArgs)
+  Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckboxNS.MTCheckboxCHKEventArgs)
     If e.CheckSelezionata = False Then
 
     End If
