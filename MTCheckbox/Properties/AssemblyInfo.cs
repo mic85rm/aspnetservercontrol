@@ -33,8 +33,8 @@ using System.Web.UI;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.1")]
-[assembly: AssemblyFileVersion("1.0.1.1")]
+[assembly: AssemblyVersion("1.0.5.9")]
+[assembly: AssemblyFileVersion("1.0.5.9")]
 [assembly: WebResource("MTCheckbox.Css.MTCheckbox.css", "text/css", PerformSubstitution = true)]
 [assembly: WebResource("MTCheckbox.Scripts.MTCheckbox.js", "text/javascript", PerformSubstitution = true)]
 //[assembly: WebResource("MTCheckbox.Scripts.jquery-3.6.0.min.js", "text/javascript", PerformSubstitution = true)]

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI;
 
-namespace MTCheckboxNS
+namespace MTCheckbox
 {
   [ToolboxData("<{0}:MTCheckboxItem runat=server></{0}:MTCheckboxItem>")]
   public class MTCheckboxItem:INamingContainer

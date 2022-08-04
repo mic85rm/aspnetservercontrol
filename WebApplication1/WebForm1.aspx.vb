@@ -111,13 +111,13 @@ Public Class WebForm1
 
   End Sub
 
-  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckboxNS.MTCheckboxMenuEventArgs)
+  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxMenuEventArgs)
     If e.ValoreRestituito = "1" Then
 
     End If
   End Sub
 
-  Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckboxNS.MTCheckboxCHKEventArgs)
+  Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckbox.MTCheckboxCHKEventArgs)
     If e.CheckSelezionata = False Then
 
     End If

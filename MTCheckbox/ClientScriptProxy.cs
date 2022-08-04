@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 
-namespace MTCheckboxNS
+namespace MTCheckbox
 {
   /// <summary>
 

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MTCheckboxNS.WebControls
+namespace MTCheckbox.WebControls
 {
   public class MTCheckboxItemCollection: CollectionBase
   {

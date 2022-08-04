@@ -49,9 +49,8 @@
     <Reference Include="ClassLibrary3">
       <HintPath>..\ClassLibrary3\bin\Debug\ClassLibrary3.dll</HintPath>
     </Reference>
-    <Reference Include="MTWebControl, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MTCheckbox\bin\Debug\MTWebControl.dll</HintPath>
+    <Reference Include="MTWebControl">
+      <HintPath>..\MTCheckbox\bin\Release\MTWebControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

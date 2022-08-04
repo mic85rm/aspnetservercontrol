@@ -1,12 +1,13 @@
-﻿using MTCheckboxNS.WebControls;
+﻿using MTCheckbox.WebControls;
 using System;
 using System.ComponentModel;
+using System.Text;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 
-namespace MTCheckboxNS
+namespace MTCheckbox
 {
   [ParseChildren(true)]
   
@@ -167,17 +168,21 @@ namespace MTCheckboxNS
           
         
         Controls.Add(MTCheckboxControllo);
-        
-        
+
+
 
 
 
         HtmlLink cssSource = new HtmlLink();
-        cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
+        cssSource.Href = this.ClientScriptProxy.GetWebResourceUrl(this, this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
         cssSource.Attributes["rel"] = "stylesheet";
         cssSource.Attributes["type"] = "text/css";
-        Page.Header.Controls.Add(cssSource);
-       // Page.Controls.Add(cssSource);
+        //Page.Header.Controls.Add(cssSource);
+        this.Controls.Add(cssSource);
+
+
+
+
 
         this.ClientScriptProxy.RegisterClientScriptResource(this, this.GetType(), SCRIPTLIBRARY_SCRIPT_RESOURCE);
 
@@ -343,7 +348,12 @@ namespace MTCheckboxNS
     {
 
       this.ClientScriptProxy = ClientScriptProxy.Current;
-
+      HtmlLink cssSource = new HtmlLink();
+      cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
+      cssSource.Attributes["rel"] = "stylesheet";
+      cssSource.Attributes["type"] = "text/css";
+      Page.Header.Controls.Add(cssSource);
+      this.Controls.Add(cssSource);
       base.OnInit(e);
 
     }
