@@ -9,10 +9,12 @@ namespace MTCheckbox
   public class MTCheckboxCHKEventArgs : EventArgs
   {
     private Boolean _chkSelezionata;
+    private string _chkIDSelezionata;
 
-    public MTCheckboxCHKEventArgs(Boolean chkSelezionata)
+    public MTCheckboxCHKEventArgs(Boolean chkSelezionata,string chkIDSelezionata)
     {
       this._chkSelezionata = chkSelezionata;
+      this._chkIDSelezionata = chkIDSelezionata;
     }
 
     public Boolean CheckSelezionata
@@ -22,5 +24,14 @@ namespace MTCheckbox
         return this._chkSelezionata;
       }
     }
+
+    public string IDCheckSelezionata
+    {
+      get
+      {
+        return this._chkIDSelezionata;
+      }
+    }
+
   }
 }

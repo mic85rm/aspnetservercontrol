@@ -1,11 +1,14 @@
 ﻿function MTMostraSottopannello(nomecontrollo) {
-  /* alert(nomecontrollo);*/
-  var stringa = nomecontrollo + '_' + 'MTmyDropdown';
-  /*console.log(stringa);*/
+  //alert(nomecontrollo);
+ // var stringa = nomecontrollo + '_' + 'MTmyDropdown';
+  var stringa = nomecontrollo.replace("chk","MTmyDropdown");
+/*  console.log(stringa);*/
+  
   var x = document.getElementById(stringa);
-  /*console.log(x);*/
+
   /* var x = document.getElementById('<%=nomecontrollo.ClientID %>');*/
   if (x) {
+   // alert(stringa);
     x.classList.toggle("MTshow");
   }
     else {
@@ -23,10 +26,13 @@
 }
 
 function MTNascondiSottopannello(controlname) {
-  /*  alert(controlname);*/
-  var stringa2 = controlname + '_' + 'MTmyDropdown';
+    //alert(controlname);
+  /*  var stringa2 = controlname + '_' + 'MTmyDropdown';*/
+  var stringa2 = controlname.replace("chk", "MTmyDropdown");
+
   var x2 = document.getElementById(stringa2);
   if (x2) {
+   /* alert(stringa2);*/
   /*var x2 = document.getElementById('<%=stringa2.ClientID %>');*/
     x2.classList.remove("MTshow");
   }

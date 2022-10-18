@@ -10,28 +10,39 @@ using System.Web.UI.WebControls;
 namespace MTCheckbox
 {
   [ParseChildren(true)]
-  
+
+  [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
   [ToolboxData("<{0}:MTCheckbox runat=server></{0}:MTCheckbox>")]
-    public class MTCheckbox:WebControl,INamingContainer,IPostBackEventHandler
+    public class MTCheckbox:WebControl,IPostBackEventHandler
     {
 
 
     private MTCheckboxItemCollection MTdropdownItems;
-    private CheckBox MTChk;
+    //private CheckBox MTChk;
+    private HtmlInputCheckBox MTChk;
+    private HtmlButton hiddenButtonMTChk;
+    private HiddenField hiddenField;
+    private PlaceHolder placeHolder;
     private Panel FrecciaINBasso;
     private HtmlGenericControl iHtml;
     private HtmlGenericControl liHtml;
     private Panel PannelloItem;
     private Panel MTCheckboxControllo;
     private Panel MTCheckboxWidth;
-    private Button button;
+    private HtmlButton button;
     private bool _itemChecked;
     private Forma _rotondoQuadrato;
     private string _MTCSSClass;
     private string _MTJS;
     private HtmlGenericControl labelRound;
-    private Boolean _MTAutoPostBack;
+    private Boolean _MTAutoPostBackCHK;
+    private Boolean _MTAutoPostBackMENU;
+
     ClientScriptProxy ClientScriptProxy;
+  
+
+    //public event EventHandler Click;
+    //public event EventHandler Checked;
 
     public delegate void MTCheckboxMenuEventArgsHandler(object sender, MTCheckboxMenuEventArgs e);
     public delegate void MTCheckboxCHKEventArgsHandler(object sender, MTCheckboxCHKEventArgs e);
@@ -42,7 +53,35 @@ namespace MTCheckbox
       Quadrata,
       Rotonda
     }
-    
+
+    //protected virtual void Prova(EventArgs e)
+    //{
+    //  if (Checked != null)
+    //  {
+    //    Checked(this, e);
+    //  }
+    //}
+
+
+
+
+    //protected virtual void OnClick(EventArgs e)
+    //{
+     
+    //  if (Click != null)
+    //  {
+    //    Click(this, e);
+    //  }
+   
+    //}
+
+    public void RaisePostBackEvent(string eventArgument)
+    {
+      //string prova = eventArgument;
+      //OnClick(new EventArgs());
+      //Prova(new EventArgs());
+    }
+
 
     //private Boolean checkedInterno; // field
 
@@ -109,14 +148,24 @@ namespace MTCheckbox
     //}
 
 
-    [Bindable(false)]
+    [Bindable(true)]
     [Category("Option")]
     [DefaultValue(false)]
-    public virtual Boolean AutoPostBack  // property
+    public virtual Boolean AutoPostBackCHK // property
     {
-      get { return _MTAutoPostBack; }   // get method
-      set { _MTAutoPostBack = value; }  // set method
+      get { return _MTAutoPostBackCHK; }   // get method
+      set { _MTAutoPostBackCHK = value; }  // set method
     }
+
+    [Bindable(true)]
+    [Category("Option")]
+    [DefaultValue(false)]
+    public virtual Boolean AutoPostBackMENU // property
+    {
+      get { return _MTAutoPostBackMENU; }   // get method
+      set { _MTAutoPostBackMENU = value; }  // set method
+    }
+
 
 
 
@@ -165,11 +214,11 @@ namespace MTCheckbox
         {
           labelRound.Attributes.Add("for", string.Format("{0}_MTcheckbox", this.ClientID.ToString().Trim()));//nuovo
         }
-          
-        
+
+        //Attributes.Add("onclick", string.Format("__doPostBack('{0}','');",MTChk.UniqueID+button.UniqueID));
+        //this.bottoneCliccato += Button_Click;
+
         Controls.Add(MTCheckboxControllo);
-
-
 
 
 
@@ -200,24 +249,54 @@ namespace MTCheckbox
       
     }
 
+    
+
    
 
     private Boolean InizializzaControllo()
     {
 
-     
+      this.placeHolder = new PlaceHolder();
+
+      
       try
       {
-        this.MTChk = new CheckBox();
-        this.MTChk.ID = "MTcheckbox";
-        this.MTChk.InputAttributes.Add("class", "MTCheckbox");
-        this.MTChk.Checked = Selezionato;
-        this.MTChk.AutoPostBack = AutoPostBack;
-        if (MTChk.AutoPostBack == true)
-        {
-          MTChk.CheckedChanged += MTChk_CheckedChanged;
-        }
+        this.hiddenButtonMTChk = new HtmlButton();
+        hiddenButtonMTChk.ID = "hbtn";
+        hiddenButtonMTChk.Attributes.Add("style","display:none;");
+        string clientIdHbtn = this.ClientID;
+      string stringaLancioEvento = string.Format("{0}.click();",clientIdHbtn.Replace("chk","hbtn"));
 
+        //this.MTChk = new CheckBox();
+        this.MTChk = new HtmlInputCheckBox();
+        this.MTChk.ID = "MTcheckbox";
+        //this.MTChk.InputAttributes.Add("class", "MTCheckbox");
+        this.MTChk.Attributes.Add("class", "MTCheckbox");
+        this.MTChk.Checked = Selezionato;
+        
+
+
+
+
+        //this.MTChk.AutoPostBack = AutoPostBack;
+        //if (MTChk.AutoPostBack == true)
+        //{
+        //  MTChk.CheckedChanged += MTChk_CheckedChanged;
+        //}
+        placeHolder.Controls.Add(hiddenButtonMTChk);
+        placeHolder.Controls.Add(MTChk);
+        if(AutoPostBackCHK== true)
+        {
+          this.MTChk.Attributes.Add("onclick", stringaLancioEvento);
+          hiddenButtonMTChk.ServerClick += new System.EventHandler(HiddenButtonMTChk_ServerClick);
+
+        }
+        else
+        {
+          this.MTChk.Attributes.Remove("onclick");
+          hiddenButtonMTChk.ServerClick -= new System.EventHandler(HiddenButtonMTChk_ServerClick);
+        }
+       
         this.iHtml = new HtmlGenericControl("i");
         this.iHtml.Visible = true;
         this.iHtml.Attributes.Add("class", "MTdropdown-content");
@@ -245,18 +324,35 @@ namespace MTCheckbox
         if (MTdropdownItems != null)
         {
           int i = 1;
+          
           foreach (MTCheckboxItem item in MTdropdownItems)
           {
             if (item.Testo!=null) { 
             this.liHtml = new HtmlGenericControl("li");
 
-            this.button = new Button();
-            this.button.CssClass = "MTunstyled-button";
+              //this.button = new Button();
+              this.button = new HtmlButton();
+            this.button.Attributes.Add("class","MTunstyled-button");
             this.button.ID = string.Format("btn{0}",i);
-           
-            this.button.Click += Button_Click;
-            this.button.Text = item.Testo;
-            this.button.CommandArgument = item.Valore;
+
+              //this.button.Click += Button_Click;
+             
+              //this.button.Disabled = false;
+              if (AutoPostBackMENU == true)
+              {
+                this.button.ServerClick += new System.EventHandler(this.Button_Click);
+                this.button.Attributes.Remove("onclick");
+              }
+              else
+              {
+                this.button.Attributes.Add("onclick","return false");
+                this.button.ServerClick -= new System.EventHandler(this.Button_Click);
+              }
+              //this.button.InnerText = item.Testo;
+              this.button.InnerHtml= item.Testo;
+              //this.button.CommandArgument = item.Valore;
+              this.button.Attributes.Add("CommandArgument",item.Valore);
+              
             this.liHtml.Controls.Add(button);
             this.PannelloItem.Controls.Add(liHtml);
             i++;
@@ -294,7 +390,8 @@ namespace MTCheckbox
           this.MTCheckboxWidth.CssClass = "MTround";//nuovo
 
         }
-        this.MTCheckboxWidth.Controls.Add(MTChk);
+        //this.MTCheckboxWidth.Controls.Add(MTChk);
+        this.MTCheckboxWidth.Controls.Add(placeHolder);
         if (_rotondoQuadrato == Forma.Rotonda)
         {
 
@@ -321,27 +418,34 @@ namespace MTCheckbox
 
     }
 
-   
+    private void HiddenButtonMTChk_ServerClick(object sender, EventArgs e)
+    {
+      _itemChecked = MTChk.Checked;
+      MTCheckboxCHKEventArgs eventValore = new MTCheckboxCHKEventArgs(MTChk.Checked, this.ID);
+      OnCHKSelezionata(eventValore);
+    }
 
     private void Button_Click(object sender, EventArgs e)
     {
-      MTChk.Checked = true;
-      Button prova =(Button) sender;
-      MTCheckboxMenuEventArgs eventValore = new MTCheckboxMenuEventArgs(prova.CommandArgument);
+      
+      //MTChk.Checked = true;
+      HtmlButton prova =(HtmlButton) sender;
+      //MTCheckboxMenuEventArgs eventValore = new MTCheckboxMenuEventArgs(prova.CommandArgument);
+      MTCheckboxMenuEventArgs eventValore = new MTCheckboxMenuEventArgs(prova.Attributes["CommandArgument"]); ;
       OnValoreRestituito(eventValore);
 
     }
 
-    private void MTChk_CheckedChanged(object sender, EventArgs e)
-    {
-      _itemChecked = MTChk.Checked;
-      MTCheckboxCHKEventArgs eventValore = new MTCheckboxCHKEventArgs(MTChk.Checked);
-      OnCHKSelezionata(eventValore);
-      
+    //private void MTChk_CheckedChanged(object sender, EventArgs e)
+    //{
+    //  _itemChecked = MTChk.Checked;
+    //  MTCheckboxCHKEventArgs eventValore = new MTCheckboxCHKEventArgs(MTChk.Checked, this.ID);
+    //  OnCHKSelezionata(eventValore);
 
-    }
 
-    
+    //}
+
+
 
     protected override void OnInit(EventArgs e)
 
@@ -359,11 +463,35 @@ namespace MTCheckbox
     }
 
 
- 
-    public void RaisePostBackEvent(string eventArgument)
+    protected override void OnLoad(EventArgs e)
     {
-      
+      string IDUNICO = this.UniqueID;
+      string IDCLIENT = this.ClientID;
+      string IDCORRETTO = string.Empty;
+      string valoreInterno = string.Empty;
+      string IDCHIAMANTE= Page.Request.Params.Get("__EVENTTARGET");
+      if (!(string.IsNullOrWhiteSpace(IDCHIAMANTE))&&(IDCHIAMANTE.Split('$')[2] != "hbtn")) { 
+      int posizione=Convert.ToInt32( IDCHIAMANTE.Split('$')[2].Replace("btn",string.Empty));
+        valoreInterno = MTDropdownItems[posizione - 1].Valore;
+      }
+      if ((Page.IsPostBack)) {
+
+      if (IDUNICO.Split('$')[1] == IDCHIAMANTE.Split('$')[1]){
+          //if (IDCHIAMANTE.Split('$')[2] != "hbtn") {
+
+          // var oggetto= this.FindControl(IDCORRETTO);
+          //  Button_Click(oggetto,e); }
+          if (IDCHIAMANTE.Split('$')[2] != "hbtn") { MTCheckboxMenuEventArgs e2 = new MTCheckboxMenuEventArgs(valoreInterno);
+            OnValoreRestituito(e2); }
+          if (IDCHIAMANTE.Split('$')[2] == "hbtn") { MTCheckboxCHKEventArgs e3 = new MTCheckboxCHKEventArgs(false,IDUNICO); OnCHKSelezionata(e3); }
+          //OnClick(e);
+        }
+       
+      }
+        
+      base.OnLoad(e);
     }
+
 
 
     public event MTCheckboxMenuEventArgsHandler ValoreRestituito;
@@ -373,39 +501,19 @@ namespace MTCheckbox
     {
       if (ValoreRestituito != null)
       {
-        ValoreRestituito(this,e);
+        ValoreRestituito(this, e);
       }
     }
-  
 
-  protected virtual void OnCHKSelezionata(MTCheckboxCHKEventArgs e)
-  {
-    if (CheckSelezionata != null)
+
+    protected virtual void OnCHKSelezionata(MTCheckboxCHKEventArgs e)
     {
-      CheckSelezionata(this, e);
+      if (CheckSelezionata != null)
+      {
+        CheckSelezionata(this, e);
+      }
     }
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

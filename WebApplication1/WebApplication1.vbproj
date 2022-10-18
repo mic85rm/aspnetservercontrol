@@ -50,7 +50,7 @@
       <HintPath>..\ClassLibrary3\bin\Debug\ClassLibrary3.dll</HintPath>
     </Reference>
     <Reference Include="MTWebControl">
-      <HintPath>..\MTCheckbox\bin\Release\MTWebControl.dll</HintPath>
+      <HintPath>..\MTCheckbox\bin\Debug\MTWebControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
