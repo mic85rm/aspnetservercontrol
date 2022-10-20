@@ -1,5 +1,5 @@
 ﻿function MTMostraSottopannello(nomecontrollo) {
-  //alert(nomecontrollo);
+  /*alert(nomecontrollo);*/
  // var stringa = nomecontrollo + '_' + 'MTmyDropdown';
   var stringa = nomecontrollo.replace("chk","MTmyDropdown");
 /*  console.log(stringa);*/
@@ -8,7 +8,7 @@
 
   /* var x = document.getElementById('<%=nomecontrollo.ClientID %>');*/
   if (x) {
-   // alert(stringa);
+    
     x.classList.toggle("MTshow");
   }
     else {
