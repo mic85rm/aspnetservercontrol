@@ -48,6 +48,35 @@ function MTNascondiSottopannello(controlname) {
   /*document.getElementById('<%=myDropdown.ClientID %>').classList.remove("show");*/
 }
 
+
+function AddCSS() {
+
+  var css = '.MTdropbtn{padding:16px;font-size:16px;border:none;cursor:pointer}.MTCheckbox{display:inline-block;vertical-align:text-top;margin-top:6px}.MTarrow-down{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #000;display:inline-block}.MTdisplayNone{display:none}.MTdropbtn:focus,.MTdropbtn:hover{background-color:#3e8e41}.MTdropdown{position:relative;display:inline-block}.MTdropdown-content{display:none;position:absolute;background-color:#f9f9f9;min-width:160px;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);z-index:100000000!important}.MTunstyled-button{border:none;padding:0;background:0 0;cursor:pointer;text-align:left;text-indent:20px;z-index:917;height:100%;width:100%;margin-left:-3px!important;margin-right:-3px!important;font-size:.78vw}.MTdropdown-content li{color:#000;height:48px;width:222px;text-decoration:none;display:block}.MTdropdown-content li:hover{background-color:#f1f1f1;cursor:pointer}.MTshow{display:block}.MTround{position:relative}.MTround label{background-color:#fff;border:1px solid #ccc;border-radius:50%;cursor:pointer;height:12px;left:12px;position:absolute;top:0;width:12px;margin-top:4px}.MTround label:after{border:2px solid #fff;border-top:none;border-right:none;content:"";height:2px;left:3px;opacity:0;position:absolute;top:3px;transform:rotate(-45deg);width:4px}.MTround input[type=checkbox]{visibility:hidden}.MTround input[type=checkbox]:checked+label{background-color:#3c3e3c;border-color:#3c3e3c;margin-top:4px}.MTround input[type=checkbox]:checked+label:after{opacity:1}',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+  head.appendChild(style);
+
+  style.type = 'text/css';
+  if (style.styleSheet) {
+    // This is required for IE8 and below.
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+
+
+
+
+
+
+
+}
+
+
+
+
+
 //function cliccaMTChkbox(nameofcontrol) {
 
 //  var stringa = nameofcontrol + '_' + 'MTcheckbox';

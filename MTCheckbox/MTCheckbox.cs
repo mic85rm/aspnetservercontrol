@@ -40,16 +40,34 @@ namespace MTCheckbox
     private Boolean _MTAutoPostBackCHK;
     private Boolean _MTAutoPostBackMENU;
     private string _ID;
-    
+    private int indiceinternochk;
+    private HiddenField HFcontaindexchk;
     ClientScriptProxy ClientScriptProxy;
-  
 
-  
+
+    private int ControlsCount
+    {
+      get
+      {
+        object o = ViewState["ControlCount"];
+        if (o != null)
+          return (int)o;
+
+        return 0;
+      }
+      set
+      {
+        ViewState["ControlCount"] = value;
+      }
+    }
 
     public delegate void MTCheckboxMenuEventArgsHandler(object sender, MTCheckboxMenuEventArgs e);
     public delegate void MTCheckboxCHKEventArgsHandler(object sender, MTCheckboxCHKEventArgs e);
 
     public const string SCRIPTLIBRARY_SCRIPT_RESOURCE = "MTCheckbox.Scripts.MTCheckbox.js";
+    public const string SCRIPTLIBRARY_SCRIPT_CSS = "MTCheckbox.Scripts.AddCSS.js";
+
+
     public enum Forma
     {
       Quadrata,
@@ -67,7 +85,23 @@ namespace MTCheckbox
       }
       else
       {
-        MTCheckboxCHKEventArgs e = new MTCheckboxCHKEventArgs(Convert.ToBoolean(eventArgument.Split('§')[0]), Page.Request.Params.Get("__EVENTTARGET"));
+        Selezionato = !Convert.ToBoolean(eventArgument.Split('§')[0]);
+        //int index = Convert.ToInt32( eventArgument.Split('§')[2]);
+        string appoggio= Page.Request.Params.Get("__EVENTTARGET");
+        string[] conta = appoggio.Split('$');
+        int indice = -1;
+        int trovato = -1;
+        string prova = "";
+        foreach (string item in conta)
+        {
+          indice += 1;
+          if (item.Contains("ctl"))
+          {
+            trovato = indice;
+          }
+        }
+        prova = conta[trovato].Replace("ctl", "");
+        MTCheckboxCHKEventArgs e = new MTCheckboxCHKEventArgs(Selezionato, Page.Request.Params.Get("__EVENTTARGET"),Convert.ToInt32(prova) - 2); 
         OnCHKSelezionata(e);
       }
     }
@@ -111,31 +145,6 @@ namespace MTCheckbox
     }
 
 
-
-
-
-
-    //[Bindable(false)]
-    //[Category("Option")]
-    //[DefaultValue("MTCheckbox.Css.MTCheckbox.css")]
-    //[Localizable(true)]
-    //[CssClassProperty]
-    //public virtual string MTCssClass  // property
-    //{
-    //  get { return _MTCSSClass; }   // get method
-    //  set { _MTCSSClass = value; }  // set method
-    //}
-
-    //[Bindable(false)]
-    //[Category("Option")]
-    //[DefaultValue("MTCheckbox.Scripts.MTCheckbox.js")]
-    //[Localizable(true)]
-    //[CssClassProperty]
-    //public virtual string MTJS  // property
-    //{
-    //  get { return _MTJS; }   // get method
-    //  set { _MTJS = value; }  // set method
-    //}
 
 
     [Bindable(true)]
@@ -193,7 +202,8 @@ namespace MTCheckbox
       try
       {
 
-       
+        
+
         InizializzaControllo();
         int conta = Controls.Count;
         this.Controls.Clear();
@@ -207,17 +217,26 @@ namespace MTCheckbox
           labelRound.Attributes.Add("for", string.Format("{0}_MTcheckbox", this.ClientID.ToString().Trim()));//nuovo
         }
 
-    
+      
         Controls.Add(MTCheckboxControllo);
+        
+
+
+        this.ClientScriptProxy = ClientScriptProxy.Current;
+        Page page = HttpContext.Current.Handler as Page;
+        
+
+        ClientScriptProxy.RegisterClientScriptResource(this, this.GetType(), SCRIPTLIBRARY_SCRIPT_RESOURCE);
+
+
+      
 
 
 
-
-        this.ClientScriptProxy.RegisterClientScriptResource(this, this.GetType(), SCRIPTLIBRARY_SCRIPT_RESOURCE);
-
+        ClientScriptProxy.RegisterStartupScript(this, this.GetType(), "MTCss", " AddCSS();", true);
 
 
-     
+
         base.CreateChildControls();
       }
       catch (Exception a)
@@ -249,7 +268,7 @@ namespace MTCheckbox
 
         //string stringaLancioEvento = string.Format("__doPostBack('{1}', '{0}');", !Selezionato, UniqueID);
         
-        string stringaLancioEvento = string.Format("__doPostBack('{1}', '{0}§{2}');", !Selezionato, UniqueID,"checkbox");
+        
 
 
         //this.MTChk = new CheckBox();
@@ -258,6 +277,10 @@ namespace MTCheckbox
         //this.MTChk.InputAttributes.Add("class", "MTCheckbox");
         this.MTChk.Attributes.Add("class", "MTCheckbox");
         this.MTChk.Checked = Selezionato;
+
+       
+
+        string stringaLancioEvento = string.Format("__doPostBack('{1}', '{0}§{2}§{3}');", Selezionato, UniqueID, "checkbox",ClientID);
         
         placeHolder.Controls.Add(hiddenButtonMTChk);
         placeHolder.Controls.Add(MTChk);
@@ -402,59 +425,17 @@ namespace MTCheckbox
 
     }
 
-  
+
+
+
    
 
 
 
-    protected override void OnInit(EventArgs e)
-
-    {
-      base.OnInit(e);
-      Page page = HttpContext.Current.Handler as Page;
-
-      //this.ClientScriptProxy = ClientScriptProxy.Current;
-      //HtmlLink cssSource = new HtmlLink();
-      //cssSource.Href = Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
-      //cssSource.Attributes["rel"] = "stylesheet";
-      //cssSource.Attributes["type"] = "text/css";
-      //Page.Header.Controls.Add(cssSource);
-      //this.Controls.Add(cssSource);
-
-      this.ClientScriptProxy = ClientScriptProxy.Current;
-      HtmlLink cssSource = new HtmlLink();
-      cssSource.Href = page.ClientScript.GetWebResourceUrl(this.GetType(), "MTCheckbox.Css.MTCheckbox.css");
-      cssSource.Attributes["rel"] = "stylesheet";
-      cssSource.Attributes["type"] = "text/css";
-      page.Header.Controls.Add(cssSource);
-      //this.Controls.Add(cssSource);
-
-
-    }
-
-
-    //protected override void OnLoad(EventArgs e)
-    //{
-
-    //  string IDCHIAMANTE = Page.Request.Params.Get("__EVENTTARGET");
-    //  string IDCHIAMANTEARGOMENTO = Page.Request.Params.Get("__EVENTARGUMENT");
-
-
-    //  if (Page.IsPostBack)
-    //  {
-
-
-    //    //   MTCheckboxMenuEventArgs e2 = new MTCheckboxMenuEventArgs(valoreInterno);
-    //    //   OnValoreRestituito(e2);
-    //    //MTCheckboxCHKEventArgs e3 = new MTCheckboxCHKEventArgs(false, IDUNICO); OnCHKSelezionata(e3); }
 
 
 
-    //  }
-
-    //  base.OnLoad(e);
-    //}
-
+   
 
 
 
