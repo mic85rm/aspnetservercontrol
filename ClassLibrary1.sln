@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29306.81
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MenuFunzioneMF", "ClassLibrary1\MenuFunzioneMF.vbproj", "{758FEBB1-FB33-4A62-A59F-F3D7DCB19895}"
 EndProject
@@ -10,6 +10,12 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MTMenuFunzioni", "ClassLibrary3\MTMenuFunzioni.vbproj", "{208A7630-8123-4DE3-AFBB-1B35721B8ADA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTCheckbox", "MTCheckbox\MTCheckbox.csproj", "{FA4FFC28-54CF-438E-97A1-AAB4A7C15886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTHtmlEditor", "MTHtmlEditor\MTHtmlEditor.csproj", "{0818D27A-1B23-4A21-8A57-A94694F8B96C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTConfirm", "MTConfirm\MTConfirm.csproj", "{02ABE7F9-874B-453D-B361-04272A0E4744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{CBAD8598-6F73-42DB-A69C-C85D1414B8A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{FA4FFC28-54CF-438E-97A1-AAB4A7C15886}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA4FFC28-54CF-438E-97A1-AAB4A7C15886}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA4FFC28-54CF-438E-97A1-AAB4A7C15886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0818D27A-1B23-4A21-8A57-A94694F8B96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0818D27A-1B23-4A21-8A57-A94694F8B96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0818D27A-1B23-4A21-8A57-A94694F8B96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0818D27A-1B23-4A21-8A57-A94694F8B96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02ABE7F9-874B-453D-B361-04272A0E4744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02ABE7F9-874B-453D-B361-04272A0E4744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02ABE7F9-874B-453D-B361-04272A0E4744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02ABE7F9-874B-453D-B361-04272A0E4744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBAD8598-6F73-42DB-A69C-C85D1414B8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBAD8598-6F73-42DB-A69C-C85D1414B8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBAD8598-6F73-42DB-A69C-C85D1414B8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBAD8598-6F73-42DB-A69C-C85D1414B8A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
