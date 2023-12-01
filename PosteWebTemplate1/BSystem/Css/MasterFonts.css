@@ -1,0 +1,227 @@
+﻿
+/* Testi SIZE*/
+.BTesto6 {
+  font-size: 6pt;
+}
+
+.BTesto7 {
+  font-size: 7pt;
+}
+
+.BTesto8 {
+  font-size: 8pt;
+}
+
+.BTesto9 {
+  font-size: 9pt;
+}
+
+.BTesto10 {
+  font-size: 10pt;
+}
+
+.BTesto11 {
+  font-size: 11pt;
+}
+
+.BTesto12 {
+  font-size: 12pt;
+}
+
+.BTesto13 {
+  font-size: 13pt;
+}
+
+.BTesto14 {
+  font-size: 14pt;
+}
+
+.BTesto15 {
+  font-size: 15pt;
+}
+
+.BTesto16 {
+  font-size: 16pt;
+}
+
+.BTesto17 {
+  font-size: 17pt;
+}
+
+.BTesto18 {
+  font-size: 18pt;
+}
+
+.BTesto19 {
+  font-size: 19pt;
+}
+
+.BTesto20 {
+  font-size: 20pt;
+}
+
+.BTesto21 {
+  font-size: 21pt;
+}
+
+.BTesto22 {
+  font-size: 22pt;
+}
+
+.BTesto23 {
+  font-size: 23pt;
+}
+
+.BTesto24 {
+  font-size: 24pt;
+}
+
+.BTesto25 {
+  font-size: 25pt;
+}
+
+.BTesto26 {
+  font-size: 26pt;
+}
+
+.BTesto27 {
+  font-size: 27pt;
+}
+
+.BTesto28 {
+  font-size: 28pt;
+}
+
+.BTesto29 {
+  font-size: 29pt;
+}
+
+.BTesto30 {
+  font-size: 30pt;
+}
+
+.BTesto31 {
+  font-size: 31pt;
+}
+
+.BTesto32 {
+  font-size: 32pt;
+}
+
+.BTesto33 {
+  font-size: 33pt;
+}
+
+.BTesto34 {
+  font-size: 34pt;
+}
+
+.BTesto35 {
+  font-size: 35pt;
+}
+
+.BTesto36 {
+  font-size: 36pt;
+}
+
+.BTesto48 {
+  font-size: 48pt;
+}
+
+.BTesto72 {
+  font-size: 72pt;
+}
+
+
+
+/*Grandezza TITOLI*/
+.BH1 {
+  font-size: 24pt;
+  font-weight: normal;
+}
+
+.BH2 {
+  font-size: 15pt;
+  font-weight: normal;
+}
+
+.BH3 {
+  font-size: 13pt;
+  font-weight: normal
+}
+
+.BH4 {
+  font-size: 12pt;
+  font-weight: normal
+}
+
+.BH5 {
+  font-size: 10pt;
+  font-weight: normal
+}
+
+.BH6 {
+  font-size: 8pt;
+  font-weight: normal
+}
+
+
+/* CLASSI FONT STYLE*/
+.BTestoBold {
+  font-weight: bold;
+}
+
+.BTestoItalic {
+  font-style: italic;
+}
+
+.BTestoUnderline {
+  text-decoration: underline;
+}
+
+.BTestoDecorationNone {
+  text-decoration: none;
+}
+
+.BTestoUnderlineHover {
+}
+
+  .BTestoUnderlineHover:hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+  }
+
+.BTestoUnderlineColorHover:hover {
+  text-decoration-color: yellow;
+}
+
+
+/*Allineamento Testo*/
+.BTestoLeft {
+  text-align: left;
+}
+
+.BTestoRight {
+  text-align: right;
+}
+
+.BTestoCenter {
+  text-align: center;
+}
+
+/* CLASSI FONT */
+.BFontCenturyGothic {
+  font-family: 'Century Gothic' !Important;
+}
+
+.BFontSegoeUI {
+  font-family: 'Segoe UI' !important;
+}
+
+.BFontArial {
+  font-family: Arial !important;
+}
+
+.BFontTimesNewRoman {
+  font-family: 'Times New Roman' !important;
+}

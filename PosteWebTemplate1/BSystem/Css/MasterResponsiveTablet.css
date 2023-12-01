@@ -1,0 +1,59 @@
+﻿@media only screen and (min-width: 601px) and (max-width: 1024px) {
+   
+  .BCollapseTablet, .BCollapse {
+    display: none !important;
+  }
+
+
+  .BShowOnlyTablet, .BShowOnlyTabletPC {
+    display: block !important;
+  }
+
+
+  .BShowOnlyTabletSmartPhone {
+    display: block !important;
+  }
+
+  .BShowOnlySmartPhone, .BShowOnlyPC {
+    display: none !important;
+  }
+
+  .BFloatLeftTablet {
+    float: left !important;
+  }
+
+  .BFloatRightTablet {
+    float: right !important;
+  }
+
+  .BNextControlGoDown {
+    width: 85% !important;
+    max-width: 85% !important;
+    box-sizing: border-box;
+  }
+
+  .BPager {
+    width: calc(100% - 2px);
+    background-color: rgb(246,246,247);
+    border: solid 1px rgb(220,220,220);
+    height: auto !important;
+    min-height: 150px;
+  }
+
+  .BNextControlGoDownCenter {
+    width: 95% !important;
+    max-width: 95% !important;
+    box-sizing: border-box;
+    margin: 30px 2.5% 30px 2.5%;
+  }
+
+  .BNextControlGoDown100 {
+    max-width: calc(100% - 10px) !important;
+    box-sizing: border-box;
+  }
+
+  .BNextControlGoDownWithHelpButton {
+    max-width: calc(100% - 60px) !important;
+    box-sizing: border-box;
+  }
+}

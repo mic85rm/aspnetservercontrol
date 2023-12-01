@@ -1,0 +1,126 @@
+﻿.BCalendar {
+  background-color: whitesmoke;
+  width: 290px
+}
+
+  .BCalendar tbody tr:nth-child(1) {
+    color: #00a1fd;
+    background-color: white;
+    font-weight: bold;
+    height: 40px;
+  }
+
+    .BCalendar tbody tr:nth-child(1) td:nth-child(1) a {
+      color: #00a1fd !important;
+    }
+
+    .BCalendar tbody tr:nth-child(1) td:nth-child(3) a {
+      color: #00a1fd !important;
+    }
+
+  /* GIORNI */
+  .BCalendar tbody tr:nth-child(2) {
+    background-color: #424242;
+    color: white;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(2) th:nth-child(7) {
+      color: red !important;
+    }
+
+  /*PRIMA RIGA*/
+  .BCalendar tbody tr:nth-child(3) {
+    background-color: #424242;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(3) td a {
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .BCalendar tbody tr:nth-child(3) td:nth-child(7) a {
+      color: red !important;
+      font-weight: bold;
+    }
+
+  /*SECONDA RIGA*/
+  .BCalendar tbody tr:nth-child(4) {
+    background-color: #424242;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(4) td a {
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .BCalendar tbody tr:nth-child(4) td:nth-child(7) a {
+      color: red !important;
+      font-weight: bold;
+    }
+
+  /*TERZA RIGA*/
+  .BCalendar tbody tr:nth-child(5) {
+    background-color: #424242;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(5) td a {
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .BCalendar tbody tr:nth-child(5) td:nth-child(7) a {
+      color: red !important;
+      font-weight: bold;
+    }
+
+  /*QUARTA RIGA*/
+  .BCalendar tbody tr:nth-child(6) {
+    background-color: #424242;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(6) td a {
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .BCalendar tbody tr:nth-child(6) td:nth-child(7) a {
+      color: red !important;
+      font-weight: bold;
+    }
+
+  /*QUINTA RIGA*/
+  .BCalendar tbody tr:nth-child(7) {
+    background-color: #424242;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(7) td a {
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .BCalendar tbody tr:nth-child(7) td:nth-child(7) a {
+      color: red !important;
+      font-weight: bold;
+    }
+
+  /*SESTA RIGA*/
+  .BCalendar tbody tr:nth-child(8) {
+    background-color: #424242;
+    height: 25px;
+  }
+
+    .BCalendar tbody tr:nth-child(8) td a {
+      color: white !important;
+      text-decoration: none;
+    }
+
+    .BCalendar tbody tr:nth-child(8) td:nth-child(7) a {
+      color: red !important;
+      font-weight: bold;
+    }

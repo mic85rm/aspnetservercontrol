@@ -12,6 +12,7 @@ Option Explicit On
 
 
 Partial Public Class WebForm1
+<<<<<<< Updated upstream
 
   '''<summary>
   '''form1 control.
@@ -39,4 +40,6 @@ Partial Public Class WebForm1
   '''To modify move field declaration from designer file to code-behind file.
   '''</remarks>
   Protected WithEvents ab As Global.MTCheckbox.MTCheckbox
+=======
+>>>>>>> Stashed changes
 End Class

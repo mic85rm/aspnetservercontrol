@@ -1,0 +1,48 @@
+﻿
+select {
+  padding: 7px;
+  /*margin: 1px !important;*/
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+  select:hover {
+    cursor: pointer;
+  }
+
+  select:focus {
+    box-shadow: 0 0 1px 1px #2196F3 !important;
+    outline: none;
+  }
+
+  select:active {
+    box-shadow: 0 0 1px 1px #2196F3 !important;
+  }
+
+  select:disabled {
+    border: 1px solid #000 !important;
+    background-color: #CCC !important;
+    color: #707070 !important;
+    cursor: default;
+  }
+
+  select option {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+
+  .SmartCombo{
+    width:90%;
+  }
+
+
+@media only screen and (max-width: 600px) {
+
+  /*PER COMBOBOX */
+  .SmartCombo {
+    width:90%;
+  }
+
+}

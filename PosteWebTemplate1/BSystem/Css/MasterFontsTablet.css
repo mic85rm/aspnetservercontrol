@@ -1,0 +1,223 @@
+﻿@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Testi SIZE*/
+  .BTestoTablet6 {
+    font-size: 6pt;
+  }
+
+  .BTestoTablet7 {
+    font-size: 7pt;
+  }
+
+  .BTestoTablet8 {
+    font-size: 8pt;
+  }
+
+  .BTestoTablet9 {
+    font-size: 9pt;
+  }
+
+  .BTestoTablet10 {
+    font-size: 10pt;
+  }
+
+  .BTestoTablet11 {
+    font-size: 11pt;
+  }
+
+  .BTestoTablet12 {
+    font-size: 12pt;
+  }
+
+  .BTestoTablet13 {
+    font-size: 13pt;
+  }
+
+  .BTestoTablet14 {
+    font-size: 14pt;
+  }
+
+  .BTestoTablet15 {
+    font-size: 15pt;
+  }
+
+  .BTestoTablet16 {
+    font-size: 16pt;
+  }
+
+  .BTestoTablet17 {
+    font-size: 17pt;
+  }
+
+  .BTestoTablet18 {
+    font-size: 18pt;
+  }
+
+  .BTestoTablet19 {
+    font-size: 19pt;
+  }
+
+  .BTestoTablet20 {
+    font-size: 20pt;
+  }
+
+  .BTestoTablet21 {
+    font-size: 21pt;
+  }
+
+  .BTestoTablet22 {
+    font-size: 22pt;
+  }
+
+  .BTestoTablet23 {
+    font-size: 23pt;
+  }
+
+  .BTestoTablet24 {
+    font-size: 24pt;
+  }
+
+  .BTestoTablet25 {
+    font-size: 25pt;
+  }
+
+  .BTestoTablet26 {
+    font-size: 26pt;
+  }
+
+  .BTestoTablet27 {
+    font-size: 27pt;
+  }
+
+  .BTestoTablet28 {
+    font-size: 28pt;
+  }
+
+  .BTestoTablet29 {
+    font-size: 29pt;
+  }
+
+  .BTestoTablet30 {
+    font-size: 30pt;
+  }
+
+  .BTestoTablet31 {
+    font-size: 31pt;
+  }
+
+  .BTestoTablet32 {
+    font-size: 32pt;
+  }
+
+  .BTestoTablet33 {
+    font-size: 33pt;
+  }
+
+  .BTestoTablet34 {
+    font-size: 34pt;
+  }
+
+  .BTestoTablet35 {
+    font-size: 35pt;
+  }
+
+  .BTestoTablet36 {
+    font-size: 36pt;
+  }
+
+  .BTestoTablet48 {
+    font-size: 48pt;
+  }
+
+  .BTestoTablet72 {
+    font-size: 72pt;
+  }
+
+
+
+  /*Grandezza TITOLI*/
+  .BH1 {
+    font-size: 24pt;
+    font-weight: normal;
+  }
+
+  .BH2 {
+    font-size: 15pt;
+    font-weight: normal;
+  }
+
+  .BH3 {
+    font-size: 13pt;
+    font-weight: normal
+  }
+
+  .BH4 {
+    font-size: 12pt;
+    font-weight: normal
+  }
+
+  .BH5 {
+    font-size: 10pt;
+    font-weight: normal
+  }
+
+  .BH6 {
+    font-size: 8pt;
+    font-weight: normal
+  }
+
+
+  /* CLASSI FONT STYLE*/
+  .BTestoTabletBold {
+    font-weight: bold;
+  }
+
+  .BTestoTabletItalic {
+    font-style: italic;
+  }
+
+  .BTestoTabletUnderline {
+    text-decoration: underline;
+  }
+
+  .BTestoTabletDecorationNone {
+    text-decoration: none;
+  }
+
+  .BTestoTabletUnderlineHover {
+  }
+
+    .BTestoTabletUnderlineHover:hover {
+      text-decoration: underline;
+    }
+
+
+  /*Allineamento Testo*/
+  .BTestoTabletLeft {
+    text-align: left;
+  }
+
+  .BTestoTabletRight {
+    text-align: right;
+  }
+
+  .BTestoTabletCenter {
+    text-align: center;
+  }
+
+  /* CLASSI FONT */
+  .BFontTabletCenturyGothic {
+    font-family: 'Century Gothic' !Important;
+  }
+
+  .BFontTabletSegoeUI {
+    font-family: 'Segoe UI' !important;
+  }
+
+  .BFontTabletArial {
+    font-family: Arial !important;
+  }
+
+  .BFontTabletTimesNewRoman {
+    font-family: 'Times New Roman' !important;
+  }
+}

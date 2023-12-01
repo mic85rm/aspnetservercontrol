@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPrint" targetNamespace="http://tempuri.org/DSPrint.xsd" xmlns:mstns="http://tempuri.org/DSPrint.xsd" xmlns="http://tempuri.org/DSPrint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="BWebAppTemplateConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BWebAppTemplateConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.BWebAppTemplateConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPrint" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DSPrint" msprop:Generator_DataSetName="DSPrint">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="rptComuni" msprop:Generator_RowEvHandlerName="rptComuniRowChangeEventHandler" msprop:Generator_RowDeletedName="rptComuniRowDeleted" msprop:Generator_RowDeletingName="rptComuniRowDeleting" msprop:Generator_RowEvArgName="rptComuniRowChangeEvent" msprop:Generator_TablePropName="rptComuni" msprop:Generator_RowChangedName="rptComuniRowChanged" msprop:Generator_RowChangingName="rptComuniRowChanging" msprop:Generator_TableClassName="rptComuniDataTable" msprop:Generator_RowClassName="rptComuniRow" msprop:Generator_TableVarName="tablerptComuni" msprop:Generator_UserTableName="rptComuni">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descrizione" msprop:Generator_ColumnPropNameInRow="Descrizione" msprop:Generator_ColumnPropNameInTable="DescrizioneColumn" msprop:Generator_ColumnVarNameInTable="columnDescrizione" msprop:Generator_UserColumnName="Descrizione" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodiceIstat" msprop:Generator_ColumnPropNameInRow="CodiceIstat" msprop:Generator_ColumnPropNameInTable="CodiceIstatColumn" msprop:Generator_ColumnVarNameInTable="columnCodiceIstat" msprop:Generator_UserColumnName="CodiceIstat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodiceIstatAsl" msprop:Generator_ColumnPropNameInRow="CodiceIstatAsl" msprop:Generator_ColumnPropNameInTable="CodiceIstatAslColumn" msprop:Generator_ColumnVarNameInTable="columnCodiceIstatAsl" msprop:Generator_UserColumnName="CodiceIstatAsl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAP" msprop:Generator_ColumnPropNameInRow="CAP" msprop:Generator_ColumnPropNameInTable="CAPColumn" msprop:Generator_ColumnVarNameInTable="columnCAP" msprop:Generator_UserColumnName="CAP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDProvincia" msprop:Generator_ColumnPropNameInRow="IDProvincia" msprop:Generator_ColumnPropNameInTable="IDProvinciaColumn" msprop:Generator_ColumnVarNameInTable="columnIDProvincia" msprop:Generator_UserColumnName="IDProvincia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataIstituzione" msprop:Generator_ColumnPropNameInRow="DataIstituzione" msprop:Generator_ColumnPropNameInTable="DataIstituzioneColumn" msprop:Generator_ColumnVarNameInTable="columnDataIstituzione" msprop:Generator_UserColumnName="DataIstituzione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DataCessazione" msprop:Generator_ColumnPropNameInRow="DataCessazione" msprop:Generator_ColumnPropNameInTable="DataCessazioneColumn" msprop:Generator_ColumnVarNameInTable="columnDataCessazione" msprop:Generator_UserColumnName="DataCessazione" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Patrono" msprop:Generator_ColumnPropNameInRow="Patrono" msprop:Generator_ColumnPropNameInTable="PatronoColumn" msprop:Generator_ColumnVarNameInTable="columnPatrono" msprop:Generator_UserColumnName="Patrono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:rptComuni" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

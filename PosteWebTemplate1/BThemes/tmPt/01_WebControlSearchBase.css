@@ -1,0 +1,68 @@
+﻿
+/*CSS PANEL CONTAINER*/
+.WebControlSearchBase_Container {
+  width: 100%;
+  height: 100%;
+}
+
+.WebControlSearchBase_DivInternal {
+  width: 100%;
+  height: -moz-calc(100% - 56px);
+  height: -webkit-calc(100% - 56px);
+  height: calc(100% - 56px);
+  overflow: auto;
+}
+
+.WebControlSearchBase_Ricerca {
+  background-color: #EFEFEF;
+  border-bottom: 1px solid #707070 !important;
+  /*-webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;*/
+  margin: 0px;
+  padding-top: 10px;
+  margin-bottom: 10px !important;
+  width: 100% !important;
+}
+
+.WebControlSearchBase_Elenco {
+  min-height: 200px;
+  height: auto;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.WebControlSearchBase_Ricerca_CommandBar {
+  left: 0px;
+  height: 32px !important;
+  width: 100%;
+  background-color: #ebeaea;
+  border-top: 1px solid #cdcccc !important;
+}
+
+.WebControlSearchBase_Ricerca_ButtonSearch {
+  height: 28px;
+  width: 90px;
+  float: right;
+  margin-top: 1px !important;
+  margin-right: 18px !important;
+}
+
+.WebControlSearchBase_Ricerca_ButtonCancel {
+  height: 28px;
+  width: 100px;
+  float: right;
+  margin-top: 1px !important;
+  margin-right: 18px !important;
+}
+
+.WebControlSearchBase_Ricerca_ButtonCommit {
+  height: 28px;
+  width: 120px;
+  float: right;
+  margin-top: 1px !important;
+  margin-right: 18px !important;
+}
+
+
+

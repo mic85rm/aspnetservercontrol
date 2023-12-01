@@ -1,0 +1,191 @@
+﻿.BPager {
+  width: calc(100% - 2px);
+  background-color: rgb(246,246,247);
+  border: solid 1px rgb(220,220,220);
+  height: auto !important;
+  min-height: 48px;
+  overflow: auto;
+}
+
+/* SEZIONE 1 */
+.BPager_PnlLeft {
+  float: left;
+  width: 25%;
+  height: 48px;
+  min-width: 220px;
+}
+
+.BPager_Caption {
+  font-size: 12pt;
+  color: black;
+  font-weight: bold;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 8px;
+  margin-right: 8px;
+  float: left;
+}
+
+.BPager_NumRowForPage {
+  margin-top: 4px;
+  float: left;
+  height: 40px;
+  width: 80px;
+  float: left;
+}
+
+
+/* SEZIONE 2*/
+
+.BPager_PnlNavigator {
+  float: left;
+  min-width: 325px;
+  height: 48px;
+  min-width: 220px;
+  margin-left: calc(25% - 112.5px);
+  margin-right: 10%;
+}
+
+
+/*PAGER FRECCE*/
+
+.BPager_BtnFirst {
+  background-image: url('Image/Icon24/primo_b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid whitesmoke !important;
+  height: 44px;
+  width: 32px;
+  margin-top: 2px;
+  float: left;
+}
+
+  .BPager_BtnFirst:disabled {
+    background-image: url('Image/Icon24/primo_b.png');
+    background-color: lightgray !important;
+    border: 1px solid whitesmoke !important;
+  }
+
+.BPager_BtnPrevius {
+  background-image: url('Image/Icon24/prevpagina_b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid whitesmoke !important;
+  height: 44px;
+  width: 48px;
+  margin-top: 2px;
+  float: left;
+}
+
+  .BPager_BtnPrevius:disabled {
+    background-image: url('Image/Icon24/prevpagina_b.png');
+    background-color: lightgray !important;
+    border: 1px solid whitesmoke !important;
+  }
+
+
+.BPager_BtnNext {
+  background-image: url('Image/Icon24/proxpagina_b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid whitesmoke !important;
+  height: 44px;
+  width: 48px;
+  margin-top: 2px;
+  float: left;
+  border: none;
+}
+
+  .BPager_BtnNext:disabled {
+    background-image: url('Image/Icon24/proxpagina_b.png');
+    background-color: lightgray !important;
+    border: 1px solid whitesmoke !important;
+  }
+
+.BPager_BtnLast {
+  background-image: url('Image/Icon24/ultimo_b.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid whitesmoke !important;
+  height: 44px;
+  width: 32px;
+  margin-top: 2px;
+  float: left;
+}
+
+  .BPager_BtnLast:disabled {
+    background-image: url('Image/Icon24/ultimo_b.png');
+    background-color: lightgray !important;
+    border: 1px solid whitesmoke !important;
+  }
+
+
+/* SEZIONE 3 */
+
+.BPager_PnlPagePosition {
+  float: left;
+  width: auto;
+  height: 48px;
+}
+
+
+.BPager_Page {
+  margin-top: 4px !important;
+  float: left;
+  height: 40px;
+  width: 50px;
+  float: left;
+  margin-left: 30px;
+}
+
+.BPager_Separatore {
+  font-size: 10pt;
+  color: black;
+  font-weight: bold;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 8px;
+  margin-right: 8px;
+  float: left;
+}
+
+.BPager_TotPage {
+  font-size: 10pt;
+  color: black;
+  font-weight: bold;
+  line-height: 48px;
+  float: left;
+  margin-right: 30px;
+}
+
+
+/* SEZIONE 4 */
+
+.BPager_PnlRight {
+  float: left;
+  width: auto;
+  height: 48px;
+  float: right;
+  border: none;
+}
+
+.BPager_BtnExportXls {
+  background-image: url('Image/Icon32/Excel.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 44px;
+  width: 48px;
+  margin-top: 2px;
+  float: right;
+}
+
+.BPager_Risultati {
+  font-size: 10pt;
+  color: black;
+  font-weight: bold;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 8px;
+  margin-right: 8px;
+  float: right;
+}

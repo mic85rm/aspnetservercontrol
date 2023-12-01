@@ -1,0 +1,45 @@
+﻿* {
+  font-family: 'Segoe UI' !important;
+}
+
+.TestoDefaultInverse {
+  color: white !Important;
+}
+
+.TestoDefault {
+  color: black;
+}
+
+.BH1 {
+  color: #424242 !important;
+  font-weight: bold;
+  font-size: 24pt;
+  text-transform: uppercase;
+}
+
+.BH2 {
+  text-transform: uppercase;
+  /*letter-spacing: 3px;*/
+  /*color: #00a1fd !important;*/
+  color: #0346BB !important;
+  font-size: 18pt;
+  font-style: normal !important;
+}
+
+
+.BH3 {
+  color: #424242 !important;
+}
+
+.BH4 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00a1fd !important;
+}
+
+.BBtnSuccess {
+  /*background-color: #26b158 !important;*/
+}
+
+
+

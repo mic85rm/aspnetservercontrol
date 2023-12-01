@@ -1,0 +1,163 @@
+﻿/*MODALITTA SMARTPHONE*/
+@media only screen and (max-width: 600px) {
+
+  .BCtlServiceNotification_Container {
+    width: 100%;
+    height: 100vh;
+    background-color: #424242;
+    border: 1px solid #141414;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.95;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+
+  .BCtlServiceNotification_Header {
+    width: 100%;
+    background-color: #141414;
+    height: 32px;
+    float: left;
+    border-bottom: groove whitesmoke 1px;
+  }
+
+  .BCtlServiceNotification_LnkClearAll {
+    color: #00a1fd;
+    font-size: 8pt;
+    margin: 10px;
+    float: right;
+  }
+
+  .BCtlServiceNotification_LblCount {
+    color: white;
+    font-size: 8pt;
+    margin: 10px;
+    float: left;
+  }
+
+  .BCtlServiceNotification_BtnChiudi {
+    color: white;
+    font-size: 12pt;
+    margin: 6px;
+    margin-left: 10px;
+    float: right;
+  }
+
+  .BCtlServiceNotification_NotificaContainer {
+    width: 100%;
+    float: left;
+    background-color: #727272;
+    border-bottom: groove whitesmoke 1px;
+  }
+
+    .BCtlServiceNotification_NotificaContainer:hover {
+      background-color: #00a1fd;
+    }
+
+    .BCtlServiceNotification_NotificaContainer.ToRead {
+      width: calc(100% - 10px) !important;
+      padding-left: 10px;
+    }
+
+      .BCtlServiceNotification_NotificaContainer.ToRead:before {
+        content: '*';
+        text-align: center;
+        float: left;
+        display: inline-block;
+        width: 10px;
+        margin-left: -10px;
+        min-height: 68px;
+        height: 100%;
+        background-color: whitesmoke !important;
+      }
+
+  .BCtlServiceNotification_NotificaContainer_Alternate {
+    width: 100%;
+    float: left;
+    background-color: #525252;
+    border-bottom: groove whitesmoke 1px;
+  }
+
+    .BCtlServiceNotification_NotificaContainer_Alternate:hover {
+      background-color: #00a1fd;
+    }
+
+    .BCtlServiceNotification_NotificaContainer_Alternate.ToRead {
+      width: calc(100% - 10px) !important;
+      padding-left: 10px;
+    }
+
+      .BCtlServiceNotification_NotificaContainer_Alternate.ToRead:before {
+        content: '*';
+        text-align: center;
+        float: left;
+        display: inline-block;
+        width: 10px;
+        margin-left: -10px;
+        min-height: 68px;
+        height: 100%;
+        background-color: whitesmoke !important;
+      }
+
+
+  .BCtlServiceNotification_NotificaHead {
+    color: #00a1fd;
+    float: left;
+    font-size: 12pt;
+    min-height: 20px;
+    width: 100%;
+  }
+
+    .BCtlServiceNotification_NotificaHead.ToRead {
+      width: calc(100% - 2px);
+      box-sizing: border-box;
+    }
+
+  .BCtlServiceNotification_NotificaContent {
+    color: white;
+    float: left;
+    font-size: 10pt;
+    min-height: 50px;
+    display: none;
+  }
+
+    .BCtlServiceNotification_NotificaContent.ToRead {
+      /*background-color: whitesmoke;*/
+      font-weight: bold;
+      width: calc(100% - 10px);
+    }
+
+  .BCtlServiceNotification_Data {
+    color: white;
+    float: left;
+    margin: 5px;
+    font-size: 10pt;
+    min-height: 24px;
+  }
+
+    .BCtlServiceNotification_Data.ToRead {
+      font-weight: bold;
+    }
+
+  .BCtlServiceNotification_Descrizione {
+    color: #141414;
+    float: left;
+    margin: 5px;
+    font-size: 10pt;
+    min-height: 24px;
+  }
+
+  .BCtlServiceNotification_LabelEmpty {
+    color: white;
+    float: left;
+    font-size: 12pt;
+    text-align: center;
+    vertical-align: middle;
+    height: calc(100% - 0px);
+    width: 100%;
+    line-height: 100vh;
+  }
+}

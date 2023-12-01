@@ -1,0 +1,28 @@
+﻿
+.BPageBaseContainer {
+  position: relative;
+}
+
+.BControlBase {
+  position: absolute;
+}
+
+.BHideForDesign {
+  display: none !Important;
+}
+
+.BShowForDesign {
+  display: block !Important;
+  height: 550px !important;
+  position: relative;
+}
+
+.BGridviewHeaderFixed {
+  position: fixed;
+}
+
+.BGridviewHeaderAbsolute {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

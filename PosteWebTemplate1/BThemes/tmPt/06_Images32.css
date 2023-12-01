@@ -1,0 +1,485 @@
+﻿/*BOTTONI STANDARD DI COMANDO*/
+
+.BIconCalendar32 {
+  background-image: url('Image/Icon32/calendar32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCodiceFiscale32 {
+  background-image: url('Image/Icon32/codiceFiscale32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconNuovo32 {
+  background-image: url('Image/Icon32/Nuovo.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconNuovo32:disabled {
+    background-image: url('Image/Icon32/NuovoDis.png');
+  }
+
+.BIconModifica32 {
+  background-image: url('Image/Icon32/Modifica.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconModifica32:disabled {
+    background-image: url(' Image/Icon32/ModificaDis.png');
+  }
+
+.BIconSalva32 {
+  background-image: url('Image/Icon32/Salva.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSalva32:disabled {
+    background-image: url('Image/Icon32/SalvaDis.png');
+  }
+
+
+.BIconAnnulla32 {
+  background-image: url('Image/Icon32/Annulla.png');
+  background-repeat: no-repeat;
+}
+
+.BIconAnnulla32 {
+  background-image: url('Image/Bottoni32/Annulla32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconAnnulla:disabled {
+  background-image: url('Image/Icon32/AnnullaDis.png');
+}
+
+.BIconElimina32 {
+  background-image: url('Image/Icon32/Cestino.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconElimina32:disabled {
+    background-image: url('Image/Icon32/CestinoDis.png');
+  }
+
+.BIconLente32 {
+  background-image: url('Image/Icon32/Lente.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLente32:disabled {
+    background-image: url('Image/Icon32/LenteDis.png');
+  }
+
+.BIconLenteWhite32 {
+  /*background-image: url('Image/Icon32/Lente.png');*/
+  background-image: url('Image/Icon32/LenteDis.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLenteWhite32:disabled {
+    background-image: url('Image/Icon32/LenteDis.png');
+  }
+
+.BIconLogOut32 {
+  background-image: url('Image/Icon32/LogOut.png');
+  background-repeat: no-repeat;
+}
+
+
+.BIconCampana32 {
+  /*background-image: url(Image/Icon32/CampanaBianca.png);*/
+  /*background-image: url(Image/Icon32/Campana.png);*/
+  background-image: url(Image/Icon32/CampanaDis.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+  .BIconCampana32:disabled {
+    background-image: url('Image/Icon32/CampanaDis.png');
+  }
+
+.BIconValidatorChiudi32 {
+  background-image: url(Image/Icon32/ValidatorChiudi.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+  .BIconValidatorChiudi32:disabled {
+    background-image: url(Image/Icon32/ValidatorChiudiDis.png);
+  }
+
+.BIconPin32 {
+  background-image: url(Image/Icon32/pin.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+  .BIconPin32:disabled {
+    background-image: url(Image/Icon32/pinDis.png);
+  }
+
+.BIconUnpin32 {
+  background-image: url(Image/Icon32/unPin.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+  .BIconUnpin32:disabled {
+    background-image: url(Image/Icon32/unPinDis.png);
+  }
+
+.BIconHelpButton32 {
+  /*background-image: url(Image/Icon32/HelpButton32Bianco.png);*/
+  /*background-image: url(Image/Icon32/HelpButton32.png);*/
+  background-image: url(Image/Icon32/HelButtonGrigio.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+  .BIconHelpButton32:disabled {
+    background-image: url(Image/Icon32/HelpButton32Dis.png);
+  }
+
+
+
+.BIconSemaforoRosso {
+  background-image: url('Image/Icon32/rosso.png');
+  background-repeat: no-repeat;
+}
+
+.BIconSemaforoVerde {
+  background-image: url('Image/Icon32/verde.png');
+  background-repeat: no-repeat;
+}
+
+.BIconStampa32 {
+  background-image: url('Image/Icon32/Stampa.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconStampa32:disabled {
+    background-image: url('Image/Icon32/StampaDis.png');
+  }
+
+.BIconCopia32 {
+  background-image: url('Image/Icon32/Copia.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconCopia32:disabled {
+    background-image: url('Image/Icon32/Copia_DIS.png');
+  }
+
+
+.BIconAggiorna32 {
+  background-image: url('Image/Icon32/Aggiorna32.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconAggiorna32:disabled {
+    background-image: url('Image/Icon32/Aggiorna32Dis.png');
+  }
+
+/*BOTTONI FRECCE*/
+.BIconFrecciaSu32 {
+  background-image: url('Image/Icon32/FrecciaSu.png');
+  background-repeat: no-repeat;
+}
+
+.BIconFrecciaGiu32 {
+  background-image: url('Image/Icon32/FrecciaGiu.png');
+  background-repeat: no-repeat;
+}
+
+.BIconFrecciaSx32 {
+  background-image: url('Image/Icon32/FrecciaSx.png');
+  background-repeat: no-repeat;
+}
+
+.BIconFrecciaDx32 {
+  background-image: url('Image/Icon32/FrecciaDx.png');
+  background-repeat: no-repeat;
+}
+
+
+/*ALTRI COMANDI*/
+
+.BIconSeleziona32 {
+  background-image: url('Image/Icon32/SelezionaSingolo.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSeleziona32:disabled {
+    background-image: url('Image/Icon32/SelezionaSingoloDis.png');
+  }
+
+.BIconSelezionaTutti32 {
+  background-image: url('Image/Icon32/SelezionaTutti.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSelezionaTutti32:disabled {
+    background-image: url('Image/Icon32/SelezionaTuttiDis.png');
+  }
+
+/*BOTTONI CONSOLE DEVELOPER*/
+
+.BIconModulo32 {
+  background-image: url('Image/Icon32/Modulo.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconModulo32:disabled {
+    background-image: url('Image/Icon32/ModuloDis.png');
+  }
+
+.BIconFunzioni32 {
+  background-image: url('Image/Icon32/Funzioni.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconFunzioni32:disabled {
+    background-image: url('Image/Icon32/FunzioniDis.png');
+  }
+
+.BIconMenu32 {
+  /*background-image: url('Image/Icon32/FunzioniBlue.png');*/
+  background-image: url('Image/Icon32/FunzioniGrigio.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconMenu32:disabled {
+    background-image: url('Image/Icon32/FunzioniDis.png');
+  }
+
+
+.BIconRuoli32 {
+  background-image: url('Image/Icon32/Ruoli.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconRuoli32:disabled {
+    background-image: url('Image/Icon32/RuoliDis.png');
+  }
+
+.BIconProfili32 {
+  background-image: url('Image/Icon32/Profili.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconProfili32 :disabled {
+    background-image: url('Image/Icon32/ProfiliDis.png');
+  }
+
+.BIconSeverity32 {
+  background-image: url('Image/Icon32/Severity.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSeverity32 :disabled {
+    background-image: url('Image/Icon32/SeverityDis.png');
+  }
+
+.BIconPolicyPwd32 {
+  background-image: url('Image/Icon32/PolicyPwd.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconPolicyPwd32 :disabled {
+    background-image: url('Image/Icon32/PolicyPwdDis.png');
+  }
+
+.BIconMonitorLog32 {
+  background-image: url('Image/Icon32/MonitorLog.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconMonitorLog32 :disabled {
+    background-image: url('Image/Icon32/MonitorLogDis.png');
+  }
+
+.BIconInitDB32 {
+  background-image: url('Image/Icon32/InitDB.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconInitDB32 :disabled {
+    background-image: url('Image/Icon32/InitDBDis.png');
+  }
+
+.BIconGestioneUtenti32 {
+  background-image: url('Image/Icon32/User.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconGestioneUtenti32 :disabled {
+    background-image: url('Image/Icon32/UserDis.jpg');
+  }
+
+
+/*ALTRI BOTTONI*/
+
+.BIconLucchetto32 {
+  background-image: url('Image/Icon32/Lucchetto.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLucchetto32:disabled {
+    background-image: url('Image/Icon32/LucchettoDis.png');
+  }
+
+.BIconLucchettoAperto32 {
+  background-image: url('Image/Icon32/LucchettoAperto.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLucchettoAperto32:disabled {
+    background-image: url('Image/Icon32/LucchettoApertoDis.png');
+  }
+
+.BIconExcel32 {
+  background-image: url('Image/Icon32/Excel.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconExcel32:disabled {
+    background-image: url('Image/Icon32/ExcelDis.png');
+  }
+
+.BIconDownload32 {
+  background-image: url('Image/Icon32/Download.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconDownload32:disabled {
+    background-image: url('Image/Icon32/Image/Icon32/DownloadDis.png');
+  }
+
+.BIconUpload32 {
+  background-image: url('Image/Icon32/Upload.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconUpload32:disabled {
+    background-image: url('Image/Icon32/UploadDis.png');
+  }
+
+.BIconLoginError32 {
+  background-image: url('Image/LoginError.png');
+  background-repeat: no-repeat;
+}
+
+.BIconWebConfig32 {
+  background-image: url('Image/Icon32/WebConfig.png');
+  background-repeat: no-repeat;
+}
+
+.BIconConfigMail32 {
+  background-image: url('Image/Icon32/ConfigMail.png');
+  background-repeat: no-repeat;
+}
+
+.BIconEmail32 {
+  background-image: url('Image/Icon32/Email.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconEmail32:disabled {
+    background-image: url('Image/Icon32/EmailDis.png');
+  }
+
+.BIconPdf32 {
+  background-image: url('Image/Icon32/Pdf.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconPdf32:disabled {
+    background-image: url('Image/Icon32/PdfDis.png');
+  }
+
+.BIconInfo32 {
+  background-image: url('Image/Icon32/Info.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconInfo32:disabled {
+    background-image: url('Image/Icon32/InfoDis.png');
+  }
+
+/* FINE CLASSI BOTTONI */
+
+.BIconIngranaggio32 {
+  background-image: url('Image/Icon32/InitDB.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconIngranaggio32:disabled {
+    background-image: url('Image/Icon32/InitDBDis.png');
+  }
+
+/*PAGER FRECCE*/
+
+.BIconPrimo32 {
+  background-image: url('Image/Icon32/primo_b.png');
+}
+
+.BIconUltimo32 {
+  background-image: url('Image/Icon32/ultimo_b.png');
+}
+
+.BIconPrevPagina32 {
+  background-image: url('Image/Icon32/prevpagina_b.png');
+}
+
+.BIconProxPagina32 {
+  background-image: url('Image/Icon32/proxpagina_b.png');
+}
+
+.BIconGoogle32 {
+  background-image: url('Image/Icon32/');
+  background-repeat: no-repeat;
+}
+
+  .BIconGoogle32:disabled {
+    background-image: url('Image/Icon32/GoogleDis.png');
+  }
+
+.BIconMicrosoft32 {
+  background-image: url('Image/Icon32/Microsoft.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconMicrosoft32:disabled {
+    background-image: url('Image/Icon32/MicrosoftDis.png');
+  }
+
+
+.BIconImportante32 {
+  background-image: url('Image/Icon32/Important32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconNascondi32 {
+  background-image: url('Image/Icon32/Nascondi.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCuoreRosso32 {
+  background-image: url('Image/Icon32/CuoreRosso32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCuoreVuotoNero32 {
+  background-image: url('Image/Icon32/CuoreVuotoNero32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCuoreGialloPoste32 {
+  background-image: url('Image/Icon32/CuoreGialloPoste24.png');
+  background-repeat: no-repeat;
+}

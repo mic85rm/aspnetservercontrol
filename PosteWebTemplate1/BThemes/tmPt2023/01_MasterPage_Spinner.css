@@ -1,0 +1,168 @@
+﻿/*CLASSE PER PANNELLO MODALE*/
+.ModalBackground {
+  background-color: #424242ab;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)" !important;
+  filter: alpha(opacity=85) !important;
+  opacity: 0.85 !important;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000002;
+}
+
+/*PANNELLO CONTENITORE DIV LOADER*/
+.PanelProgressBar {
+  width: 100%;
+  height: 100%;
+}
+/*DIV PANNELLO LOADER*/
+.CenterScreen {
+  border: 1px solid #6495ED;
+  position: fixed;
+  z-index: 100002;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 210px;
+  margin-left: -200px;
+  margin-top: -105px;
+  background-color: #424242;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px 0.5px #141414 !important;
+}
+
+.TestoProgressBar {
+  color: #e5e5e5;
+  font-size: 12pt;
+  line-height: 250px;
+  text-shadow: 1px 1px 2px black !important;
+}
+
+.ImageProgressBar {
+}
+
+  .ImageProgressBar::after {
+    border-top: #bdbdbd 3px solid;
+    border-right: transparent 3px solid;
+    border-bottom: transparent 3px solid;
+    border-left: transparent 3px solid;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    top: 50%;
+    width: 40px;
+    position: absolute;
+    -webkit-animation: rotatingBack 1.7s linear infinite;
+    -moz-animation: rotatingBack 1.7s linear infinite;
+    -ms-animation: rotatingBack 1.7s linear infinite;
+    -o-animation: rotatingBack 1.7s linear infinite;
+    animation: rotatingBack 1.7s linear infinite;
+  }
+
+  .ImageProgressBar::before {
+    border-top: #eedc00 3px solid;
+    border-right: transparent 3px solid;
+    border-bottom: transparent 3px solid;
+    border-left: transparent 3px solid;
+    border-radius: 50%;
+    content: "";
+    height: 50px;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -35px;
+    top: 50%;
+    width: 50px;
+    position: absolute;
+    -webkit-animation: rotating 1.1s linear infinite;
+    -moz-animation: rotating 1.1s linear infinite;
+    -ms-animation: rotating 1.1s linear infinite;
+    -o-animation: rotating 1.1s linear infinite;
+    animation: rotating 1.1s linear infinite;
+  }
+
+
+
+@media only screen and (max-width:400px) {
+  /*DIV PANNELLO LOADER*/
+  .CenterScreen {
+    border: 1px solid #6495ED;
+    position: fixed;
+    z-index: 100002;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 80px;
+    margin-left: -100px;
+    margin-top: -30px;
+    background-color: #242527;
+    box-shadow: 0 0 10px darkgrey !important;
+  }
+
+  .TestoProgressBar {
+    color: white;
+    font-size: 8pt;
+  }
+}
+
+
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: rotate(359deg);
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes rotatingBack {
+  from {
+    -webkit-transform: rotate(359deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    opacity: 1;
+  }
+
+
+
+  to {
+    -ms-transform: rotate(359deg);
+    opacity: 0.5;
+  }
+}
+
+
+
+@keyframes rotatingBack {
+  from {
+    -ms-transform: rotate(359deg);
+    opacity: 1;
+  }
+
+
+
+  to {
+    -ms-transform: rotate(0deg);
+    opacity: 0.5;
+  }
+}

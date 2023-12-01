@@ -1,0 +1,21 @@
+﻿/*MODALITTA SMARTPHONE*/
+@media only screen and (max-width: 600px) {
+  .UtenteEntrato-Containers {
+    float: right;
+    height: 40px;
+  }
+
+  .UtenteEntrato-LabelLogOut {
+    font-size: 12pt !Important;
+    color: #ffff;
+    text-wrap: none;
+    line-height: 32px;
+    float: left;
+    margin: 9px;
+  }
+
+  .UtenteEntrato-BtnLogOut {
+    margin: 9px;
+    float: left;
+  }
+}

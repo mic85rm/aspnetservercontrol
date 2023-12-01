@@ -1,0 +1,23 @@
+﻿/*MODALITTA TABLET*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .UtenteEntrato-Containers {
+    float: right;
+    height: 40px;
+    margin-top: 0px;
+    margin-right: 20px;
+  }
+
+  .UtenteEntrato-LabelLogOut {
+    font-size: 12pt !Important;
+    color: #ffff;
+    text-wrap: none;
+    line-height: 32px;
+    float: left;
+    margin: 4px;
+  }
+
+  .UtenteEntrato-BtnLogOut {
+    margin: 4px;
+    float: left;
+  }
+}

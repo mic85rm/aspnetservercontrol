@@ -1,0 +1,185 @@
+﻿@media only screen and (min-width: 1025px) {
+
+  .lblElencoSistemi {
+    border-bottom: 1px solid black;
+  }
+
+  .lblElencoProfili {
+    border-bottom: 1px solid black;
+  }
+
+  /* HEADER */
+
+  .Header {
+    float: left;
+    width: 100%;
+  }
+
+  .HeaderLeft {
+    float: left;
+    width: calc(100% - 100px);
+  }
+
+  .HeaderRight {
+    float: left;
+    width: 100px;
+  }
+
+  .BBtnBar {
+    width: 32px;
+    height: 32px;
+    margin: 15px;
+    float: left;
+  }
+
+  .PnlSearchAll {
+    float: left;
+    height: calc(100% - 0px);
+    width: calc(100% - 80px);
+  }
+
+  .BBtnBarLente {
+    width: 32px;
+    height: 32px;
+    margin: 32px;
+    float: left;
+  }
+
+  .BtnSearchAll {
+    width: 32px;
+    height: 32px;
+    margin: 37px;
+    float: right;
+  }
+
+  .mbtSearchAll {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+    border: none !important;
+    /*background-color: transparent !important;*/
+    /*color: white !important;*/
+    height: 40px;
+    min-width: 300px;
+  }
+
+
+  /* FOOTER*/
+
+  .Footer {
+    /*background-color: #707070;*/
+    background-color: #EEDC00;
+    height: 26px;
+    margin-top: 4px;
+  }
+
+  .TestoFooter {
+    height: 52px;
+    line-height: 52px;
+    float: left;
+  }
+
+  .DataFooter {
+    height: 52px;
+    line-height: 52px;
+    float: right;
+  }
+
+  .FooterLeft {
+    display: none;
+    float: left;
+  }
+
+
+  .FooterRight {
+    text-align: center;
+    width: 100%;
+    float: right;
+  }
+
+  /*LABEL FOOTER*/
+  .Designed {
+    margin-left: 10px;
+    margin-right: 10px;
+    /*color: white;*/
+    color: #0d47a1;
+    font-style: normal;
+    font-size: 10pt;
+  }
+
+  .BSideBarContent {
+    margin: 10px;
+    float: left;
+    width: calc(100% - 20px);
+  }
+
+  .SceltaVisibilitaPnl {
+    width: 100%;
+  }
+
+  .SceltaVisibilitaItemPnl {
+    width:100%;
+  }
+
+  .SceltaVisibilitaLink{
+    cursor:pointer;
+    font-size:13px;
+    color:black;
+    text-align:left;
+    margin-top:5px;
+  }
+
+  .SceltaVisibilitaLinkSelezionato {
+    cursor: pointer;
+    font-size: 13px;
+    color: black;
+    text-align: left;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  .SceltaVisibilitaPreferito {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px !important;
+    background-image: url('Image/Icon24/CuoreVuotoNero24.png');
+    background-repeat: no-repeat;
+    border: 1px solid #bfd0e4;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px 8px 12px;
+    background-color: rgba(221,221,221,0.2);
+    border: 0px solid gray !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+    background-color: transparent !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .SceltaVisibilitaPreferitoSelezionato {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px !important;
+    background-image: url('Image/Icon24/CuoreGialloPoste24.png');
+    background-repeat: no-repeat;
+    border: 1px solid #bfd0e4;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px 8px 12px;
+    background-color: rgba(221,221,221,0.2) ;
+    border: 0px solid gray !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+    background-color: transparent !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+
+}

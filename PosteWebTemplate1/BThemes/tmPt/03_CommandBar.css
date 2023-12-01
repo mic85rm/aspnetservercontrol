@@ -1,0 +1,77 @@
+﻿.PnlCommandBar {
+  min-width: 300px !important;
+  min-height: 32px;
+  width: 100%;
+  background-color: #707070;
+  margin: 0px;
+  padding: 0px;
+}
+
+.BtnSalva {
+  margin-top: 2px;
+  margin-right: 10px;
+  float: right;
+  width: 28px;
+  height: 28px;
+}
+
+.BtnNuovo {
+  margin-top: 2px;
+  margin-right: 10px;
+  float: right;
+  width: 28px;
+  height: 28px;
+}
+
+.BtnAnnulla {
+  margin-top: 2px;
+  margin-right: 10px;
+  float: right;
+  width: 28px;
+  height: 28px;
+}
+
+.BtnElimina {
+  margin-top: 2px;
+  margin-right: 10px;
+  float: right;
+  width: 28px;
+  height: 28px;
+}
+
+
+.BtnStampa {
+  margin-top: 2px;
+  margin-right: 10px;
+  float: right;
+  width: 28px;
+  height: 28px;
+}
+
+.LblPageName {
+  margin-top: 6px;
+  margin-left: 10px;
+  margin-right: 10px;
+  float: left;
+}
+
+.PnlSeparatoreDx {
+  margin-top: 4px;
+  margin-right: 10px;
+  float: right;
+  width: 10px;
+  height: 10px;
+}
+
+.PnlSeparatoreSx {
+  margin-top: 4px;
+  margin-right: 10px;
+  float: left;
+  width: 10px;
+  height: 10px;
+}
+
+.PnlOtherControls {
+  float: right;
+  height: 28px;
+}

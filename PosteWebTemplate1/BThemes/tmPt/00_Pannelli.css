@@ -1,0 +1,41 @@
+﻿.BPanelContainerBase {
+  scrollbar-base-color: #707070;
+  scrollbar-arrow-color: #0D5AAA;
+  scrollbar-track-color: whitesmoke;
+}
+
+
+.BPanel {
+  border: 1px solid #424242;
+  background-color: whitesmoke !important;
+}
+
+.BPanelRadius {
+  border: 1px solid #424242;
+  background-color: whitesmoke !important;
+}
+
+.BPanelShadow {
+  border: 1px solid #424242;
+  background-color: whitesmoke !important;
+}
+
+.BPanelShadowRadius {
+  border: 1px solid #424242;
+  background-color: whitesmoke !important;
+}
+
+.BPanelTitle {
+  color: whitesmoke;
+  background-color: #424242;
+  font-size: 20pt;
+}
+
+.BPaneTitleAzzurro {
+  color: #00a1fd !important;
+}
+
+.BPanelFooter {
+  background-color: #424242;
+  color: whitesmoke;
+}

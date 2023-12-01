@@ -1,0 +1,269 @@
+﻿
+
+/*HEIGHT*/
+.BHeight100 {
+  height: -moz-calc(100% - 0px);
+  Height: -webkit-calc(100% - 0px);
+  Height: calc(100% - 0px);
+}
+
+
+.BHeight100-5 {
+  height: -moz-calc(100% - 5px);
+  Height: -webkit-calc(100% - 5px);
+  Height: calc(100% - 5px);
+}
+
+.BHeight100-10 {
+  height: -moz-calc(100% - 10px);
+  height: -webkit-calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+.BHeight100-15 {
+  height: -moz-calc(100% - 15px);
+  height: -webkit-calc(100% - 15px);
+  height: calc(100% - 15px);
+}
+
+.BHeight100-20 {
+  height: -moz-calc(100% - 20px);
+  height: -webkit-calc(100% - 20px);
+  height: calc(100% - 20px);
+}
+
+.BHeight100-25 {
+  height: -moz-calc(100% - 25px);
+  height: -webkit-calc(100% - 25px);
+  height: calc(100% - 25px);
+}
+
+.BHeight100-30 {
+  height: -moz-calc(100% - 30px);
+  height: -webkit-calc(100% - 30px);
+  height: calc(100% - 30px);
+}
+
+.BHeight100-35 {
+  height: -moz-calc(100% - 35px);
+  height: -webkit-calc(100% - 35px);
+  height: calc(100% - 35px);
+}
+
+.BHeight100-40 {
+  height: -moz-calc(100% - 40px);
+  height: -webkit-calc(100% - 40px);
+  height: calc(100% - 40px);
+}
+
+.BHeight100-45 {
+  height: -moz-calc(100% - 45px);
+  height: -webkit-calc(100% - 45px);
+  height: calc(100% - 45px);
+}
+
+.BHeight100-50 {
+  height: -moz-calc(100% - 50px);
+  height: -webkit-calc(100% - 50px);
+  height: calc(100% - 50px);
+}
+
+.BHeight100-45 {
+  height: -moz-calc(100% - 45px);
+  height: -webkit-calc(100% - 45px);
+  height: calc(100% - 45px);
+}
+
+.BHeight100-50 {
+  height: -moz-calc(100% - 50px);
+  height: -webkit-calc(100% - 50px);
+  height: calc(100% - 50px);
+}
+
+.BHeight100-55 {
+  height: -moz-calc(100% - 55px);
+  height: -webkit-calc(100% - 55px);
+  height: calc(100% - 55px);
+}
+
+.BHeight100-60 {
+  height: -moz-calc(100% - 60px);
+  height: -webkit-calc(100% - 60px);
+  height: calc(100% - 60px);
+}
+
+.BHeight100-65 {
+  height: -moz-calc(100% - 65px);
+  height: -webkit-calc(100% - 65px);
+  height: calc(100% - 65px);
+}
+
+.BHeight100-70 {
+  height: -moz-calc(100% - 70px);
+  height: -webkit-calc(100% - 70px);
+  height: calc(100% - 70px);
+}
+
+.BHeight100-75 {
+  height: -moz-calc(100% - 75px);
+  height: -webkit-calc(100% - 75px);
+  height: calc(100% - 75px);
+}
+
+.BHeight100-80 {
+  height: -moz-calc(100% - 80px);
+  height: -webkit-calc(100% - 80px);
+  height: calc(100% - 80px);
+}
+
+.BHeight100-85 {
+  height: -moz-calc(100% - 85px);
+  height: -webkit-calc(100% - 85px);
+  height: calc(100% - 85px);
+}
+
+.BHeight100-90 {
+  height: -moz-calc(100% - 90px);
+  height: -webkit-calc(100% - 90px);
+  height: calc(100% - 90px);
+}
+
+.BHeight100-95 {
+  height: -moz-calc(100% - 95px);
+  height: -webkit-calc(100% - 95px);
+  height: calc(100% - 95px);
+}
+
+.BHeight100-100 {
+  height: -moz-calc(100% - 100px);
+  height: -webkit-calc(100% - 100px);
+  height: calc(100% - 100px);
+}
+
+/*MIN-HEIGHT*/
+.BMinHeight100 {
+  min-height: -moz-calc(100% - 0px);
+  min-height: -webkit-calc(100% - 0px);
+  min-height: calc(100% - 0px);
+}
+
+
+.BMinHeight100-5 {
+  min-height: -moz-calc(100% - 5px);
+  min-height: -webkit-calc(100% - 5px);
+  min-height: calc(100% - 5px);
+}
+
+.BMinHeight100-10 {
+  min-height: -moz-calc(100% - 10px);
+  min-height: -webkit-calc(100% - 10px);
+  min-height: calc(100% - 10px);
+}
+
+.BMinHeight100-15 {
+  min-height: -moz-calc(100% - 15px);
+  min-height: -webkit-calc(100% - 15px);
+  min-height: calc(100% - 15px);
+}
+
+.BMinHeight100-20 {
+  min-height: -moz-calc(100% - 20px);
+  min-height: -webkit-calc(100% - 20px);
+  min-height: calc(100% - 20px);
+}
+
+.BMinHeight100-25 {
+  min-height: -moz-calc(100% - 25px);
+  min-height: -webkit-calc(100% - 25px);
+  min-height: calc(100% - 25px);
+}
+
+.BMinHeight100-30 {
+  min-height: -moz-calc(100% - 30px);
+  min-height: -webkit-calc(100% - 30px);
+  min-height: calc(100% - 30px);
+}
+
+.BMinHeight100-35 {
+  min-height: -moz-calc(100% - 35px);
+  min-height: -webkit-calc(100% - 35px);
+  min-height: calc(100% - 35px);
+}
+
+.BMinHeight100-40 {
+  min-height: -moz-calc(100% - 40px);
+  min-height: -webkit-calc(100% - 40px);
+  min-height: calc(100% - 40px);
+}
+
+.BMinHeight100-45 {
+  min-height: -moz-calc(100% - 45px);
+  min-height: -webkit-calc(100% - 45px);
+  min-height: calc(100% - 45px);
+}
+
+.BMinHeight100-50 {
+  min-height: -moz-calc(100% - 50px);
+  min-height: -webkit-calc(100% - 50px);
+  min-height: calc(100% - 50px);
+}
+
+.BMinHeight100-55 {
+  min-height: -moz-calc(100% - 55px);
+  min-height: -webkit-calc(100% - 55px);
+  min-height: calc(100% - 55px);
+}
+
+.BMinHeight100-60 {
+  min-height: -moz-calc(100% - 60px);
+  min-height: -webkit-calc(100% - 60px);
+  min-height: calc(100% - 60px);
+}
+
+.BMinHeight100-65 {
+  min-height: -moz-calc(100% - 65px);
+  min-height: -webkit-calc(100% - 65px);
+  min-height: calc(100% - 65px);
+}
+
+.BMinHeight100-70 {
+  min-height: -moz-calc(100% - 70px);
+  min-height: -webkit-calc(100% - 70px);
+  min-height: calc(100% - 70px);
+}
+
+.BMinHeight100-75 {
+  min-height: -moz-calc(100% - 75px);
+  min-height: -webkit-calc(100% - 75px);
+  min-height: calc(100% - 75px);
+}
+
+.BMinHeight100-80 {
+  min-height: -moz-calc(100% - 80px);
+  min-height: -webkit-calc(100% - 80px);
+  min-height: calc(100% - 80px);
+}
+
+.BMinHeight100-85 {
+  min-height: -moz-calc(100% - 85px);
+  min-height: -webkit-calc(100% - 85px);
+  min-height: calc(100% - 85px);
+}
+
+.BMinHeight100-90 {
+  min-height: -moz-calc(100% - 90px);
+  min-height: -webkit-calc(100% - 90px);
+  min-height: calc(100% - 90px);
+}
+
+.BMinHeight100-95 {
+  min-height: -moz-calc(100% - 95px);
+  min-height: -webkit-calc(100% - 95px);
+  min-height: calc(100% - 95px);
+}
+
+.BMinHeight100-100 {
+  min-height: -moz-calc(100% - 100px);
+  min-height: -webkit-calc(100% - 100px);
+  min-height: calc(100% - 100px);
+}

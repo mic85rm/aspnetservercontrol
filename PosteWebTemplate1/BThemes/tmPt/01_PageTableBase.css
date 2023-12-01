@@ -1,0 +1,51 @@
+﻿.Page_Ricerca {
+  background-color: #EFEFEF;
+  margin: 0px;
+  padding-top: 0px !important;
+  width: 100% !important;
+  float: left;
+}
+
+.Page_Elenco {
+  min-height: 200px;
+  height: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  width: calc(100% - 40px);
+  float: left
+}
+
+.Page_Dettaglio {
+  width: 100%;
+  height: auto;
+  float: left
+}
+
+.Page_Ricerca_CommandBar {
+  height: 40px !important;
+  width: 100%;
+  background-color: #f2f2f2;
+  /*background-color: #ebeaea;*/
+  border-top: 1px solid #cdcccc !important;
+}
+
+.Page_Ricerca_ButtonSearch {
+  height: 32px;
+  width: 100px;
+  float: right;
+  margin: 4px;
+  margin-right: 24px;
+}
+
+.Page_PnlDtg {
+  width: -moz-calc(100% - 0px);
+  width: -webkit-calc(100% - 0px);
+  width: calc(100% - 0px);
+}
+
+.BRequiredFieldValidator {
+  margin: 5px;
+  float: left;
+  color: #707070;
+}

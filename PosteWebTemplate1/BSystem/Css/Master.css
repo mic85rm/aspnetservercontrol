@@ -1,0 +1,49 @@
+﻿
+html, body, form {
+  /*height: 100%;
+  max-height: 100%;*/
+  margin: 0;
+  padding: 0;
+}
+
+.BDisplayNone {
+  display: none !important;
+}
+
+.BDisplayBlock {
+  display: block;
+}
+
+.BFloatLeft {
+  float: left;
+}
+
+.BFloatRight {
+  float: right;
+}
+
+.BRow {
+  width: 100%;
+  float: left;
+}
+
+.BLabelControl {
+  margin: 5px;
+  margin-top: 16px;
+  float: left;
+}
+
+
+.BLabelControlSearch {
+  margin: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 36px;
+  min-height: 36px;
+  float: left;
+}
+
+.BInputControl {
+  margin: 5px !important;
+  float: left;
+}

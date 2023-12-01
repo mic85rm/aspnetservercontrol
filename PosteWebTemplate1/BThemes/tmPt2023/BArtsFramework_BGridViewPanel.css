@@ -1,0 +1,23 @@
+﻿.BDtgPanelContainer {
+  height: auto;
+  width: calc(100% - 40px);
+  margin: 20px;
+  background-color: rgb(246,246,247);
+  border: solid 0px rgb(220,220,220);
+}
+
+.BDtgPanelAuto {
+  background-color: rgb(246,246,247);
+  border: solid 0px rgb(220,220,220);
+  height: auto;
+  width: calc(100% - 0px);
+  overflow: hidden;
+}
+
+.BDtgPanel {
+  background-color: rgb(246,246,247);
+  border: solid 1px rgb(220,220,220);
+  min-height: 200px;
+  width: calc(100% - 0px);
+  overflow: auto;
+}

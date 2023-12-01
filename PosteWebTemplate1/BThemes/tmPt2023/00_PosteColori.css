@@ -1,0 +1,91 @@
+﻿.themePrimary{
+  background-color:#0047BB;
+}
+
+.themeLighterAlt {
+  background-color: #EEDC00;
+}
+
+.themeLighter {
+  background-color: #CDDCF4;
+}
+
+.themeLight {
+  background-color: #A4BFEA;
+}
+
+.themeTertiary {
+  background-color: #5587D6;
+}
+
+.themeSecondary {
+  background-color: #1759C2;
+}
+
+.neutralDark {
+  background-color: #0040A8;
+}
+
+.themeDarkAlt {
+  background-color: #0040A8;
+}
+
+.themeDark {
+  background-color: #00368D;
+}
+
+.themeDarker {
+  background-color: #002868;
+}
+
+.neutralLighterAlt {
+  background-color: #F8F8F8;
+}
+
+.neutralLighter {
+  background-color: #F6F6F6;
+}
+
+.neutralLight{
+  background-color: #EAEAEA;
+}
+
+.neutralPrimary{
+  background-color: #222427;
+}
+
+.neutralPrimaryAlt {
+  background-color: #3B3A39;
+}
+
+.neutralSecondary {
+  background-color: #605E5C;
+}
+
+.neutralSecondaryAlt {
+  background-color: #8A8886;
+}
+
+.neutralTertiary {
+  background-color:#A19F9D;
+}
+
+.neutralTertiaryAlt {
+  background-color: #C8C8C8;
+}
+
+.neutralQuaternary {
+  background-color: #D0D0D0;
+}
+
+.successColor {
+  background-color: #26B158;
+}
+
+.errorColor {
+  background-color: #FF3925;
+}
+
+.infoColor {
+  background-color: #808080;
+}

@@ -1,0 +1,102 @@
+﻿@media only screen and (min-width: 1025px) {
+
+  .BMsgBoxPnlCenter {
+    height: 100%;
+    width: 100%;
+    float: left;
+  }
+
+
+  .BMsgBoxPnlContainer {
+    border-style: Solid;
+    border-color: #707070;
+    background-color: whitesmoke;
+    border-width: 1px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    margin: auto;
+  }
+
+
+  .BMsgBoxPnlHeader {
+    width: 100%;
+    height: 32px;
+    background-color: #424242;
+    color: White;
+    text-align: center;
+    line-height: 32px;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    -moz-border-radius-topright: 8px;
+    -moz-border-radius-topleft: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    float: left;
+  }
+
+  .BMsgBoxPnlContent {
+    background-color: whitesmoke;
+    width: -moz-calc(100% - 0px);
+    width: -webkit-calc(100% - 0px);
+    width: calc(100% - 0px);
+    height: -moz-calc(100% - 72px);
+    height: -webkit-calc(100% - 72px);
+    height: calc(100% - 72px);
+    float: left;
+  }
+
+  .BMsgBoxPnlFooter {
+    width: 100%;
+    height: 40px;
+    background-color: #424242;
+    color: White;
+    text-align: center;
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    -moz-border-radius-bottomright: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-top: 2px;
+    float: left
+  }
+
+  .BMsgBoxImgIcon {
+    float: left;
+    width: 32px;
+    height: calc(100% - 10px) !important;
+    margin: 5px;
+  }
+
+  .BMsgBoxTitolo {
+    float: left;
+    margin: 10px;
+    width: calc(100% - 20px) !important;
+  }
+
+  .BMsgBoxMessaggio {
+    float: left;
+    margin: 10px;
+    width: calc(100% - 70px) !important;
+  }
+
+  .BMsgBoxModalBackground {
+    background-color: rgba(100, 149, 237, 0.75);
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000002;
+  }
+
+  .BMsgBoxButtons {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 4px;
+    width: calc(50% - 20px);
+    height: 32px;
+  }
+}

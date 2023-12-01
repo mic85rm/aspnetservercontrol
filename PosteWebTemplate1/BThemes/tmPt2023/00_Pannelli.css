@@ -1,0 +1,50 @@
+﻿.BPanelContainerBase {
+  scrollbar-base-color: #707070;
+  scrollbar-arrow-color: #0D5AAA;
+  scrollbar-track-color: whitesmoke;
+}
+
+
+.BPanel {
+  border: 1px solid #E1E1E1;
+  background-color: #ffffff !important;
+}
+
+.BPanelRadius {
+  border: 1px solid #E1E1E1 !important;
+  border-radius: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.BPanelShadow {
+  border: 1px solid #E1E1E1 !important;
+  border-radius: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.BPanelShadowRadius {
+  border: 1px solid #E1E1E1 !important;
+  border-radius: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.BPanelTitle {
+  color: #222427 !important;
+  background-color: #ffffff !important;
+  font-size: 20pt;
+  text-align: left !important;
+  padding-left: 15px;
+  border: 0px !important;
+  border-radius: 0 !important;
+}
+
+.BPaneTitleAzzurro {
+  color: #00a1fd !important;
+}
+
+.BPanelFooter {
+  background-color: #ffffff !important;
+  border: 1px solid #E1E1E1 !important;
+  border-radius: 0 !important;
+  color: whitesmoke;
+}

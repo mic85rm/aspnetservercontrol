@@ -1,0 +1,55 @@
+﻿.BTestoSuccess {
+  color: #28a745;
+}
+
+.BTestoWarning {
+  color: #ffc107;
+}
+
+.BTestoDanger {
+  color: #dc3545;
+}
+
+
+/*---------------------------------------------------------------------------------*/
+
+/*CLASSI COLORI*/
+.BTestoBianco {
+  color: white;
+}
+
+.BTestoNero {
+  color: black;
+}
+
+.BTestoRosso {
+  color: red;
+}
+
+.BTestoBlu {
+  color: blue;
+}
+
+.BTestoGrigio {
+  color: gray;
+}
+
+.BTestoGrigioScuro {
+  color: darkgray;
+}
+
+.BTestoGrigioChiaro {
+  color: lightgray;
+}
+
+.BTestoCeleste {
+  color: #bfd0e4;
+}
+
+.BTestoGrigioScuroPoste {
+  color: #4f4a4a;
+}
+
+.BTestoAzzurro {
+  color: #00a1fd !important;
+}

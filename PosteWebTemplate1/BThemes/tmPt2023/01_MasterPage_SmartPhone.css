@@ -1,0 +1,185 @@
+﻿@media only screen and (max-width: 600px) /*and (orientation: portrait ), only screen and (max-height: 600px) and (orientation: landscape)*/ {
+
+  .MasterBody {
+    background-color: #e5e5e5;
+    min-height: 100vh;
+  }
+
+  /*CLASSI PER SIDEBAR AND MAIN */
+
+  .BWrapper {
+    width: 100%;
+    min-height: calc(100% - 62px); /*100% - ALTEZZA FOOTER*/
+    float: left;
+  }
+
+  /* CLASSI PER SIDEBAR*/
+
+  .BSidebar {
+    min-width: 100%;
+    max-width: 100%;
+    color: black;
+    opacity: 1;
+    transition: opacity 1.5s linear;
+    background-color: #f2f2f2;
+    padding-bottom: 30px;
+    float: left;
+  }
+
+    .BSidebar.active {
+      margin-left: -100%;
+      opacity: 0;
+      transition: opacity 1.5s linear;
+      float: left;
+    }
+
+  .BSidebar_Header {
+    width: 100%;
+    margin: 0px !important;
+    background-color: #EEDC00;
+    background-image: Url('Image/LogoTitolo.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: 170px;
+    min-height: 45px;
+    float: left;
+  }
+
+  .BSidebar_Container {
+    float: left;
+    margin: 0px !important;
+    background-color: #f2f2f2;
+    width: 100%;
+  }
+
+
+  /*CLASSI PER MAIN */
+
+    .BMain {
+        width: 100%;
+        transition: all 0.3s;
+        padding: 0px;
+        background-color: #ededed;
+    }
+
+  .BMainHeader {
+    width: 100%;
+    min-height: 50px;
+    margin: 0px !important;
+    /*background-color: #707070;*/
+    background-color: #EEDC00;
+    float: left;
+  }
+
+  .BSidebarHide {
+    visibility: hidden;
+    opacity: 0;
+    float: left;
+    opacity: 0;
+    transition: opacity 1.5s linear;
+  }
+
+    .BSidebarHide.active {
+      visibility: visible;
+      background-image: Url('Image/LogoTitolo.png');
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-size: 200px;
+      width: calc(100% - 70px);
+      min-height: 50px;
+/*      margin: 10px 10px 0px 10px !important;*/
+      opacity: 1;
+      transition: opacity 1.0s linear;
+      float: left;
+    }
+
+  .BMainHeaderPnlBtn {
+    width: 50px;
+    height: 32px;
+    float: left;
+  }
+
+
+  .BMainContent {
+    float: left;
+    width: 100%;
+  }
+
+
+  .BMainHeaderContainer {
+    min-height: 100px;
+    /*background-color: #424242;*/
+    width: calc(100% - 50px);
+    float: left;
+  }
+
+    .BMainHeaderContainer.active {
+      min-height: 50px;
+      /*background-color: #525252;*/
+      background-color: #EEDC00;
+      width: calc(100% - 0px);
+      float: left;
+    }
+
+  .BFooter {
+    height: 33px;
+    width: 100%;
+    /*background-color: #707070;*/
+    background-color: #EEDC00;
+    float: left;
+  }
+
+
+
+  .ContainerMenu {
+    float: left;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .ContainerContent {
+    width: 100%;
+    float: left;
+  }
+
+
+
+  /*CLASSE PER UTILIZZZO COOKIE*/
+  .BPanelAuthCookies {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgb(66, 66, 66, 0.95);
+    height: 300px;
+  }
+
+  .TestoAuthCookie {
+    color: white;
+    font-size: 14pt;
+    line-height: 20pt;
+  }
+
+  .BBtnAccettaCookie {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: calc(50% - 100px);
+    background-color: RGBA(40,167,69,1) !important;
+    color: white !important;
+    font-weight: bolder
+  }
+
+    .BBtnAccettaCookie:hover {
+      background-color: RGBA(33,136,56,1) !important;
+      color: white !important;
+      border-radius: 8px !important;
+      transition: 0.3s
+    }
+
+    .BBtnAccettaCookie:focus {
+      border: 1px solid white;
+      color: white !important;
+      border-color: rgba(82,168,236,0.8);
+      border-radius: 4px !important;
+    }
+}

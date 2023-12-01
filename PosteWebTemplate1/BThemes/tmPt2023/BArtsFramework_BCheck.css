@@ -1,0 +1,49 @@
+﻿/* CLASSI CONTROLLI */
+.BCheck {
+  margin: 1px;
+}
+
+  .BCheck input[type="checkbox"] {
+    margin-top: 6px;
+    padding-left: 20px;
+    height: 26px;
+    width: 26px;
+    float: left;
+  }
+
+    .BCheck input[type="checkbox"]:focus {
+      outline: none;
+    }
+
+    .BCheck input[type="checkbox"]:hover {
+      cursor: pointer;
+      box-shadow: none !important;
+    }
+
+    .BCheck input[type="checkbox"]:disabled {
+      border: 1px solid #000 !important;
+      background-color: #CCC !important;
+      color: #707070 !important;
+      cursor: default;
+    }
+
+
+  .BCheck label {
+    line-height: 36px;
+  }
+
+.BCheckInGrid {
+  height: 36px;
+  width: 100%;
+  float: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 1px;
+}
+
+  .BCheckInGrid input {
+    width: 24px;
+    height: 24px;
+    margin: 6px;
+  }

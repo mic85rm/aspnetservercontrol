@@ -1,0 +1,13 @@
+﻿@media only screen and (min-width: 1025px) {
+  .BCollapse {
+    display: none !important;
+  }
+
+  .BShowOnlyPC, .BShowOnlyTabletPC {
+    display: block !important;
+  }
+
+  .BShowSmartPhone, .BShowTablet, .BShowOnlyTabletSmartPhone {
+    display: none !important;
+  }
+}

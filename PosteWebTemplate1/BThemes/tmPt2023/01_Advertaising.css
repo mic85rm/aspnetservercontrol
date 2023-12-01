@@ -1,0 +1,70 @@
+﻿
+@media only screen and (min-width: 1025px) {
+
+  .ContainerSkin {
+    display: none;
+  }
+
+  .BannerSkin {
+    position: fixed;
+    z-index: -1;
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+  }
+
+  .SkinBackground {
+    background-color: #242424;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+
+  .SkinImage {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ContentSkin {
+    width: 100%;
+    height: 100%;
+    background-color: #ededed;
+  }
+
+  .TopSkin {
+    margin: 0px auto;
+    cursor: default;
+    display: block;
+    height: 20px;
+    width: 100%;
+    top: 0px;
+  }
+
+  .LeftSkin {
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    position: fixed;
+    top: 0px;
+    right: 50%;
+    z-index: 10;
+    margin-right: 596px;
+  }
+
+  .RightSkin {
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    z-index: 10;
+    margin-left: 596px;
+  }
+}

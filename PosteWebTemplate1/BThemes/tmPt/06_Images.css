@@ -1,0 +1,442 @@
+﻿/*BOTTONI STANDARD DI COMANDO*/
+
+.BIconCalendar {
+  background-image: url('Image/Icon24/calendar24.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCodiceFiscale {
+  background-image: url('Image/Icon24/codiceFiscale24.png');
+  background-repeat: no-repeat;
+}
+
+.BIconNuovo {
+  background-image: url('Image/Icon24/Nuovo.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconNuovo:disabled {
+    background-image: url('Image/Icon24/NuovoDis.png');
+  }
+
+.BIconModifica {
+  background-image: url('Image/Icon24/Modifica.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconModifica:disabled {
+    background-image: url(' Image/Icon24/ModificaDis.png');
+  }
+  
+.BIconSalva {
+  background-image: url('Image/Icon24/Salva.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSalva:disabled {
+    background-image: url('Image/Icon24/SalvaDis.png');
+  }
+
+
+.BIconAnnulla {
+  background-image: url('Image/Icon24/Annulla.png');
+  background-repeat: no-repeat;
+}
+
+.BIconAnnulla32 {
+  background-image: url('Image/Bottoni32/Annulla32.png');
+  background-repeat: no-repeat;
+}
+
+.BIconAnnulla:disabled {
+  background-image: url('Image/Icon24/AnnullaDis.png');
+}
+
+.BIconElimina {
+  background-image: url('Image/Icon24/Cestino.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconElimina:disabled {
+    background-image: url('Image/Icon24/CestinoDis.png');
+  }
+
+.BIconLente {
+  background-image: url('Image/Icon24/Lente.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLente:disabled {
+    background-image: url('Image/Icon24/LenteDis.png');
+  }
+
+.BIconLogOut {
+  background-image: url('Image/Icon24/LogOutDis.png');
+  background-repeat: no-repeat;
+}
+
+.BIconStampa {
+  background-image: url('Image/Icon24/Stampa.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconStampa:disabled {
+    background-image: url('Image/Icon24/StampaDis.png');
+  }
+
+.BIconHelpButton {
+  background-image: url(Image/Icon24/HelpButton24.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+
+  .BIconHelpButton:disabled {
+    background-image: url(Image/Icon24/HelpButton24Dis.png);
+  }
+
+
+.BIconCopia {
+  background-image: url('Image/Icon24/Copia.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconCopia:disabled {
+    background-image: url('Image/Icon24/Copia_DIS.png');
+  }
+
+
+.BIconAggiorna {
+  background-image: url('Image/Icon24/Aggiorna24.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconAggiorna:disabled {
+    background-image: url('Image/Icon24/Aggiorna24Dis.png');
+  }
+
+/*BOTTONI FRECCE*/
+.BIconFrecciaSu {
+  background-image: url('Image/Icon24/FrecciaSu.png');
+  background-repeat: no-repeat;
+}
+
+.BIconFrecciaGiu {
+  background-image: url('Image/Icon24/FrecciaGiu.png');
+  background-repeat: no-repeat;
+}
+
+.BIconFrecciaSx {
+  background-image: url('Image/Icon24/FrecciaSx.png');
+  background-repeat: no-repeat;
+}
+
+.BIconFrecciaDx {
+  background-image: url('Image/Icon24/FrecciaDx.png');
+  background-repeat: no-repeat;
+}
+
+
+/*ALTRI COMANDI*/
+
+.BIconSeleziona {
+  background-image: url('Image/Icon24/SelezionaSingolo.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSeleziona:disabled {
+    background-image: url('Image/Icon24/SelezionaSingoloDis.png');
+  }
+
+.BIconSelezionaTutti {
+  background-image: url('Image/Icon24/SelezionaTutti.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSelezionaTutti:disabled {
+    background-image: url('Image/Icon24/SelezionaTuttiDis.png');
+  }
+
+/*BOTTONI CONSOLE DEVELOPER*/
+
+.BIconModulo {
+  background-image: url('Image/Icon24/Modulo.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconModulo:disabled {
+    background-image: url('Image/Icon24/ModuloDis.png');
+  }
+
+.BIconFunzioni {
+  background-image: url('Image/Icon24/Funzioni.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconFunzioni :disabled {
+    background-image: url('Image/Icon24/FunzioniDis.png');
+  }
+
+.BIconMenu {
+  background-image: url('Image/Icon24/Funzioni.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconMenu :disabled {
+    background-image: url('Image/Icon24/FunzioniDis.png');
+  }
+
+
+.BIconRuoli {
+  background-image: url('Image/Icon24/Ruoli.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconRuoli :disabled {
+    background-image: url('Image/Icon24/RuoliDis.png');
+  }
+
+.BIconProfili {
+  background-image: url('Image/Icon24/Profili.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconProfili :disabled {
+    background-image: url('Image/Icon24/ProfiliDis.png');
+  }
+
+.BIconSeverity {
+  background-image: url('Image/Icon24/Severity.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconSeverity :disabled {
+    background-image: url('Image/Icon24/SeverityDis.png');
+  }
+
+.BIconPolicyPwd {
+  background-image: url('Image/Icon24/PolicyPwd.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconPolicyPwd :disabled {
+    background-image: url('Image/Icon24/PolicyPwdDis.png');
+  }
+
+.BIconMonitorLog {
+  background-image: url('Image/Icon24/MonitorLog.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconMonitorLog :disabled {
+    background-image: url('Image/Icon24/MonitorLogDis.png');
+  }
+
+.BIconInitDB {
+  background-image: url('Image/Icon24/InitDB.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconInitDB :disabled {
+    background-image: url('Image/Icon24/InitDBDis.png');
+  }
+
+.BIconGestioneUtenti {
+  background-image: url('Image/Icon24/User.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconGestioneUtenti :disabled {
+    background-image: url('Image/Icon24/UserDis.jpg');
+  }
+
+
+/*ALTRI BOTTONI*/
+
+.BIconLucchetto {
+  background-image: url('Image/Icon24/Lucchetto.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLucchetto:disabled {
+    background-image: url('Image/Icon24/LucchettoDis.png');
+  }
+
+.BIconLucchettoAperto {
+  background-image: url('Image/Icon24/LucchettoAperto.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconLucchettoAperto:disabled {
+    background-image: url('Image/Icon24/LucchettoApertoDis.png');
+  }
+
+.BIconExcel {
+  background-image: url('Image/Icon24/Excel.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconExcel:disabled {
+    background-image: url('Image/Icon24/ExcelDis.png');
+  }
+
+.BIconDownload {
+  background-image: url('Image/Icon24/Download.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconDownload:disabled {
+    background-image: url('Image/Icon24/Image/Icon24/DownloadDis.png');
+  }
+
+.BIconUpload {
+  background-image: url('Image/Icon24/Upload.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconUpload:disabled {
+    background-image: url('Image/Icon24/UploadDis.png');
+  }
+
+.BIconLoginError {
+  background-image: url('Image/LoginError.png');
+  background-repeat: no-repeat;
+}
+
+.BIconWebConfig {
+  background-image: url('Image/Icon24/WebConfig.png');
+  background-repeat: no-repeat;
+}
+
+.BIconConfigMail {
+  background-image: url('Image/Icon24/ConfigMail.png');
+  background-repeat: no-repeat;
+}
+
+.BIconEmail {
+  background-image: url('Image/Icon24/Email.png');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconEmail:disabled {
+    background-image: url('Image/Icon24/EmailDis.png');
+  }
+
+.BIconCampana {
+  background-image: url(Image/Icon24/Campana.png);
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconCampana:disabled {
+    background-image: url('Image/Icon24/CampanaDis.png');
+  }
+
+.BIconValidatorChiudi {
+  background-image: url(Image/Icon24/ValidatorChiudi.png);
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconValidatorChiudi:disabled {
+    background-image: url(Image/Icon24/ValidatorChiudiDis.png);
+  }
+
+.BIconPin {
+  background-image: url(Image/Icon24/pin.png);
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconPin:disabled {
+    background-image: url(Image/Icon24/pinDis.png);
+  }
+
+.BIconUnpin {
+  background-image: url(Image/Icon24/unPin.png);
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconUnpin:disabled {
+    background-image: url(Image/Icon24/unPinDis.png);
+  }
+
+.BIconPdf {
+  background-image: url('Image/Icon24/Pdf.png');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconPdf:disabled {
+    background-image: url('Image/Icon24/PdfDis.png');
+  }
+
+.BIconInfo {
+  background-image: url('Image/Icon24/Info.png');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconInfo:disabled {
+    background-image: url('Image/Icon24/InfoDis.png');
+  }
+
+/* FINE CLASSI BOTTONI */
+
+.BIconIngranaggio {
+  background-image: url('Image/Icon24/InitDB.png');
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+}
+
+  .BIconIngranaggio:disabled {
+    background-image: url('Image/Icon24/InitDBDis.png');
+  }
+
+.BIconGoogle {
+  background-image: url('Image/Icon24/Google.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconGoogle:disabled {
+    background-image: url('Image/Icon24/GoogleDis.png');
+  }
+
+.BIconMicrosoft {
+  background-image: url('Image/Icon24/Microsoft.png');
+  background-repeat: no-repeat;
+}
+
+  .BIconMicrosoft:disabled {
+    background-image: url('Image/Icon24/MicrosoftDis.png');
+  }
+
+.BIconNascondi {
+    background-image: url('Image/Icon24/Nascondi24.png');
+    background-repeat: no-repeat;
+}
+
+.BIconCuoreRosso {
+  background-image: url('Image/Icon24/CuoreRosso24.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCuoreVuotoNero {
+  background-image: url('Image/Icon24/CuoreVuotoNero24.png');
+  background-repeat: no-repeat;
+}
+
+.BIconCuoreGialloPoste {
+  background-image: url('Image/Icon24/CuoreGialloPoste24.png');
+  background-repeat: no-repeat;
+}

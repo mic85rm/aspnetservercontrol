@@ -1,0 +1,99 @@
+﻿
+
+@media only screen and (max-width: 600px) {
+
+  .BPager {
+    width: calc(100% - 2px);
+    background-color: rgb(246,246,247);
+    border: solid 1px rgb(220,220,220);
+    height: auto !important;
+    min-height: 150px;
+  }
+
+
+  /* SEZIONE 1 */
+  .BPager_PnlLeft {
+    float: left;
+    height: 48px;
+    width: 100%;
+  }
+
+  .BPager_NumRowForPage {
+    margin-top: 4px;
+    float: right;
+    margin-right: 5px;
+    height: 40px;
+    width: 80px;
+  }
+
+
+
+  /* SEZIONE 2*/
+
+  .BPager_PnlNavigator {
+    float: left !important;
+    height: 48px;
+    width: auto;
+    margin-left: 5px;
+    width: calc(100% - 10px);
+  }
+
+
+  .BPager_BtnFirst {
+    float: left;
+  }
+
+  .BPager_BtnPrevius {
+    float: left;
+  }
+
+  .BPager_BtnNext {
+    float: left;
+  }
+
+
+  .BPager_BtnLast {
+    float: left;
+  }
+
+
+
+  /* SEZIONE 3 */
+
+  .BPager_PnlPagePosition {
+    width: calc(100% - 160px);
+  }
+
+  .BPager_Page {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .BPager_Separatore {
+    display: none;
+  }
+
+  .BPager_TotPage {
+    margin-right: 0px;
+    display: none;
+  }
+
+
+
+
+  /* SEZIONE 4 */
+
+  .BPager_BtnExportXls {
+    margin-left: 1px;
+    float: left;
+  }
+
+  .BPager_PnlRight {
+    float: left;
+    width: calc(100% - 10px);
+    height: 48px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}

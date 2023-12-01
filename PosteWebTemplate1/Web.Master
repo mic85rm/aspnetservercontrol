@@ -1,0 +1,245 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Web.master.cs" Inherits="PosteWebTemplate1.Web" %>
+
+<!DOCTYPE html>
+<%@ Import Namespace="PosteWebTemplate1" %>
+<%@ Register Src="BSystem/Controls/BCtlMenu.ascx" TagName="BCtlMenu" TagPrefix="uc2" %>
+<%@ Register Src="~/BSystem/Controls/BCtlSidebar.ascx" TagPrefix="uc2" TagName="BCtlSidebar" %>
+
+
+<html lang="en">
+<head runat="server">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="google-site-verification" content="gHJgNOoPp0RdPITKU5IlzyE3e3wQhIWnwPxXQcvEq1o" />
+  <meta name="keywords" content="template web marco balsamo b-arts barts framework" />
+  <meta name="description" content="BWebTemplate - Template web per applicazioni sviluppate con b-arts framework" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title><%= BWebConfig.TitoloWebSite%></title>
+
+  <%-- ICONA APP --%>
+  <link href="http://localhost/BWebTemplateCS/public/Icon/app.ico" rel="shortcut icon" />
+
+
+  <!--FOGLI DI STILE GLOBALI-->
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+
+  <!--BEGIN_ONLY_FOR_DESIGN-->
+  <link href="BSystem/Css/Master.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterBackgroundColor.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterBase.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterBorder.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterButtons.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterColors.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterCommandBar.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterFonts.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterHeight.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterMargin.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterPadding.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterPanels.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterResponsive.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterResponsiveSmartphone.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterResponsiveTablet.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterRound.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterTable.css" rel="stylesheet" />
+  <link href="BSystem/Css/MasterWidth.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/00_Base.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/00_Pannelli.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_Advertaising.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_Advertaising_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_Advertaising_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_BPagePreviewReport.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_MasterPage.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_MasterPage_SmartPhone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_MasterPage_Spinner.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_MasterPage_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_PageTableBase.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/01_WebControlSearchBase.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/02_Header-Footer-Sidebar.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/02_Header-Footer-Sidebar_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/02_Header-Footer-SideBar_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_BCtlCalendario.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_Clock.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_CommandBar.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_Copyright.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_HeaderBar.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_MenuFunzioni.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_MenuFunzioni_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_MenuFunzioni_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_Notify.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_Notify_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_Notify_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_Segnalazioni.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_UtenteEntrato.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_UtenteEntrato_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/03_UtenteEntrato_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/04_Extender.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/05_LogIn.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/05_Registrazione.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/06_Images.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/06_Images32.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BCheck.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BCollapsiblePanel.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BCombo.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BGridView.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BGridView_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BGridViewPanel.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BMsgBox.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BMsgBox_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BMsgBox_Tablet.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BNotify.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BPager.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BPager_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BPropertyGrid.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BRadio.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BSwitch.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BTesto.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BTesto_Smartphone.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BToast.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/BArtsFramework_BUploader.css" rel="stylesheet" />
+  <link href="BThemes/tmBApp/testcss.css" rel="stylesheet" />
+  <!--END_ONLY_FOR_DESIGN-->
+
+</head>
+
+<body id="MyBody" runat="server" class="MasterBody">
+  <form id="frmMaster" runat="server" autocomplete="off">
+    <asp:ScriptManager ID="SM" runat="server" EnablePageMethods="true" EnableScriptGlobalization="true" AsyncPostBackTimeout="10000000">
+    </asp:ScriptManager>
+    <BWC:BScriptManager ID="BSM" runat="server" />
+    <%--    <asp:HiddenField runat="server" ID="ControlsCode" Value="" />
+    <asp:HiddenField runat="server" ID="screenResolution" Value="" />
+    <asp:HiddenField runat="server" ID="hBodyEventsOnResize" Value="" />--%>
+
+    <%-- PANNELLI PER SKIN --%>
+    <div class="ContainerSkin ">
+      <a id="LnkSkinTop" runat="server" target="_blank" class="TopSkin" href="default.aspx"></a>
+      <a id="LnkSkinLeft" runat="server" target="_blank" class="LeftSkin" href="default.aspx"></a>
+      <a id="LnkSkinRight" runat="server" target="_blank" class="RightSkin" href="default.aspx"></a>
+      <asp:Panel ID="PnlSkin" runat="server" CssClass="BannerSkin SkinBackground">
+      </asp:Panel>
+    </div>
+
+    <%-- CONTENT MASTER SKIN--%>
+    <div class="ContentSkin">
+
+      <asp:UpdatePanel ID="UpdContainer" runat="server" UpdateMode="Always" style="height: 100%">
+        <ContentTemplate>
+
+          <div class="BWrapper">
+            <asp:TextBox ID="HStatePnlSidebar" runat="server" Style="display: none"></asp:TextBox>
+            <asp:TextBox ID="HStatePnlSidebarHide" runat="server" Style="display: none"></asp:TextBox>
+            <asp:TextBox ID="HStatePnlMain" runat="server" Style="display: none"></asp:TextBox>
+            <asp:TextBox ID="HStatePnlMainHeaderContainer" runat="server" Style="display: none"></asp:TextBox>
+
+            <%-- LEFT --%>
+            <asp:Panel ID="BSidebar" runat="server" CssClass="BSidebar">
+
+              <div class="BSidebar_Header"></div>
+              <asp:Panel ID="pnlSidebarContainer" runat="server" CssClass="BSidebar_Container">
+                <uc2:BCtlSidebar runat="server" ID="BCtlSidebarSystem" />
+              </asp:Panel>
+              <asp:ContentPlaceHolder ID="CtnSideBar" runat="server">
+              </asp:ContentPlaceHolder>
+
+            </asp:Panel>
+
+            <%-- RIGHT --%>
+            <asp:Panel ID="BMain" runat="server" CssClass="BMain">
+              <%--BARRA DI NAVIGAZIONE--%>
+              <header class="BMainHeader">
+                <asp:Panel ID="BSideBarHide" runat="server" CssClass="BSidebarHide"></asp:Panel>
+
+                <asp:Panel ID="BMainHeaderPnlBtn" runat="server" class="BMainHeaderPnlBtn ">
+                  <BWC:BButton ID="BtnCollapse" runat="server" CssClass="BBtn BBtnTrasparente BIconMenu32 BBtnCenter BFloatLeft BBtnBar BMarginLeft9" style="margin-top:14px"></BWC:BButton>
+                </asp:Panel>
+                <asp:Panel ID="BMainHeaderContainer" runat="server" CssClass="BMainHeaderContainer">
+                  <asp:Panel ID="pnlContainerHeader" runat="server" Style="border: none;"></asp:Panel>
+                </asp:Panel>
+              </header>
+
+              <%-- CONTENT --%>
+              <main>
+                <asp:Panel ID="BMainContent" runat="server" CssClass="BMainContent">
+                  <div class="ContainerMenu">
+                    <uc2:BCtlMenu ID="MenuFunzioni" runat="server" />
+                  </div>
+                  <asp:Panel ID="Container" runat="server" class="ContainerContent">
+
+                    <asp:ContentPlaceHolder ID="ctnMain" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <%-- BMSGBOX --%>
+                    <BWC:BMsgBox runat="server" ID="MsgBoxMaster"
+                      CssMessaggio="TestoDefault BTesto12 BMsgBoxMessaggio"
+                      CssTitolo="BTitoloPannelloPopup"
+                      CssImgIcon="BMsgBoxImgIcon BIconInfo32"
+                      CssIcona="BIconInfo32"
+                      CssBtnTrue="BMsgBoxButtons BBtnLeft BIconSeleziona BBtnSuccess"
+                      CssBtnFalse="BMsgBoxButtons BBtnLeft BIconAnnulla BBtnWarning"></BWC:BMsgBox>
+
+                    <!-- PANNELLO TOAST MANAGER-->
+                    <BWC:BToast ID="BToastManager" runat="server" Width="300px" Height="120px" Style="display: block!important"></BWC:BToast>
+
+                  </asp:Panel>
+
+                </asp:Panel>
+              </main>
+            </asp:Panel>
+
+          </div>
+          <footer class="BFooter">
+            <!--Aggiungere classe per eventuale customizzazione-->
+            <asp:Panel ID="pnlContainerFooter" runat="server"></asp:Panel>
+          </footer>
+        </ContentTemplate>
+      </asp:UpdatePanel>
+
+    </div>
+
+
+    <%-- PANNELLO INFORMATIVA COOKIE--%>
+    <asp:Panel ID="PnlAuthCookie" runat="server" CssClass="BPanelAuthCookies" Visible="false">
+      <div class="BWidth100-20 BHeight100-20 TestoAuthCookie" style="margin: 10px;">
+        Navigando su questo sito accetti l'uso, sia di prima che di terze parti dei cookies per fini statistici, di personalizzazione dei contenuti, di condivisione sui social networks, di misurazione dell'audience, profilazione e pubblicità targettizzata.        
+        <br />
+
+        <BWC:BButton ID="BtnAccettaCookie" Text="Accetta" runat="server" CssClass="BBtn BBtnAccettaCookie " />
+        <br />
+      </div>
+    </asp:Panel>
+
+
+    <!-- PANNELLO CARICAMENTO IN CORSO -->
+    <asp:UpdatePanel ID="UpdDisabled" runat="server" UpdateMode="Conditional">
+      <ContentTemplate>
+      </ContentTemplate>
+    </asp:UpdatePanel>
+    <asp:UpdateProgress ID="UpdLoader" runat="server" AssociatedUpdatePanelID="UpdDisabled">
+      <ProgressTemplate>
+        <asp:Panel ID="PnlProgBar" runat="server" CssClass="ModalBackground">
+          <center>
+            <div>
+              <asp:Panel ID="pnlLoader" runat="server" CssClass="PanelProgressBar">
+                <div class="CenterScreen">
+                  <br />
+                  <div id="imgLoader" class="ImageProgressBar"></div>
+                  <br />
+
+                  <asp:Label ID="lblLoader" runat="server" CssClass="TestoProgressBar" Text="Attendere ... Caricamento in corso..."></asp:Label>
+                </div>
+              </asp:Panel>
+              </div>
+          </center>
+        </asp:Panel>
+      </ProgressTemplate>
+    </asp:UpdateProgress>
+  </form>
+
+
+
+</body>
+</html>

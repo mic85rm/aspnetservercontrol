@@ -1,0 +1,169 @@
+﻿
+@media only screen and (min-width: 1025px) {
+  /* CLASSI PER IL BMENU */
+  .BMenu {
+    /*background-color: #e5e5e5;*/
+    background-color: #EEDC00;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 35px;
+  }
+
+  nav.BMenu:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*MENU PRINCIPALE*/
+  .BMenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+
+  .BMenuItemContainer {
+    float: left;
+    height: 35px;
+    margin-right: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+    width: calc(100% - 10px);
+  }
+
+  .BMenuItemLabel {
+    text-decoration: none;
+    color: black;
+    font-size: 12pt;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+  }
+
+    .BMenuItemLabel:hover {
+      border-bottom: solid yellow 3px;
+      box-sizing: border-box;
+    }
+
+  .BMenuItemPanelIcon {
+    float: left;
+    height: 35px;
+  }
+
+  .BMenuItemIcon {
+    float: left;
+    height: 32px;
+    margin-bottom: 3px;
+  }
+
+
+  .BFirstMenu > li {
+    float: left;
+    position: relative;
+    /*border-left: 1px solid black;*/
+  }
+
+    .BFirstMenu > li:first-child {
+      border-left: 0;
+    }
+
+  /*SOTTO MENU*/
+
+  .BSubMenu {
+    position: absolute;
+    top: 35px;
+    border-top: 1px solid #CBCBCC;
+    border-left: 1px solid #CBCBCC;
+    border-right: 1px solid #CBCBCC;
+    box-shadow: 2px 2px 10px 2px #424242;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transition: .3s linear;
+    transition: .3s linear;
+    min-width: 240px;
+  }
+
+    .BSubMenu li {
+      position: relative;
+    }
+
+    .BSubMenu .BSubMenu {
+      position: absolute;
+      left: 100%;
+      top: 5px;
+      -webkit-transition: .4s linear;
+      transition: .4s linear;
+    }
+
+
+  .BMenu li:hover > .BSubMenu {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /*ITEM TENDINE*/
+
+  .BSubMenu .BMenuItemContainer {
+    /*white-space:  nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+    padding: 0;
+    margin: 0;
+    background-color: #e5e5e5;
+    min-width: 240px;
+    height: 24px;
+  }
+
+  .BSubMenu .BMenuItemLabel {
+    text-decoration: none;
+    color: black;
+    font-size: 10pt;
+    float: left;
+    padding-left: 5px;
+    min-width: calc(100% - 35px);
+    height: 24px;
+    line-height: 24px;
+  }
+
+  .BSubMenu .BMenuItemPanelIcon {
+    width: 30px;
+    height: 24px;
+    float: left;
+    /*background-color: #727272;*/
+    background-color: #EEDC00;
+  }
+
+  .BSubMenu .BMenuItemIcon {
+    height: 24px;
+    margin-left: 2px;
+    margin-right: 2px;
+    float: left;
+  }
+
+  /*BOTTONE RESPONSIVE*/
+  .BMenu-Btn {
+    display: none;
+    float: left;
+    height: 26px;
+    width: 48px;
+    background-image: url('Image/Icon24/FunzioniMenu.png');
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,116 @@
+﻿/*MODALITTA TABLET*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* CLASSI PER IL GRIDVIEW */
+
+  .BDtg {
+    width: calc(100% - 0px);
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+    text-align: center;
+  }
+
+
+    /*COLONNE*/
+
+    .BDtg th {
+      border: solid 1px rgb(220,220,220);
+      border-collapse: separate;
+      margin-bottom: 10px;
+    }
+
+    .BDtg td {
+      border: none;
+      border-collapse: separate;
+    }
+
+    .BDtg .BDtgCommand {
+      border: none;
+      line-height: 1;
+    }
+
+    .BDtg .BDtgEndCommand {
+      border: none;
+      border-right: 1px solid rgb(220,220,220);
+      line-height: 1;
+    }
+
+    .BDtg .BDtgHeaderCommand {
+      border-left: none;
+      border-right: none;
+      line-height: 1;
+    }
+
+
+
+  .BDtgRowHeader {
+    height: 48px;
+    line-height: 48px;
+    border: solid 1px rgb(220,220,220);
+    border-collapse: separate;
+    font-weight: 400;
+    background-color: rgb(246,246,247);
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .BDtgRow {
+    background-color: white;
+    color: black;
+    height: 38px;
+    line-height: 38px;
+    font-size: 11pt;
+    text-align: left;
+    border: none;
+    border-left: solid 1px rgb(220,220,220);
+    border-right: solid 1px rgb(220,220,220);
+    border-bottom: solid 1px rgb(220,220,220);
+  }
+
+    .BDtgRow:hover {
+      background-color: whitesmoke;
+    }
+
+  .BDtgAlternatingRow {
+    background-color: white;
+    color: black;
+    height: 32px;
+    line-height: 32px;
+    font-size: 11pt;
+    text-align: left;
+    border: none;
+    border-left: solid 1px rgb(220,220,220);
+    border-right: solid 1px rgb(220,220,220);
+    border-bottom: solid 1px rgb(220,220,220);
+  }
+
+    .BDtgAlternatingRow:hover {
+      background-color: whitesmoke;
+    }
+
+
+  .BDtgRowFooter {
+    background-color: #00a1fd;
+    color: white;
+    height: 32px;
+  }
+
+
+  .BRowClick {
+    cursor: pointer;
+  }
+
+    .BRowClick:hover {
+    }
+
+
+  .BDtgBtnNewResponsive {
+    display: none;
+  }
+
+
+  /* CLASSI PER FUNZIONI AGGIUNTIVE PER IL GRIDVIEW */
+  .BRowLineBottom {
+    border-bottom: 1px solid #7ac1ff;
+  }
+}

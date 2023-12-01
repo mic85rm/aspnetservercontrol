@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Imports MTCheckboxNS
+
 
 Public Class WebForm1
   Inherits UI.Page
@@ -39,6 +39,33 @@ Public Class WebForm1
 
     Else
 
+<<<<<<< Updated upstream
+=======
+      '  Dim dt As DataTable = New DataTable()
+      '  Dim ds As DataSet = New DataSet()
+      '  ' dt = SelectQuery(conString, K_SP_MENU, parametri)
+      '  'Mtmenu1.Idmenu = "Menu"
+      '  'Mtmenu1.MenuCss = "MenuBArts"
+      '  'Mtmenu1.StaticMenuStyleCssClass = "MenuBArts-Node"
+      '  'Mtmenu1.DynamicMenuStyleCssClass = "MenuBArts-ChildNode"
+      '  'Mtmenu1.MTDatatable = dt
+      '  'Mtmenu1.BindMenuData()
+      '  If Not dt Is Nothing AndAlso dt.Rows.Count > 0 Then
+      '    ds.Tables.Add(dt)
+      '    ds.DataSetName = "Menus"
+      '    ds.Tables(0).TableName = "Menu"
+      '    Dim relation As New DataRelation("ParentChild", dt.Columns("ID"), dt.Columns("IDPadre"), False)
+      '    ds.Relations.Add(relation)
+      '    'Menu.Items.Clear()
+      '    Me.CaricaMenu(ds)
+
+      '  Else
+
+      '  End If
+
+      'mic123.DataSource = dt
+      'mic123.DataBind()
+>>>>>>> Stashed changes
     End If
 
 
@@ -101,6 +128,7 @@ Public Class WebForm1
     End Using
   End Function
 
+<<<<<<< Updated upstream
   Protected Sub ciao_CheckBoxClicked(sender As Object, e As EventArgs)
 
   End Sub
@@ -122,4 +150,7 @@ Public Class WebForm1
 
     End If
   End Sub
+=======
+
+>>>>>>> Stashed changes
 End Class

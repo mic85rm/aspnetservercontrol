@@ -1,0 +1,44 @@
+﻿
+/* HEADER */
+.BPagePreviewReport_Header {
+  float: left;
+  width: 100%;
+  height: 70px;
+  background-color: #161616;
+  display: none;
+}
+
+.BPagePreviewReport_HeaderLeft {
+  background-image: Url('Image/LogoTitolo.png');
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: 200px;
+  width: 250px;
+  height: 50px;
+  margin: 10px;
+  float: left;
+}
+
+
+/* CONTAINER */
+
+.BPagePreviewReport_Container {
+  width: calc(100% - 20px);
+  height: calc(100% - 90px);
+  scrollbar-base-color: #808080;
+  scrollbar-arrow-color: #0094ff;
+  scrollbar-track-color: #161616;
+  float: left;
+  padding: 10px;
+  background-color: #161616;
+  min-height: 500px;
+}
+
+
+.BPagePreviewReport_ReportContainer {
+  float: left;
+  width: calc(100% - 0px);
+  height: calc(100% - 0px);
+  border: 1px solid #0094ff !important;
+  background-color: white;
+}

@@ -1,0 +1,128 @@
+﻿.BCollapsiblePanel {
+  width: 100%;
+  min-height: 33px;
+  min-width: 280px;
+  border-bottom: 1px solid #707070;
+}
+
+.BCollapsiblePanelTitolo {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 15px;
+}
+
+.BCollapsiblePanelHeader {
+  /*background-color: #efefef;*/
+  /*background-color: #f2f2f2;*/
+  background-color: #ffffff;
+  height: 32px;
+  width: 100%;
+  float: left;
+}
+
+.BCollapsiblePanelContent {
+  width: 100%;
+  height: auto;
+  float: left;
+  background-color: #ffffff;
+  /*background-color: #efefef;*/
+  border-bottom: 1px solid #e1e1e1 !important;
+  transition: transform 0.3s ease-out;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+
+  .BCollapsiblePanelContent.collapse {
+    transform: scaleY(0);
+    height: 0;
+  }
+
+.BCollapsibleButton {
+  height: 32px;
+  width: 32px;
+  background-image: url(Image/Icon32/Collapse32.png);
+  background-repeat: no-repeat;
+  background-color: transparent !important;
+  border: none !important;
+  background-position: center center;
+  background-size: 24px;
+  float: right;
+  margin: 0px;
+  margin-right: 5px !important;
+  cursor: pointer;
+}
+
+  .BCollapsibleButton:active, .BCollapsibleButton:focus {
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0px;
+    box-shadow: none !important;
+  }
+
+
+  .BCollapsibleButton.collapse {
+    height: 32px;
+    background-image: url(Image/Icon32/Expand32.png);
+  }
+
+.BCollapsibleSidebar {
+  width: 100%;
+  min-height: 33px;
+  min-width: 280px;
+  border-bottom: 1px solid #707070;
+}
+
+.BCollapsibleSidebarTitolo {
+  float: left;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 10px;
+}
+
+.BCollapsibleSidebarHeader {
+  height: 32px;
+  width: 100%;
+  float: left;
+}
+
+.BCollapsibleSidebarContent {
+  width: 100%;
+  height: auto;
+  float: left;
+  transition: transform 0.3s ease-out;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+
+  .BCollapsibleSidebarContent.collapse {
+    transform: scaleY(0);
+    height: 0;
+  }
+
+.BCollapsibleButton {
+  height: 32px;
+  width: 32px;
+  background-image: url(Image/Icon32/Collapse32.png);
+  background-repeat: no-repeat;
+  background-color: transparent !important;
+  border: none !important;
+  background-position: center center;
+  background-size: 24px;
+  float: right;
+  margin: 0px !important;
+  cursor: pointer;
+}
+
+  .BCollapsibleButton:active, .BCollapsibleButton:focus {
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0px !important;
+    box-shadow: none !important;
+  }
+
+
+  .BCollapsibleButton.collapse {
+    height: 32px;
+    background-image: url(Image/Icon32/Expand32.png);
+  }

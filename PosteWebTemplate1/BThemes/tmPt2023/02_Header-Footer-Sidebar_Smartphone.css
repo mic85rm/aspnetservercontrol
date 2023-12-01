@@ -1,0 +1,184 @@
+﻿/*MODALITTA SMARTPHONE*/
+@media only screen and (max-width: 600px) and (orientation: portrait ), only screen and (max-height: 600px) and (orientation: landscape) {
+
+  .lblElencoSistemi {
+    border-bottom: 1px solid black;
+  }
+
+  .lblElencoProfili {
+    border-bottom: 1px solid black;
+  }
+
+  /* HEADER */
+  .Header {
+    float: left;
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .HeaderLeft {
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    padding-right: 10px;
+  }
+
+  .HeaderRight {
+    float: left;
+    width: calc(100% - 10px);
+    padding-right: 10px;
+    /*min-height: 50px;*/
+  }
+
+  .BBtnBar {
+    width: 32px;
+    height: 32px;    
+    float: left;
+    margin-top:10px;
+  }
+
+  .PnlSearchAll {
+    float: left;
+    height: calc(100% - 0px);
+    width: calc(100% - 80px);
+  }
+
+  .BBtnBarLente {
+    width: 32px;
+    height: 32px;
+    float: left;
+    margin-top: 38px;
+  }
+
+  .mbtSearchAll {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+    border: none !important;
+    background-color: transparent !important;
+    color: white !important;
+    height: 35px;
+    width: calc(100% - 32px);
+    float: left
+  }
+
+  .BtnSearchAll {
+    width: 32px;
+    height: 32px;
+    margin: 37px;
+    float: right;
+  }
+
+  /* FOOTER*/
+
+  .Footer {
+    /*background-color: #707070;*/
+    background-color: #EEDC00;
+    min-height: 30px;
+    padding-top: 10px;
+  }
+
+  .TestoFooter {    
+    width:100%;
+    text-align:center;
+  }
+
+  .DataFooter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .FooterLeft {
+    display: none;
+    float: left;
+  }
+
+
+  .FooterRight {
+    text-align: center;
+    width: 100%;
+    float: left;
+  }
+
+
+  /*LABEL FOOTER*/
+  .Designed {
+    margin-left: 10px;
+    margin-right: 10px;
+    /*color: white;*/
+    color: #0d47a1;
+    font-style: normal;
+    font-size: 10pt;
+  }
+
+
+  .SceltaVisibilitaPnl {
+    width: 100%;
+  }
+
+  .SceltaVisibilitaItemPnl {
+    width: 100%;
+  }
+
+  .SceltaVisibilitaLink {
+    cursor: pointer;
+    font-size: 13px;
+    color: black;
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .SceltaVisibilitaLinkSelezionato {
+    cursor: pointer;
+    font-size: 13px;
+    color: black;
+    text-align: left;
+    margin-top: 5px;
+    font-weight:bold;
+  }
+
+  .SceltaVisibilitaPreferito {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px !important;
+    background-image: url('Image/Icon24/CuoreVuotoNero24.png');
+    background-repeat: no-repeat;
+    border: 1px solid #bfd0e4;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px 8px 12px;
+    background-color: rgba(221,221,221,0.2);
+    border: 0px solid gray !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+    background-color: transparent !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .SceltaVisibilitaPreferitoSelezionato {
+    float: right;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px !important;
+    background-image: url('Image/Icon24/CuoreGialloPoste24.png');
+    background-repeat: no-repeat;
+    border: 1px solid #bfd0e4;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 12px 8px 12px;
+    background-color: rgba(221,221,221,0.2);
+    border: 0px solid gray !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    cursor: pointer !important;
+    background-color: transparent !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+
+}

@@ -1,0 +1,33 @@
+﻿* {
+  font-family: 'Century Gothic', 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+.TestoDefaultInverse {
+  color: white !Important;
+}
+
+.TestoDefault {
+  color: black;
+}
+
+.BH1 {
+  color: #424242 !important;
+}
+
+.BH2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /*color: #00a1fd !important;*/
+  color: #0346BB !important;
+}
+
+
+.BH3 {
+  color: #424242 !important;
+}
+
+.BH4 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #00a1fd !important;
+}

@@ -1,0 +1,301 @@
+﻿/* CALENDAR EXTENDER */
+
+.calExtender .ajax__calendar_container {
+  /*background-color: #e2e2e2;*/
+  background-color: #FFFFFF; /* Old browsers */
+  background: -moz-linear-gradient(top, #FFFFFF 40%, #E2E2E2 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left E2E2E2, color-stop(0%,#FFFFFF), color-stop(100%,#E2E2E2)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #FFFFFF 40%,#E2E2E2 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #FFFFFF 40%,#E2E2E2 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #FFFFFF 40%,#E2E2E2 100%); /* IE10+ */
+  background: linear-gradient(top, #FFFFFF 40%,#E2E2E2 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#E2E2E2',GradientType=0 ); /* IE6-9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#FFFFFF' 40%, EndColorStr='#E2E2E2')"; /* IE8 */
+  border: solid 1px #cccccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  z-index: 10000;
+}
+
+.calExtender .ajax__calendar_header {
+  background-color: #1C4E8C; /* Old browsers */
+  background: -moz-linear-gradient(top, #1C4E8C 40%, #467EBF 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1C4E8C), color-stop(100%,#467EBF)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #1C4E8C 40%,#467EBF 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #1C4E8C 40%,#467EBF 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #1C4E8C 40%,#467EBF 100%); /* IE10+ */
+  background: linear-gradient(top, #1C4E8C 40%,#467EBF 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1C4E8C', endColorstr='#467EBF',GradientType=0 ); /* IE6-9 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#1C4E8C' 40%, EndColorStr='#467EBF')"; /* IE8 */
+  margin-bottom: 4px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.calExtender .ajax__calendar_title, .calExtender .ajax__calendar_next, .calExtender .ajax__calendar_prev {
+  color: White;
+  padding-top: 3px;
+}
+
+.calExtender .ajax__calendar_body {
+  background-color: transparent;
+  border: solid 1px #cccccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.calExtender .ajax__calendar_dayname {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 4px;
+  margin-top: 2px;
+}
+
+.calExtender .ajax__calendar_day {
+  text-align: center;
+}
+
+.calExtender .ajax__calendar_hover .ajax__calendar_day, .calExtender .ajax__calendar_hover .ajax__calendar_month, .calExtender .ajax__calendar_hover .ajax__calendar_year, .calExtender .ajax__calendar_active {
+  color: #004080;
+  font-weight: bold;
+  background-color: #FFE97F;
+}
+
+.calExtender .ajax__calendar_today {
+  font-weight: bold;
+}
+
+.calExtender .ajax__calendar_hover .ajax__calendar_title {
+  color: #FFE97F;
+}
+
+.calExtender .ajax__calendar_other, .calExtender .ajax__calendar_hover .ajax__calendar_today {
+  color: #808080;
+}
+
+/* FINE CALENDAR EXTENDER */
+
+/* CLASSI PER I VALIDATOR */
+.CalloutValidator div, .CalloutValidator td {
+  border: solid 1px Black;
+  background-color: LightSteelBlue;
+  color: Black;
+}
+
+.CalloutValidator .ajax__validatorcallout_popup_table {
+  display: none;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.CalloutValidator .ajax__validatorcallout_popup_table_row {
+  vertical-align: top;
+  height: 100%;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.CalloutValidator .ajax__validatorcallout_callout_cell {
+  width: 20px;
+  height: 100%;
+  text-align: right;
+  vertical-align: top;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.CalloutValidator .ajax__validatorcallout_callout_table {
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.CalloutValidator .ajax__validatorcallout_callout_table_row {
+  background-color: transparent;
+  padding: 0px;
+}
+
+.CalloutValidator .ajax__validatorcallout_callout_arrow_cell {
+  padding: 8px 0px 0px 0px;
+  text-align: right;
+  vertical-align: top;
+  font-size: 1px;
+  border: none;
+  background-color: transparent;
+}
+
+  .CalloutValidator .ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv {
+    font-size: 1px;
+    position: relative;
+    left: 1px;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    width: 15px;
+    background-color: transparent;
+    padding: 0px;
+  }
+
+    .CalloutValidator .ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv div {
+      height: 1px;
+      overflow: hidden;
+      border-top: none;
+      border-bottom: none;
+      border-right: none;
+      padding: 0px;
+      margin-left: auto;
+    }
+
+.CalloutValidator .ajax__validatorcallout_error_message_cell {
+  font-size: 11px;
+  padding: 5px;
+  border-right: none;
+  border-left: none;
+  width: 100%;
+}
+
+.CalloutValidator .ajax__validatorcallout_icon_cell {
+  width: 20px;
+  padding: 5px;
+  border-right: none;
+}
+
+.CalloutValidator .ajax__validatorcallout_close_button_cell {
+  vertical-align: top;
+  padding: 0px;
+  text-align: right;
+  border-left: none;
+}
+
+  .CalloutValidator .ajax__validatorcallout_close_button_cell .ajax__validatorcallout_innerdiv {
+    border: none;
+    text-align: center;
+    width: 10px;
+    padding: 1px;
+    cursor: pointer;
+  }
+/* FINE CLASSI PER I VALIDATOR */
+
+
+
+/* AUTOCOMPLETE */
+
+.List {
+  background-color: black;
+  border: solid 1px #444444;
+  margin: 0px;
+  padding: 2px;
+  height: 100px;
+  overflow: auto;
+  font-size: 9pt;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  z-index: 10;
+  min-width: 300px !important;
+  visibility: hidden;
+}
+
+.ListItem {
+  color: white;
+  border-bottom: solid 1px #444444;
+}
+
+.SelectedItem {
+  background-color: LightSteelBlue;
+  cursor: pointer;
+}
+/* AUTOCOMPLETE */
+
+/* TAB CONTAINER */
+
+
+
+.MyTabStyle .ajax__tab_header {
+  font-size: 10pt;
+  display: block;
+  text-align: center;
+  height: 28px !important;
+}
+
+  .MyTabStyle .ajax__tab_header .ajax__tab_outer {
+    border-color: #222;
+    color: #222;
+    padding-left: 10px;
+    margin-right: 5px;
+    border: solid 1px #d7d7d7;
+  }
+
+  .MyTabStyle .ajax__tab_header .ajax__tab_inner {
+    border-color: #666;
+    color: #666;
+    padding: 3px 5px 3px 0px;
+  }
+
+.MyTabStyle .ajax__tab_hover .ajax__tab_outer {
+  background-color: lightsteelblue;
+}
+
+.MyTabStyle .ajax__tab_hover .ajax__tab_inner {
+  color: #0D5AAA;
+}
+
+.MyTabStyle .ajax__tab_active .ajax__tab_outer {
+  border-bottom-color: #ffffff;
+  background-color: #707070;
+  color: white !important;
+}
+
+.MyTabStyle .ajax__tab_active .ajax__tab_inner {
+  color: #ffffff !important;
+  border-color: #333;
+}
+
+.MyTabStyle .ajax__tab_body {
+  background-color: #ededed;
+  border: solid 1px #467EBF;
+}
+
+.MyTabStyle .ajax__tab_active .ajax__tab_tab {
+  color: #ffffff !important;
+}
+
+
+.ajax__tab_header {
+  white-space: normal !important;
+}
+
+.ajax__tab_body {
+  /*height: auto !important;*/
+  width: 100%;
+  min-height: 300px !important;
+  float: left;
+}
+
+.ajax__tab_xp .ajax__tab_header {
+  background-position: bottom;
+  background-repeat: repeat-x;
+  font-family: verdana,tahoma,helvetica;
+  font-size: 13px !important;
+}
+
+.ajax__tab_tab {
+  color: black !important;
+}
+
+.ajax__tab_xp .ajax__tab_body {
+  padding: 0 !important;
+  background-color: #e5e5e5 !important;
+}
+
+.ajax__html_editor_extender_popupDiv {
+  display: none !important;
+}
+/* FINE TAB CONTAINER eedc00 */
+

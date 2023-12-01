@@ -1,0 +1,1895 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26F044FD-DA8D-4195-8E29-EA672FDE762E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PosteWebTemplate1</RootNamespace>
+    <AssemblyName>BWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44356</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="BArtsFrameworkNet, Version=4.4.0.0, Culture=neutral, PublicKeyToken=7a433bb7ef39396b, processorArchitecture=MSIL">
+      <HintPath>..\packages\BArtsFrameworkNet.4.4.1\lib\net46\BArtsFrameworkNet.dll</HintPath>
+    </Reference>
+    <Reference Include="BArtsFrameworkStandard, Version=1.4.4.0, Culture=neutral, PublicKeyToken=7a433bb7ef39396b, processorArchitecture=MSIL">
+      <HintPath>..\packages\BArtsFrameworkStandard.1.4.4\lib\netstandard2.0\BArtsFrameworkStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="BArtsSocket, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BArtsSocket.1.0.3\lib\netstandard2.0\BArtsSocket.dll</HintPath>
+    </Reference>
+    <Reference Include="BIPosteBaseLibraryCS, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BIPosteBaseLibraryCS.2.0.4\lib\netstandard2.0\BIPosteBaseLibraryCS.dll</HintPath>
+    </Reference>
+    <Reference Include="BTemplateBaseLibrary, Version=1.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BTemplateBaseLibrary.1.1.6\lib\netstandard2.0\BTemplateBaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.Configuration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.7.0.0\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=7.0.0.4, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.7.0.4\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.7.0.0\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventLog, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.EventLog.7.0.0\lib\net462\Microsoft.Extensions.Logging.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.7.0.1\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1576.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MTConfirmControl">
+      <HintPath>..\MTConfirm\bin\Debug\MTConfirmControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.7.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Odbc, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Odbc.7.0.0\lib\net462\System.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OleDb, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.7.0.0\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.EventLog, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.EventLog.7.0.0\lib\net462\System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Formats.Asn1, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.7.0.0\lib\net462\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=7.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Pkcs.7.0.1\lib\net462\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.7.0.0\lib\net462\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebPersBaseLibrary, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebPersBaseLibrary.2.0.4\lib\netstandard2.0\WebPersBaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BControls\BCtlConfiguration.ascx" />
+    <Content Include="BSystem\AuthMicrosoft.aspx" />
+    <Content Include="BSystem\AuthGoogle.aspx" />
+    <Content Include="BSystem\BControlsSearch\BCtlsysPersonaleSearch.ascx" />
+    <Content Include="BSystem\BControlsSearch\BCtlsysPersoneSearch.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysAccessi.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysComuni.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysFunzione.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysLog.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysModuli.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysNotifiche.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysPersone.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysPolicyPwd.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysProfili.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysProvince.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysRegioni.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysRuoli.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysSeverity.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysSistemi.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysStati.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysUtenti.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysVisibilita.ascx" />
+    <Content Include="BSystem\BControls\BCtlsysWiki.ascx" />
+    <Content Include="BSystem\Controls\BCtlCalendario.ascx" />
+    <Content Include="BSystem\Controls\BCtlElencoApplicazioni.ascx" />
+    <Content Include="BSystem\Controls\BCtlElencoProfili.ascx" />
+    <Content Include="BSystem\Controls\BCtlElencoSistemi.ascx" />
+    <Content Include="BSystem\Controls\BCtlElencoVisibilita.ascx" />
+    <Content Include="BSystem\Controls\BCtlHeaderBar.ascx" />
+    <Content Include="BSystem\Controls\BCtlImportMassivo.ascx" />
+    <Content Include="BSystem\Controls\BCtlMenu.ascx" />
+    <Content Include="BSystem\Controls\BCtlServicesNotification.ascx" />
+    <Content Include="BSystem\Controls\BCtlSidebar.ascx" />
+    <Content Include="BSystem\Controls\BCtlUtenteEntrato.ascx" />
+    <Content Include="BSystem\Controls\CtlCambiaPassword.ascx" />
+    <Content Include="BSystem\Controls\CtlClock.ascx" />
+    <Content Include="BSystem\Controls\CtlCommandBar.ascx" />
+    <Content Include="BSystem\Controls\CtlItemWiki.ascx" />
+    <Content Include="BSystem\Controls\CtlLogin.ascx" />
+    <Content Include="BSystem\Css\Master.css" />
+    <Content Include="BSystem\Css\MasterBackgroundColor.css" />
+    <Content Include="BSystem\Css\MasterBase.css" />
+    <Content Include="BSystem\Css\MasterBorder.css" />
+    <Content Include="BSystem\Css\MasterButtons.css" />
+    <Content Include="BSystem\Css\MasterColors.css" />
+    <Content Include="BSystem\Css\MasterCommandBar.css" />
+    <Content Include="BSystem\Css\MasterFonts.css" />
+    <Content Include="BSystem\Css\MasterFontsSmartphone.css" />
+    <Content Include="BSystem\Css\MasterFontsTablet.css" />
+    <Content Include="BSystem\Css\MasterHeight.css" />
+    <Content Include="BSystem\Css\MasterMargin.css" />
+    <Content Include="BSystem\Css\MasterPadding.css" />
+    <Content Include="BSystem\Css\MasterPanels.css" />
+    <Content Include="BSystem\Css\MasterResponsive.css" />
+    <Content Include="BSystem\Css\MasterResponsiveSmartphone.css" />
+    <Content Include="BSystem\Css\MasterResponsiveTablet.css" />
+    <Content Include="BSystem\Css\MasterRound.css" />
+    <Content Include="BSystem\Css\MasterTable.css" />
+    <Content Include="BSystem\Css\MasterWidth.css" />
+    <Content Include="BSystem\HomeConsoleDeveloper.aspx" />
+    <Content Include="BSystem\Image\Bottoni32\rosso.png" />
+    <Content Include="BSystem\Image\Bottoni32\verde.png" />
+    <Content Include="BSystem\Image\Collapse.png" />
+    <Content Include="BSystem\Image\Expand.png" />
+    <Content Include="BSystem\Image\Pin.png" />
+    <Content Include="BSystem\Image\UnPin.png" />
+    <Content Include="BSystem\Image\ValidatorAttenzione.png" />
+    <Content Include="BSystem\Image\ValidatorChiudi.png" />
+    <Content Include="BSystem\JS\Master.js" />
+    <Content Include="BSystem\sysAccediCome.aspx" />
+    <Content Include="BSystem\sysAccessi.aspx" />
+    <Content Include="BSystem\sysComuni.aspx" />
+    <Content Include="BSystem\sysConfermaRegistrazione.aspx" />
+    <Content Include="BSystem\sysConfigMailDB.aspx" />
+    <Content Include="BSystem\sysConfigReportingServices.aspx" />
+    <Content Include="BSystem\sysConfiguration.aspx" />
+    <Content Include="BSystem\sysDownload.aspx" />
+    <Content Include="BSystem\sysDownloadByte.aspx" />
+    <Content Include="BSystem\sysEsportaExcel.aspx" />
+    <Content Include="BSystem\sysFunzioni.aspx" />
+    <Content Include="BSystem\sysInitDB.aspx" />
+    <Content Include="BSystem\sysLog.aspx" />
+    <Content Include="BSystem\sysLogin.aspx" />
+    <Content Include="BSystem\sysMessage.aspx" />
+    <Content Include="BSystem\sysModuli.aspx" />
+    <Content Include="BSystem\sysNotifiche.aspx" />
+    <Content Include="BSystem\sysPassePartout.aspx" />
+    <Content Include="BSystem\sysPersone.aspx" />
+    <Content Include="BSystem\sysPolicyPwd.aspx" />
+    <Content Include="BSystem\sysPreviewReport.aspx" />
+    <Content Include="BSystem\sysProfili.aspx" />
+    <Content Include="BSystem\sysProvince.aspx" />
+    <Content Include="BSystem\sysRecuperaPassword.aspx" />
+    <Content Include="BSystem\sysRegioni.aspx" />
+    <Content Include="BSystem\sysRegistrazione.aspx" />
+    <Content Include="BSystem\sysReportViewer.aspx" />
+    <Content Include="BSystem\sysRuoli.aspx" />
+    <Content Include="BSystem\sysSelectProfilo.aspx" />
+    <Content Include="BSystem\sysSeverity.aspx" />
+    <Content Include="BSystem\sysSistemi.aspx" />
+    <Content Include="BSystem\sysStartApp.aspx" />
+    <Content Include="BSystem\sysStartAppDebug.ASPX" />
+    <Content Include="BSystem\sysStati.aspx" />
+    <Content Include="BSystem\sysUtenti.aspx" />
+    <Content Include="BSystem\sysVisibilita.aspx" />
+    <Content Include="BSystem\sysWebConfig.aspx" />
+    <Content Include="BSystem\sysWiki.aspx" />
+    <Content Include="BThemes\tmPt2023\00_Base.css" />
+    <Content Include="BThemes\tmPt2023\00_Pannelli.css" />
+    <Content Include="BThemes\tmPt2023\00_PosteColori.css" />
+    <Content Include="BThemes\tmPt2023\01_Advertaising.css" />
+    <Content Include="BThemes\tmPt2023\01_Advertaising_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\01_Advertaising_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\01_BPagePreviewReport.css" />
+    <Content Include="BThemes\tmPt2023\01_MasterPage.css" />
+    <Content Include="BThemes\tmPt2023\01_MasterPage_SmartPhone.css" />
+    <Content Include="BThemes\tmPt2023\01_MasterPage_Spinner.css" />
+    <Content Include="BThemes\tmPt2023\01_MasterPage_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\01_PageTableBase.css" />
+    <Content Include="BThemes\tmPt2023\01_WebControlSearchBase.css" />
+    <Content Include="BThemes\tmPt2023\02_Header-Footer-Sidebar.css" />
+    <Content Include="BThemes\tmPt2023\02_Header-Footer-Sidebar_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\02_Header-Footer-SideBar_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\03_BCtlCalendario.css" />
+    <Content Include="BThemes\tmPt2023\03_Clock.css" />
+    <Content Include="BThemes\tmPt2023\03_CommandBar.css" />
+    <Content Include="BThemes\tmPt2023\03_Copyright.css" />
+    <Content Include="BThemes\tmPt2023\03_HeaderBar.css" />
+    <Content Include="BThemes\tmPt2023\03_Notify.css" />
+    <Content Include="BThemes\tmPt2023\03_Notify_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\03_Notify_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\03_Segnalazioni.css" />
+    <Content Include="BThemes\tmPt2023\03_UtenteEntrato.css" />
+    <Content Include="BThemes\tmPt2023\03_UtenteEntrato_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\03_UtenteEntrato_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\04_Extender.css" />
+    <Content Include="BThemes\tmPt2023\05_LogIn.css" />
+    <Content Include="BThemes\tmPt2023\05_Registrazione.css" />
+    <Content Include="BThemes\tmPt2023\06_Images.css" />
+    <Content Include="BThemes\tmPt2023\06_Images32.css" />
+    <Content Include="BThemes\tmPt2023\06_ImagesPoste24.css" />
+    <Content Include="BThemes\tmPt2023\06_ImagesPoste32.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BAutoComplete.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BCheck.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BCollapsiblePanel.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BCombo.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BGridView.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BGridViewPanel.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BGridView_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BGridView_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BImage.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BMenu.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BMenu_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BMenu_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BMsgBox.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BMsgBox_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BMsgBox_Tablet.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BNotify.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BPager.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BPager_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BPropertyGrid.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BRadio.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BSwitch.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BTesto.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BTesto_Smartphone.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BToast.css" />
+    <Content Include="BThemes\tmPt2023\BArtsFramework_BUploader.css" />
+    <Content Include="BThemes\tmPt2023\Controls\ctlFooterTmPt2023.ascx" />
+    <Content Include="BThemes\tmPt2023\Controls\ctlHeaderTmPt2023.ascx" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\0-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\0.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\0Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\1-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\1.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\1Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\2-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\2.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\2Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\3-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\3.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\3Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\4-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\4.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\4Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\5-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\5.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\5Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\6-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\6.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\6Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\7-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\7.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\7Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\8-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\8.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\8Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\9-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\9.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\9Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\agenda-appuntamento-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\agenda-appuntamento.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\agenda-appuntamentoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Aggiorna24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Aggiorna24Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\aiuto-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\aiuto.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\aiutoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Annulla.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\AnnullaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\arrows-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\arrows.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\arrowsDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\calendar24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\cam-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\cam.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\camDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Campana.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\CampanaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Cestino.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\CestinoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\check-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\check.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\checkDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\cloud-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\cloud.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\cloudDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\codiceFiscale24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ConfigMail.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ConfigMailDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Copia.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\CopiaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\CuoreGialloPoste24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\CuoreRosso24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\CuoreVuotoNero24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Download.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\DownloadDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\dress-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\dress.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\dressDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Email-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Email.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\EmailDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Excel.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ExcelDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaDx.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaDxDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaGiu.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaGiuDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaSu.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaSuDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaSx.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FrecciaSxDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Funzioni.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FunzioniBianco.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\FunzioniDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Google.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\GoogleDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\HelpButton24.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\HelpButton24Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\hour-week-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\hour-week.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\hour-weekDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Info.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\InfoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\InitDB.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\InitDBDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\laurea-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\laurea.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\laureaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\lente-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Lente.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\LenteDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\LogOut.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\LogOutBianco.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Lucchetto.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\LucchettoAperto.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\LucchettoApertoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\LucchettoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\message.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\messageDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\messagge-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Microsoft.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\MicrosoftDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\modifica-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Modifica.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ModificaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Modulo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ModuloDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\MonitorLog.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\MonitorLogDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\news-novita-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\news-novita.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\news-novitaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Nuovo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\NuovoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Pdf.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\PdfDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\peoples-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\peoples.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\peoplesDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\persone-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\persone.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\personeDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\picture-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\picture.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\pictureDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\pin.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\pinDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\PolicyPwd.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\PolicyPwdDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\position-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\position.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\positionDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\prevpagina_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\primo_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\prodotto-e-commerce-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\prodotto-e-commerce.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\prodotto-e-commerceDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Profili.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ProfiliDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\proxpagina_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\repair-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\repair.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\repairDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\riservato-usoInternoConfidenziale-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\riservato-usoInternoConfidenziale.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\riservato-usoInternoConfidenzialeDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\riunione-meeting-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\riunione-meeting.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\riunione-meetingDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Ruoli.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\RuoliDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Salva.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SalvaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SelezionaSingolo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SelezionaSingoloDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SelezionaTutti.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SelezionaTuttiDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\settings-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\settings.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\settingsDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Severity.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SeverityDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\smartphone-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\smartphone.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\smartphoneDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\soldi-fatturatoAndamento-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\soldi-fatturatoAndamento.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\soldi-fatturatoAndamentoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\soluzione-idea-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\soluzione-idea.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\soluzione-ideaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SortAsc.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\SortDesc.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Stampa.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\StampaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\struttura-flusso-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\struttura-flusso.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\struttura-flussoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\target-obiettivo-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\target-obiettivo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\target-obiettivoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\timing-tempistiche-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\timing-tempistiche.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\timing-tempisticheDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ultimo_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\unPin.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\unPinDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\Upload.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\UploadDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\User.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\UserDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ValidatorChiudi.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\ValidatorChiudiDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\web-link-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\web-link.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\web-linkDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\wifi-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\wifi.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon24\wifiDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\0-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\0.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\0Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\1-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\1.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\1Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\2-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\2.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\2Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\3-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\3.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\3Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\4-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\4.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\4Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\5-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\5.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\5Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\6-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\6.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\6Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\7-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\7.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\7Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\8-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\8.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\8Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\9-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\9.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\9Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\agenda-appuntamento-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\agenda-appuntamento.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\agenda-appuntamentoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Aggiorna32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Aggiorna32Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\aiuto-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\aiuto.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\aiutoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Annulla.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\AnnullaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\arrows-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\arrows.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\arrowsDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\calendar32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\cam-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\cam.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\camDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Campana.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CampanaBianca.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CampanaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Cestino.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CestinoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\check-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\check.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\checkDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\cloud-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\cloud.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\cloudDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\codiceFiscale32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Collapse32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ConfigMail.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ConfigMailDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Copia.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CopiaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CuoreGialloPoste32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CuoreRosso32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\CuoreVuotoNero32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Download.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\DownloadDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\dress-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\dress.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\dressDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Email-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Email.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\EmailDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Excel.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ExcelDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Expand32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaDx.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaDxDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaGiu.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaGiuDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaSu.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaSuDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaSx.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FrecciaSxDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Funzioni.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FunzioniBianco.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FunzioniBlue.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FunzioniDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\FunzioniGrigio.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Google.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\GoogleDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\HelButtonGrigio.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\HelpButton32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\HelpButton32Bianco.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\HelpButton32Dis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\hour-week-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\hour-week.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\hour-weekDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Important32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Info.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\InfoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\InitDB.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\InitDbDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\laurea-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\laurea.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\laureaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Lente-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Lente.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LenteBianco.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LenteDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LenteWhite.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\link_esterno.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\link_interno.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LogOut.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LogOutDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Lucchetto.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LucchettoAperto.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LucchettoApertoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\LucchettoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\message.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\messageDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\messagge-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Microsoft.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\MicrosoftDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Modifica-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Modifica.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ModificaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Modulo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ModuloDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\MonitorLog.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\MonitorLogDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Nascondi32.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\news-novita-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\news-novita.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\news-novitaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Nuovo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\NuovoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Pdf.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\PdfDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\peoples-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\peoples.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\peoplesDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\persone-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\persone.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\personeDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\picture-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\picture.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\pictureDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\pin.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\pinDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\PolicyPwd.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\PolicyPwdDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\position-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\position.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\positionDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\prevpagina_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\primo_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\prodotto-e-commerce-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\prodotto-e-commerce.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\prodotto-e-commerceDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Profili.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ProfiliDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\proxpagina_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\repair-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\repair.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\repairDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\riservato-usoInternoConfidenziale-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\riservato-usoInternoConfidenziale.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\riservato-usoInternoConfidenzialeDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\riunione-meeting-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\riunione-meeting.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\riunione-meetingDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\rosso.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Ruoli.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\RuoliDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Salva.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\SalvaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\SelezionaSingolo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\SelezionaSingoloDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\SelezionaTutti.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\SelezionaTuttiDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\settings-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\settings.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\settingsDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Severity.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\SeverityDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\smartphone-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\smartphone.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\smartphoneDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\soldi-fatturatoAndamento-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\soldi-fatturatoAndamento.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\soldi-fatturatoAndamentoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\soluzione-idea-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\soluzione-idea.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\soluzione-ideaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Stampa.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\StampaDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\struttura-flusso-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\struttura-flusso.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\struttura-flussoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\target-obiettivo-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\target-obiettivo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\target-obiettivoDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\timing-tempistiche-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\timing-tempistiche.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\timing-tempisticheDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ultimo_b.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\unPin.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\unPinDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\Upload.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\UploadDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\User.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\UserDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ValidatorChiudi.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\ValidatorChiudiDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\verde.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\web-link-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\web-link.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\web-linkDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\wifi-white.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\wifi.png" />
+    <Content Include="BThemes\tmPt2023\Image\Icon32\wifiDis.png" />
+    <Content Include="BThemes\tmPt2023\Image\LoginError.png" />
+    <Content Include="BThemes\tmPt2023\Image\LogoTitolo.png" />
+    <Content Include="BThemes\tmPt2023\Image\Risoluzioni.png" />
+    <Content Include="BThemes\tmPt2023\Image\Scrivania\dx.jpg" />
+    <Content Include="BThemes\tmPt2023\Image\Scrivania\dx.png" />
+    <Content Include="BThemes\tmPt2023\Image\Scrivania\sx.jpg" />
+    <Content Include="BThemes\tmPt2023\Image\Scrivania\sx.png" />
+    <Content Include="BThemes\tmPt2023\Image\Scrivania\top.jpg" />
+    <Content Include="BThemes\tmPt2023\Image\Scrivania\top.png" />
+    <Content Include="BThemes\tmPt2023\Image\sfondowp.jpg" />
+    <Content Include="BThemes\tmPt2023\Image\ValidatorAttenzione.png" />
+    <Content Include="BThemes\tmPt2023\Image\ValidatorChiudi.png" />
+    <Content Include="BThemes\tmPt2023\xx_WebPers.css" />
+    <Content Include="BThemes\tmPt2023\xx_WebPers_SmartPhone.css" />
+    <Content Include="BThemes\tmPt2023\xx_WebPers_Tablet.css" />
+    <Content Include="BThemes\tmPt\00_Base.css" />
+    <Content Include="BThemes\tmPt\00_Pannelli.css" />
+    <Content Include="BThemes\tmPt\01_Advertaising.css" />
+    <Content Include="BThemes\tmPt\01_Advertaising_Smartphone.css" />
+    <Content Include="BThemes\tmPt\01_Advertaising_Tablet.css" />
+    <Content Include="BThemes\tmPt\01_BPagePreviewReport.css" />
+    <Content Include="BThemes\tmPt\01_MasterPage.css" />
+    <Content Include="BThemes\tmPt\01_MasterPage_SmartPhone.css" />
+    <Content Include="BThemes\tmPt\01_MasterPage_Spinner.css" />
+    <Content Include="BThemes\tmPt\01_MasterPage_Tablet.css" />
+    <Content Include="BThemes\tmPt\01_PageTableBase.css" />
+    <Content Include="BThemes\tmPt\01_WebControlSearchBase.css" />
+    <Content Include="BThemes\tmPt\02_Header-Footer-Sidebar.css" />
+    <Content Include="BThemes\tmPt\02_Header-Footer-Sidebar_Smartphone.css" />
+    <Content Include="BThemes\tmPt\02_Header-Footer-SideBar_Tablet.css" />
+    <Content Include="BThemes\tmPt\03_BCtlCalendario.css" />
+    <Content Include="BThemes\tmPt\03_Clock.css" />
+    <Content Include="BThemes\tmPt\03_CommandBar.css" />
+    <Content Include="BThemes\tmPt\03_Copyright.css" />
+    <Content Include="BThemes\tmPt\03_HeaderBar.css" />
+    <Content Include="BThemes\tmPt\03_Notify.css" />
+    <Content Include="BThemes\tmPt\03_Notify_Smartphone.css" />
+    <Content Include="BThemes\tmPt\03_Notify_Tablet.css" />
+    <Content Include="BThemes\tmPt\03_Segnalazioni.css" />
+    <Content Include="BThemes\tmPt\03_UtenteEntrato.css" />
+    <Content Include="BThemes\tmPt\03_UtenteEntrato_Smartphone.css" />
+    <Content Include="BThemes\tmPt\03_UtenteEntrato_Tablet.css" />
+    <Content Include="BThemes\tmPt\04_Extender.css" />
+    <Content Include="BThemes\tmPt\05_LogIn.css" />
+    <Content Include="BThemes\tmPt\05_Registrazione.css" />
+    <Content Include="BThemes\tmPt\06_Images.css" />
+    <Content Include="BThemes\tmPt\06_Images32.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BAutoComplete.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BCheck.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BCollapsiblePanel.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BCombo.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BGridView.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BGridViewPanel.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BGridView_Smartphone.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BGridView_Tablet.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BImage.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BMenu.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BMenu_Smartphone.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BMenu_Tablet.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BMsgBox.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BMsgBox_Smartphone.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BMsgBox_Tablet.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BNotify.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BPager.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BPager_Smartphone.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BPropertyGrid.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BRadio.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BSwitch.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BTesto.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BTesto_Smartphone.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BToast.css" />
+    <Content Include="BThemes\tmPt\BArtsFramework_BUploader.css" />
+    <Content Include="BThemes\tmPt\Controls\ctlFootertmPt.ascx" />
+    <Content Include="BThemes\tmPt\Controls\ctlHeadertmPt.ascx" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Aggiorna24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Aggiorna24Dis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Annulla.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\AnnullaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\calendar24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Campana.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\CampanaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Cestino.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\CestinoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\codiceFiscale24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ConfigMail.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ConfigMailDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Copia.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\CopiaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\CuoreGialloPoste24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\CuoreRosso24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\CuoreVuotoNero24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Download.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\DownloadDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Email.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\EmailDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Excel.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ExcelDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaDx.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaDxDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaGiu.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaGiuDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaSu.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaSuDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaSx.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FrecciaSxDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Funzioni.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FunzioniBianco.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\FunzioniDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Google.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\GoogleDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\HelpButton24.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\HelpButton24Dis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Info.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\InfoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\InitDB.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\InitDBDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Lente.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LenteDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LogOut.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LogOutBianco.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LogOutDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Lucchetto.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LucchettoAperto.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LucchettoApertoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\LucchettoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Microsoft.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\MicrosoftDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Modifica.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ModificaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Modulo.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ModuloDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\MonitorLog.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\MonitorLogDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Nuovo.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\NuovoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Pdf.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\PdfDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\pin.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\pinDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\PolicyPwd.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\PolicyPwdDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\prevpagina_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\primo_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Profili.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ProfiliDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\proxpagina_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Ruoli.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\RuoliDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Salva.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\SalvaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\SelezionaSingolo.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\SelezionaSingoloDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\SelezionaTutti.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\SelezionaTuttiDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Severity.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\SeverityDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Stampa.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\StampaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ultimo_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\unPin.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\unPinDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\Upload.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\UploadDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\User.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\UserDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ValidatorChiudi.png" />
+    <Content Include="BThemes\tmPt\Image\Icon24\ValidatorChiudiDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Aggiorna32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Aggiorna32Dis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Annulla.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\AnnullaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\calendar32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Campana.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CampanaBianca.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CampanaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Cestino.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CestinoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\codiceFiscale32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Collapse32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ConfigMail.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ConfigMailDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Copia.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CopiaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CuoreGialloPoste32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CuoreRosso32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\CuoreVuotoNero32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Download.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\DownloadDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Email.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\EmailDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Excel.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ExcelDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Expand32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaDx.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaDxDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaGiu.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaGiuDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaSu.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaSuDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaSx.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FrecciaSxDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Funzioni.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FunzioniBianco.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FunzioniBlue.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FunzioniDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\FunzioniGrigio.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Google.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\GoogleDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\HelButtonGrigio.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\HelpButton32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\HelpButton32Bianco.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\HelpButton32Dis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Important32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Info.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\InfoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\InitDB.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\InitDbDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Lente.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LenteBianco.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LenteDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LenteWhite.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\link_esterno.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\link_interno.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LogOut.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LogOutDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Lucchetto.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LucchettoAperto.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LucchettoApertoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\LucchettoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Microsoft.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\MicrosoftDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Modifica.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ModificaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Modulo.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ModuloDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\MonitorLog.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\MonitorLogDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Nascondi32.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Nuovo.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\NuovoDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Pdf.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\PdfDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\pin.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\pinDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\PolicyPwd.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\PolicyPwdDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\prevpagina_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\primo_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Profili.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ProfiliDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\proxpagina_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\rosso.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Ruoli.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\RuoliDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Salva.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\SalvaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\SelezionaSingolo.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\SelezionaSingoloDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\SelezionaTutti.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\SelezionaTuttiDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Severity.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\SeverityDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Stampa.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\StampaDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ultimo_b.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\unPin.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\unPinDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\Upload.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\UploadDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\User.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\UserDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ValidatorChiudi.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\ValidatorChiudiDis.png" />
+    <Content Include="BThemes\tmPt\Image\Icon32\verde.png" />
+    <Content Include="BThemes\tmPt\Image\LoginError.png" />
+    <Content Include="BThemes\tmPt\Image\LogoTitolo.png" />
+    <Content Include="BThemes\tmPt\Image\Risoluzioni.png" />
+    <Content Include="BThemes\tmPt\Image\Scrivania\dx.jpg" />
+    <Content Include="BThemes\tmPt\Image\Scrivania\dx.png" />
+    <Content Include="BThemes\tmPt\Image\Scrivania\sx.jpg" />
+    <Content Include="BThemes\tmPt\Image\Scrivania\sx.png" />
+    <Content Include="BThemes\tmPt\Image\Scrivania\top.jpg" />
+    <Content Include="BThemes\tmPt\Image\Scrivania\top.png" />
+    <Content Include="BThemes\tmPt\Image\sfondowp.jpg" />
+    <Content Include="BThemes\tmPt\Image\ValidatorAttenzione.png" />
+    <Content Include="BThemes\tmPt\Image\ValidatorChiudi.png" />
+    <Content Include="BThemes\tmPt\xx_WebPers.css" />
+    <Content Include="BThemes\tmPt\xx_WebPers_SmartPhone.css" />
+    <Content Include="BThemes\tmPt\xx_WebPers_Tablet.css" />
+    <Content Include="default.aspx" />
+    <Content Include="Documentations\License.txt" />
+    <Content Include="Documentations\Readme.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Help.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Scripts\B-Arts\B-ArtsFrameworks.js" />
+    <Content Include="Scripts\B-Arts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\B-Arts\jquery-ui-1.13.1.min.js" />
+    <Content Include="Scripts\B-Arts\js_BWebTemplate.js" />
+    <Content Include="Nuget.config" />
+    <Content Include="BIF\Configuration.BIF" />
+    <Content Include="BIF\sysFunzioni.BIF" />
+    <Content Include="BIF\sysModuli.BIF" />
+    <Content Include="BIF\sysProfili.BIF" />
+    <Content Include="BIF\sysProfiliFunzioni.BIF" />
+    <Content Include="BIF\sysRuoli.BIF" />
+    <Content Include="BIF\sysSistemi.BIF" />
+    <Content Include="BIF\sysUtenti.BIF" />
+    <Content Include="BIF\sysUtentiNotifiche.BIF" />
+    <Content Include="BIF\sysUtentiProfili.BIF" />
+    <Content Include="BIF\sysWiki.BIF" />
+    <Content Include="Reports\DSPrint.xsc">
+      <DependentUpon>DSPrint.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Reports\DSPrint.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPrint.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Reports\DSPrint.xss">
+      <DependentUpon>DSPrint.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.6.3.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.3.js" />
+    <Content Include="Scripts\jquery-3.6.3.min.js" />
+    <Content Include="Scripts\jquery-3.6.3.slim.js" />
+    <Content Include="Scripts\jquery-3.6.3.slim.min.js" />
+    <Content Include="Scripts\jquery-3.6.3.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.3.min.map" />
+    <None Include="Scripts\jquery-3.6.4.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.4.js" />
+    <Content Include="Scripts\jquery-3.6.4.min.js" />
+    <Content Include="Scripts\jquery-3.6.4.slim.js" />
+    <Content Include="Scripts\jquery-3.6.4.slim.min.js" />
+    <Content Include="Scripts\jquery-ui-1.13.2.js" />
+    <Content Include="Scripts\jquery-ui-1.13.2.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-3.6.4.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.4.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BClassesPartial\BConfiguration.cs" />
+    <Compile Include="BClasses\BConfiguration.cs" />
+    <Compile Include="BControls\BCtlConfiguration.ascx.cs">
+      <DependentUpon>BCtlConfiguration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BControls\BCtlConfiguration.ascx.designer.cs">
+      <DependentUpon>BCtlConfiguration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\AuthMicrosoft.aspx.cs">
+      <DependentUpon>AuthMicrosoft.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\AuthMicrosoft.aspx.designer.cs">
+      <DependentUpon>AuthMicrosoft.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\AuthGoogle.aspx.cs">
+      <DependentUpon>AuthGoogle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\AuthGoogle.aspx.designer.cs">
+      <DependentUpon>AuthGoogle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BGridViewSortingOption.cs" />
+    <Compile Include="BSystem\BClassesBase\BPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BPageBaseNoMaster.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BPageOneRecordBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BPageTableBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BPageTreeViewBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BPageViewBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BPopupPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BRouteConfig.cs" />
+    <Compile Include="BSystem\BClassesBase\BWebConfig.cs" />
+    <Compile Include="BSystem\BClassesBase\BWebControlsBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BWebControlSearchBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\BWebControlTableBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BClassesBase\Web.MasterBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControlsSearch\BCtlsysPersonaleSearch.ascx.cs">
+      <DependentUpon>BCtlsysPersonaleSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControlsSearch\BCtlsysPersonaleSearch.ascx.designer.cs">
+      <DependentUpon>BCtlsysPersonaleSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControlsSearch\BCtlsysPersoneSearch.ascx.cs">
+      <DependentUpon>BCtlsysPersoneSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControlsSearch\BCtlsysPersoneSearch.ascx.designer.cs">
+      <DependentUpon>BCtlsysPersoneSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysAccessi.ascx.cs">
+      <DependentUpon>BCtlsysAccessi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysAccessi.ascx.designer.cs">
+      <DependentUpon>BCtlsysAccessi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysComuni.ascx.cs">
+      <DependentUpon>BCtlsysComuni.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysComuni.ascx.designer.cs">
+      <DependentUpon>BCtlsysComuni.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysFunzione.ascx.cs">
+      <DependentUpon>BCtlsysFunzione.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysFunzione.ascx.designer.cs">
+      <DependentUpon>BCtlsysFunzione.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysLog.ascx.cs">
+      <DependentUpon>BCtlsysLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysLog.ascx.designer.cs">
+      <DependentUpon>BCtlsysLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysModuli.ascx.cs">
+      <DependentUpon>BCtlsysModuli.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysModuli.ascx.designer.cs">
+      <DependentUpon>BCtlsysModuli.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysNotifiche.ascx.cs">
+      <DependentUpon>BCtlsysNotifiche.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysNotifiche.ascx.designer.cs">
+      <DependentUpon>BCtlsysNotifiche.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysPersone.ascx.cs">
+      <DependentUpon>BCtlsysPersone.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysPersone.ascx.designer.cs">
+      <DependentUpon>BCtlsysPersone.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysPolicyPwd.ascx.cs">
+      <DependentUpon>BCtlsysPolicyPwd.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysPolicyPwd.ascx.designer.cs">
+      <DependentUpon>BCtlsysPolicyPwd.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysProfili.ascx.cs">
+      <DependentUpon>BCtlsysProfili.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysProfili.ascx.designer.cs">
+      <DependentUpon>BCtlsysProfili.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysProvince.ascx.cs">
+      <DependentUpon>BCtlsysProvince.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysProvince.ascx.designer.cs">
+      <DependentUpon>BCtlsysProvince.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysRegioni.ascx.cs">
+      <DependentUpon>BCtlsysRegioni.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysRegioni.ascx.designer.cs">
+      <DependentUpon>BCtlsysRegioni.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysRuoli.ascx.cs">
+      <DependentUpon>BCtlsysRuoli.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysRuoli.ascx.designer.cs">
+      <DependentUpon>BCtlsysRuoli.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysSeverity.ascx.cs">
+      <DependentUpon>BCtlsysSeverity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysSeverity.ascx.designer.cs">
+      <DependentUpon>BCtlsysSeverity.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysSistemi.ascx.cs">
+      <DependentUpon>BCtlsysSistemi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysSistemi.ascx.designer.cs">
+      <DependentUpon>BCtlsysSistemi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysStati.ascx.cs">
+      <DependentUpon>BCtlsysStati.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysStati.ascx.designer.cs">
+      <DependentUpon>BCtlsysStati.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysUtenti.ascx.cs">
+      <DependentUpon>BCtlsysUtenti.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysUtenti.ascx.designer.cs">
+      <DependentUpon>BCtlsysUtenti.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysVisibilita.ascx.cs">
+      <DependentUpon>BCtlsysVisibilita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysVisibilita.ascx.designer.cs">
+      <DependentUpon>BCtlsysVisibilita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysWiki.ascx.cs">
+      <DependentUpon>BCtlsysWiki.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\BControls\BCtlsysWiki.ascx.designer.cs">
+      <DependentUpon>BCtlsysWiki.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlCalendario.ascx.cs">
+      <DependentUpon>BCtlCalendario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlCalendario.ascx.designer.cs">
+      <DependentUpon>BCtlCalendario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoApplicazioni.ascx.cs">
+      <DependentUpon>BCtlElencoApplicazioni.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoApplicazioni.ascx.designer.cs">
+      <DependentUpon>BCtlElencoApplicazioni.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoProfili.ascx.cs">
+      <DependentUpon>BCtlElencoProfili.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoProfili.ascx.designer.cs">
+      <DependentUpon>BCtlElencoProfili.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoSistemi.ascx.cs">
+      <DependentUpon>BCtlElencoSistemi.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoSistemi.ascx.designer.cs">
+      <DependentUpon>BCtlElencoSistemi.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoVisibilita.ascx.cs">
+      <DependentUpon>BCtlElencoVisibilita.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlElencoVisibilita.ascx.designer.cs">
+      <DependentUpon>BCtlElencoVisibilita.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlHeaderBar.ascx.cs">
+      <DependentUpon>BCtlHeaderBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlHeaderBar.ascx.designer.cs">
+      <DependentUpon>BCtlHeaderBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlImportMassivo.ascx.cs">
+      <DependentUpon>BCtlImportMassivo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlImportMassivo.ascx.designer.cs">
+      <DependentUpon>BCtlImportMassivo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlMenu.ascx.cs">
+      <DependentUpon>BCtlMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlMenu.ascx.designer.cs">
+      <DependentUpon>BCtlMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlServicesNotification.ascx.cs">
+      <DependentUpon>BCtlServicesNotification.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlServicesNotification.ascx.designer.cs">
+      <DependentUpon>BCtlServicesNotification.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlSidebar.ascx.cs">
+      <DependentUpon>BCtlSidebar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlSidebar.ascx.designer.cs">
+      <DependentUpon>BCtlSidebar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlUtenteEntrato.ascx.cs">
+      <DependentUpon>BCtlUtenteEntrato.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\BCtlUtenteEntrato.ascx.designer.cs">
+      <DependentUpon>BCtlUtenteEntrato.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlCambiaPassword.ascx.cs">
+      <DependentUpon>CtlCambiaPassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlCambiaPassword.ascx.designer.cs">
+      <DependentUpon>CtlCambiaPassword.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlClock.ascx.cs">
+      <DependentUpon>CtlClock.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlClock.ascx.designer.cs">
+      <DependentUpon>CtlClock.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlCommandBar.ascx.cs">
+      <DependentUpon>CtlCommandBar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlCommandBar.ascx.designer.cs">
+      <DependentUpon>CtlCommandBar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlItemWiki.ascx.cs">
+      <DependentUpon>CtlItemWiki.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlItemWiki.ascx.designer.cs">
+      <DependentUpon>CtlItemWiki.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlLogin.ascx.cs">
+      <DependentUpon>CtlLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\Controls\CtlLogin.ascx.designer.cs">
+      <DependentUpon>CtlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\HomeConsoleDeveloper.aspx.cs">
+      <DependentUpon>HomeConsoleDeveloper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\HomeConsoleDeveloper.aspx.designer.cs">
+      <DependentUpon>HomeConsoleDeveloper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\Modules\ModConstantList.cs" />
+    <Compile Include="BSystem\Modules\ModEnumeration.cs" />
+    <Compile Include="BSystem\Modules\ModGenerale.cs" />
+    <Compile Include="BSystem\Modules\ModHTMLFunction.cs" />
+    <Compile Include="BSystem\Modules\ModInit.cs" />
+    <Compile Include="BSystem\Modules\ModLog.cs" />
+    <Compile Include="BSystem\sysAccediCome.aspx.cs">
+      <DependentUpon>sysAccediCome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysAccediCome.aspx.designer.cs">
+      <DependentUpon>sysAccediCome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysAccessi.aspx.cs">
+      <DependentUpon>sysAccessi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysAccessi.aspx.designer.cs">
+      <DependentUpon>sysAccessi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysComuni.aspx.cs">
+      <DependentUpon>sysComuni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysComuni.aspx.designer.cs">
+      <DependentUpon>sysComuni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysConfermaRegistrazione.aspx.cs">
+      <DependentUpon>sysConfermaRegistrazione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysConfermaRegistrazione.aspx.designer.cs">
+      <DependentUpon>sysConfermaRegistrazione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysConfigMailDB.aspx.cs">
+      <DependentUpon>sysConfigMailDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysConfigMailDB.aspx.designer.cs">
+      <DependentUpon>sysConfigMailDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysConfigReportingServices.aspx.cs">
+      <DependentUpon>sysConfigReportingServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysConfigReportingServices.aspx.designer.cs">
+      <DependentUpon>sysConfigReportingServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysConfiguration.aspx.cs">
+      <DependentUpon>sysConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysConfiguration.aspx.designer.cs">
+      <DependentUpon>sysConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysDownload.aspx.cs">
+      <DependentUpon>sysDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysDownload.aspx.designer.cs">
+      <DependentUpon>sysDownload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysDownloadByte.aspx.cs">
+      <DependentUpon>sysDownloadByte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysDownloadByte.aspx.designer.cs">
+      <DependentUpon>sysDownloadByte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysEsportaExcel.aspx.cs">
+      <DependentUpon>sysEsportaExcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysEsportaExcel.aspx.designer.cs">
+      <DependentUpon>sysEsportaExcel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysFunzioni.aspx.cs">
+      <DependentUpon>sysFunzioni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysFunzioni.aspx.designer.cs">
+      <DependentUpon>sysFunzioni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysInitDB.aspx.cs">
+      <DependentUpon>sysInitDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysInitDB.aspx.designer.cs">
+      <DependentUpon>sysInitDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysLog.aspx.cs">
+      <DependentUpon>sysLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysLog.aspx.designer.cs">
+      <DependentUpon>sysLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysLogin.aspx.cs">
+      <DependentUpon>sysLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysLogin.aspx.designer.cs">
+      <DependentUpon>sysLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysMessage.aspx.cs">
+      <DependentUpon>sysMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysMessage.aspx.designer.cs">
+      <DependentUpon>sysMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysModuli.aspx.cs">
+      <DependentUpon>sysModuli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysModuli.aspx.designer.cs">
+      <DependentUpon>sysModuli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysNotifiche.aspx.cs">
+      <DependentUpon>sysNotifiche.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysNotifiche.aspx.designer.cs">
+      <DependentUpon>sysNotifiche.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysPassePartout.aspx.cs">
+      <DependentUpon>sysPassePartout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysPassePartout.aspx.designer.cs">
+      <DependentUpon>sysPassePartout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysPersone.aspx.cs">
+      <DependentUpon>sysPersone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysPersone.aspx.designer.cs">
+      <DependentUpon>sysPersone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysPolicyPwd.aspx.cs">
+      <DependentUpon>sysPolicyPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysPolicyPwd.aspx.designer.cs">
+      <DependentUpon>sysPolicyPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysPreviewReport.aspx.cs">
+      <DependentUpon>sysPreviewReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysPreviewReport.aspx.designer.cs">
+      <DependentUpon>sysPreviewReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysProfili.aspx.cs">
+      <DependentUpon>sysProfili.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysProfili.aspx.designer.cs">
+      <DependentUpon>sysProfili.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysProvince.aspx.cs">
+      <DependentUpon>sysProvince.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysProvince.aspx.designer.cs">
+      <DependentUpon>sysProvince.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysRecuperaPassword.aspx.cs">
+      <DependentUpon>sysRecuperaPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysRecuperaPassword.aspx.designer.cs">
+      <DependentUpon>sysRecuperaPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysRegioni.aspx.cs">
+      <DependentUpon>sysRegioni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysRegioni.aspx.designer.cs">
+      <DependentUpon>sysRegioni.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysRegistrazione.aspx.cs">
+      <DependentUpon>sysRegistrazione.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysRegistrazione.aspx.designer.cs">
+      <DependentUpon>sysRegistrazione.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysReportViewer.aspx.cs">
+      <DependentUpon>sysReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysReportViewer.aspx.designer.cs">
+      <DependentUpon>sysReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysRuoli.aspx.cs">
+      <DependentUpon>sysRuoli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysRuoli.aspx.designer.cs">
+      <DependentUpon>sysRuoli.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysSelectProfilo.aspx.cs">
+      <DependentUpon>sysSelectProfilo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysSelectProfilo.aspx.designer.cs">
+      <DependentUpon>sysSelectProfilo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysSeverity.aspx.cs">
+      <DependentUpon>sysSeverity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysSeverity.aspx.designer.cs">
+      <DependentUpon>sysSeverity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysSistemi.aspx.cs">
+      <DependentUpon>sysSistemi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysSistemi.aspx.designer.cs">
+      <DependentUpon>sysSistemi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysStartApp.aspx.cs">
+      <DependentUpon>sysStartApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysStartApp.aspx.designer.cs">
+      <DependentUpon>sysStartApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysStartAppDebug.ASPX.cs">
+      <DependentUpon>sysStartAppDebug.ASPX</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysStartAppDebug.ASPX.designer.cs">
+      <DependentUpon>sysStartAppDebug.ASPX</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysStati.aspx.cs">
+      <DependentUpon>sysStati.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysStati.aspx.designer.cs">
+      <DependentUpon>sysStati.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysUtenti.aspx.cs">
+      <DependentUpon>sysUtenti.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysUtenti.aspx.designer.cs">
+      <DependentUpon>sysUtenti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysVisibilita.aspx.cs">
+      <DependentUpon>sysVisibilita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysVisibilita.aspx.designer.cs">
+      <DependentUpon>sysVisibilita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysWebConfig.aspx.cs">
+      <DependentUpon>sysWebConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysWebConfig.aspx.designer.cs">
+      <DependentUpon>sysWebConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BSystem\sysWiki.aspx.cs">
+      <DependentUpon>sysWiki.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BSystem\sysWiki.aspx.designer.cs">
+      <DependentUpon>sysWiki.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BThemes\tmPt2023\Controls\ctlFooterTmPt2023.ascx.cs">
+      <DependentUpon>ctlFooterTmPt2023.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BThemes\tmPt2023\Controls\ctlFooterTmPt2023.ascx.designer.cs">
+      <DependentUpon>ctlFooterTmPt2023.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BThemes\tmPt2023\Controls\ctlHeaderTmPt2023.ascx.cs">
+      <DependentUpon>ctlHeaderTmPt2023.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BThemes\tmPt2023\Controls\ctlHeaderTmPt2023.ascx.designer.cs">
+      <DependentUpon>ctlHeaderTmPt2023.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BThemes\tmPt\Controls\ctlFootertmPt.ascx.cs">
+      <DependentUpon>ctlFootertmPt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BThemes\tmPt\Controls\ctlFootertmPt.ascx.designer.cs">
+      <DependentUpon>ctlFootertmPt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BThemes\tmPt\Controls\ctlHeadertmPt.ascx.cs">
+      <DependentUpon>ctlHeadertmPt.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BThemes\tmPt\Controls\ctlHeadertmPt.ascx.designer.cs">
+      <DependentUpon>ctlHeadertmPt.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Classi\BAppConfig.cs" />
+    <Compile Include="Classi\BUtenti.cs" />
+    <Compile Include="Classi\BWebConfig.cs" />
+    <Compile Include="Classi\sysInitDB.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Moduli\ModAggiornaDB_BWEBAPPTEMPLATE.cs" />
+    <Compile Include="Moduli\ModWebServices.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\BReportDataSources.cs" />
+    <Compile Include="Reports\DSPrint.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPrint.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Web.Master.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.Master.designer.cs">
+      <DependentUpon>Web.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebApi\BSysComuniController.cs" />
+    <Compile Include="WebApi\BSysUfficiController.cs" />
+    <Compile Include="WebApi\BSysUtentiController.cs" />
+    <Compile Include="WebApi\BSysWikiController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SqlServerTypes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\RptElencoComuni.rdlc" />
+    <EmbeddedResource Include="Reports\RptTemplate.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

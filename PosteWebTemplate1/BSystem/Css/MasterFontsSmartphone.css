@@ -1,0 +1,224 @@
+﻿@media only screen and (max-width: 600px) {
+
+  /* Testi SIZE*/
+  .BTestoSmartphone6 {
+    font-size: 6pt;
+  }
+
+  .BTestoSmartphone7 {
+    font-size: 7pt;
+  }
+
+  .BTestoSmartphone8 {
+    font-size: 8pt;
+  }
+
+  .BTestoSmartphone9 {
+    font-size: 9pt;
+  }
+
+  .BTestoSmartphone10 {
+    font-size: 10pt;
+  }
+
+  .BTestoSmartphone11 {
+    font-size: 11pt;
+  }
+
+  .BTestoSmartphone12 {
+    font-size: 12pt;
+  }
+
+  .BTestoSmartphone13 {
+    font-size: 13pt;
+  }
+
+  .BTestoSmartphone14 {
+    font-size: 14pt;
+  }
+
+  .BTestoSmartphone15 {
+    font-size: 15pt;
+  }
+
+  .BTestoSmartphone16 {
+    font-size: 16pt;
+  }
+
+  .BTestoSmartphone17 {
+    font-size: 17pt;
+  }
+
+  .BTestoSmartphone18 {
+    font-size: 18pt;
+  }
+
+  .BTestoSmartphone19 {
+    font-size: 19pt;
+  }
+
+  .BTestoSmartphone20 {
+    font-size: 20pt;
+  }
+
+  .BTestoSmartphone21 {
+    font-size: 21pt;
+  }
+
+  .BTestoSmartphone22 {
+    font-size: 22pt;
+  }
+
+  .BTestoSmartphone23 {
+    font-size: 23pt;
+  }
+
+  .BTestoSmartphone24 {
+    font-size: 24pt;
+  }
+
+  .BTestoSmartphone25 {
+    font-size: 25pt;
+  }
+
+  .BTestoSmartphone26 {
+    font-size: 26pt;
+  }
+
+  .BTestoSmartphone27 {
+    font-size: 27pt;
+  }
+
+  .BTestoSmartphone28 {
+    font-size: 28pt;
+  }
+
+  .BTestoSmartphone29 {
+    font-size: 29pt;
+  }
+
+  .BTestoSmartphone30 {
+    font-size: 30pt;
+  }
+
+  .BTestoSmartphone31 {
+    font-size: 31pt;
+  }
+
+  .BTestoSmartphone32 {
+    font-size: 32pt;
+  }
+
+  .BTestoSmartphone33 {
+    font-size: 33pt;
+  }
+
+  .BTestoSmartphone34 {
+    font-size: 34pt;
+  }
+
+  .BTestoSmartphone35 {
+    font-size: 35pt;
+  }
+
+  .BTestoSmartphone36 {
+    font-size: 36pt;
+  }
+
+  .BTestoSmartphone48 {
+    font-size: 48pt;
+  }
+
+  .BTestoSmartphone72 {
+    font-size: 72pt;
+  }
+
+
+
+  /*Grandezza TITOLI*/
+  .BH1 {
+    font-size: 24pt;
+    font-weight: normal;
+  }
+
+  .BH2 {
+    font-size: 15pt;
+    font-weight: normal;
+  }
+
+  .BH3 {
+    font-size: 13pt;
+    font-weight: normal
+  }
+
+  .BH4 {
+    font-size: 12pt;
+    font-weight: normal
+  }
+
+  .BH5 {
+    font-size: 10pt;
+    font-weight: normal
+  }
+
+  .BH6 {
+    font-size: 8pt;
+    font-weight: normal
+  }
+
+
+  /* CLASSI FONT STYLE*/
+  .BTestoSmartphoneBold {
+    font-weight: bold;
+  }
+
+  .BTestoSmartphoneItalic {
+    font-style: italic;
+  }
+
+  .BTestoSmartphoneUnderline {
+    text-decoration: underline;
+  }
+
+  .BTestoSmartphoneDecorationNone {
+    text-decoration: none;
+  }
+
+  .BTestoSmartphoneUnderlineHover {
+  }
+
+    .BTestoSmartphoneUnderlineHover:hover {
+      text-decoration: underline;
+    }
+
+
+  /*Allineamento Testo*/
+  .BTestoSmartphoneLeft {
+    text-align: left;
+  }
+
+  .BTestoSmartphoneRight {
+    text-align: right;
+  }
+
+  .BTestoSmartphoneCenter {
+    text-align: center;
+  }
+
+  /* CLASSI FONT */
+  .BFontSmartphoneCenturyGothic {
+    font-family: 'Century Gothic' !Important;
+  }
+
+  .BFontSmartphoneSegoeUI {
+    font-family: 'Segoe UI' !important;
+  }
+
+  .BFontSmartphoneArial {
+    font-family: Arial !important;
+  }
+
+  .BFontSmartphoneTimesNewRoman {
+    font-family: 'Times New Roman' !important;
+  }
+}

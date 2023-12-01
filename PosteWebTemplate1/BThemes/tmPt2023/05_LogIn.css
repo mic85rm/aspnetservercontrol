@@ -1,0 +1,212 @@
+﻿/*PAGINA SYSLOGIN*/
+
+.BLogin_ApplicationContainer {
+  width: 100%;
+  min-height: 220px;
+  float: left;
+}
+
+.BBoxApplication {
+  padding: 50px;
+  float: left;
+  
+}
+
+.BLogin_CtlLoginContainer {
+  width: 100%;
+  min-height: 250px;
+  float: left;
+}
+
+.BLogin_InformationNoteContainer {
+  text-align: center;
+  width: 100%;
+  float: left;
+}
+
+
+
+/* CLASSI PER IL CTLLOGIN */
+.BLogin_Container {
+  margin: auto;
+  min-width: 300px;
+  width: 400px;
+}
+
+.BLogin_InputsContainer {
+  float: left;
+  height: 100%;
+  width: calc(100% - 60px);
+  width: -moz-calc(100% - 60px);
+  width: -webkit-calc(100% - 60px);
+}
+
+.BLogin_Error {
+  float: right;
+  height: 100%;
+}
+
+.BLogin_Username, .BLogin_Password {
+  float: left;
+  width: 100%;
+}
+
+.BLogin_Buttons {
+  float: left;
+  width: 100%;
+  height: 32px !important;
+}
+
+
+
+
+.BLogin_Alert {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+
+.BLogin_LabelAlert {
+  text-align: center;
+  color: #ff0000 !important;
+}
+
+
+.BLogin_ImgError {
+  margin-top: 10px;
+  background-image: Url("Image/LoginError.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.BLogin_Registrazione {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+  width: 100%;
+}
+
+.BLogin_Registrati {
+  width: 100%;
+  float: left;
+  text-align: left;
+  color: #0094ff !important;
+  font-size: 9pt;
+}
+
+.BLogin_RecuperaPassword {
+  width: 100%;
+  float: left;
+  text-align: left;
+  color: #0094ff !important;
+  font-size: 9pt;
+}
+
+.BLogin_LabelInfo {
+  color: #0094ff !important;
+  font-size: 9pt;
+}
+
+
+.BSistemi {
+  cursor: pointer;
+}
+
+  .BSistemi label {
+    cursor: pointer;
+    line-height: 28px;
+    float: left;
+    font-size: 16px;
+  }
+
+  .BSistemi input {
+    margin: 5px;
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    float: left;
+    -webkit-appearance: initial !important;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+
+    .BSistemi input:before {
+      content: ' ';
+      display: block;
+      visibility: visible;
+      margin: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: whitesmoke;
+    }
+
+    .BSistemi input[checked]:before {
+      content: ' ';
+      display: block;
+      visibility: visible;
+      margin: 3px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #727272;
+    }
+
+
+.BBtnPoste {
+  background-color: #0047BB !important;
+  color: white !important;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: none !important;
+  height: 36px;
+  width: 100px;
+  border-radius: 3px !important;
+}
+
+  .BBtnPoste:hover {
+    
+  }
+
+/*TABLET*/
+@media(max-width:979px) {
+}
+
+/*SMARTPHONE*/
+@media(max-width:500px) {
+
+
+  .BLogin_ApplicationContainer {
+    width: 100%;
+    min-height: 220px;
+    float: left;
+  }
+
+  .BBoxApplication {
+    padding: 20px;
+    float: left;
+    display: none;
+  }
+
+  .BLogin_Container {
+    margin: auto;
+    width: calc(100% - 60px);
+    width: -moz-calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+  }
+
+
+  .BLogin_InputsContainer {
+    float: left;
+    height: 100%;
+    width: 100%;
+  }
+
+  .BLogin_Error {
+    float: right;
+    height: 100%;
+    display: none;
+  }
+}

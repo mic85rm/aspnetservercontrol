@@ -1,0 +1,36 @@
+﻿/*MODALITTA SMARTPHONE*/
+@media only screen and (max-width: 600px) {
+
+  .BannerSkin {
+    display: none;
+  }
+
+  .SkinBackground {
+    display: none;
+  }
+
+  .SkinImage {
+    display: none;
+  }
+
+  .ContentSkin {
+    max-width: 1192px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ededed;
+    box-shadow: none !important;
+    height: calc(100% - 0px) !important;
+  }
+
+  .TopSkin {
+    display: none;
+  }
+
+  .LeftSkin {
+    display: none;
+  }
+
+  .RightSkin {
+    display: none;
+  }
+}

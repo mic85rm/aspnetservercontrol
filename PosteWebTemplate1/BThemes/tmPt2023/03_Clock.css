@@ -1,0 +1,24 @@
+﻿
+.ClockOra {
+  font-size: 26pt !Important;
+  font-style: italic;
+}
+
+.ClockGiorno {
+  font-size: 10pt !Important;
+  font-style: italic;
+}
+
+.ClockNumGiorno {
+  font-size: 10pt !Important;
+  font-style: italic;
+}
+
+.ClockMese {
+  font-size: 10pt !Important;
+  font-style: italic;
+}
+
+.ClockContainer{
+
+}

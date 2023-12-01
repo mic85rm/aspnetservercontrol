@@ -1,0 +1,22 @@
+﻿.BNotifica {
+  cursor: pointer;
+}
+
+  .BNotifica:before {
+    display: inline-block;
+    float: right;
+    width: 14px;
+    height: 14px;
+    border: 1px solid white;
+    border-radius: 50%;
+    box-shadow: #242424 1px 1px 5px;
+    background-color: red;
+    color: white;
+    content: attr(bcountnotify);
+    font-size: 7pt;
+    text-align: center;
+    line-height: 14px;
+    font-weight: bold;
+    margin: 3px;
+  }
+}

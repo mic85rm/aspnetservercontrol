@@ -1,0 +1,106 @@
+﻿/*MODALITTA TABLET*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 600px) {
+
+
+  .BDtg {
+    font-size: 12pt !important;
+    border: solid 1px rgb(220,220,220);
+  }
+
+  .BDtgRow {
+  }
+
+    .BDtgRow:before {
+      content: ' ';
+      height: 5px;
+      width: 100%;
+      float: left;
+    }
+
+    .BDtgRow:after {
+      content: ' ';
+      height: 5px;
+      width: 100%;
+      float: left;
+      border-bottom: 1px solid #7ac1ff;
+    }
+
+  .BDtgAlternatingRow {
+  }
+
+
+    .BDtgAlternatingRow:before {
+      content: ' ';
+      height: 5px;
+      width: 100%;
+      float: left;
+    }
+
+    .BDtgAlternatingRow:after {
+      content: ' ';
+      height: 5px;
+      width: 100%;
+      float: left;
+      border-bottom: 1px solid #7ac1ff;
+    }
+
+
+  /*.BDtg th {
+    display: none;
+    overflow-x: hidden;
+  }*/
+
+  .BDtg td {
+    display: block;
+    text-align: right;
+    float: left;
+    width: calc(100% - 20px) !important;
+    border: none !important;
+    font-size: 9pt;
+    margin: 0 10px 0 10px;
+  }
+
+    .BDtg td:before {
+      content: attr(blabel);
+      font-weight: bold;
+      float: left;
+    }
+
+  .BDtg .BDtgCommand {
+    float: left;
+    width: 32px !important;
+    margin-left: 5px;
+    padding-bottom: 2px;
+  }
+
+  .BDtg .BDtgEndCommand {
+    float: left;
+    width: 32px !important;
+    padding-right: 5px;
+    padding-bottom: 2px;
+  }
+
+
+
+  .BDtg .BDtgHeaderCommand {
+    display: block !important;
+    float: left;
+    width: 32px;
+    border: none;
+    line-height: 1;
+    margin-top: 10px;
+    margin-left: 3px;
+  }
+
+  .BDtg .BDtgHeader {
+    display: none;
+    overflow-x: hidden;
+  }
+
+  .BColumnAutoCollapse {
+    display: none;
+  }
+}
