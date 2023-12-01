@@ -12,35 +12,23 @@ Public Class WebForm1
   Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
 
-    'Form.Controls.Add(michele2)
+    If Not Page.IsPostBack Then
+      Dim dt As DataTable = New DataTable()
+      dt = SelectQuery(conString, "select *,1 as chk from biposte..societa", Nothing)
 
-    Dim parametri() As SqlParameter = New SqlParameter() _
-  {
-    New SqlParameter("@IDSysProfilo", SqlDbType.Int) With {.Value = 1}}
-    'New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
 
-    Dim dt As DataTable = New DataTable()
-    Dim ds As DataSet = New DataSet()
-    ' dt = SelectQuery(conString, K_SP_MENU, parametri)
-    'Mtmenu1.Idmenu = "Menu"
-    'Mtmenu1.MenuCss = "MenuBArts"
-    'Mtmenu1.StaticMenuStyleCssClass = "MenuBArts-Node"
-    'Mtmenu1.DynamicMenuStyleCssClass = "MenuBArts-ChildNode"
-    'Mtmenu1.MTDatatable = dt
-    'Mtmenu1.BindMenuData()
-    If Not dt Is Nothing AndAlso dt.Rows.Count > 0 Then
-      ds.Tables.Add(dt)
-      ds.DataSetName = "Menus"
-      ds.Tables(0).TableName = "Menu"
-      Dim relation As New DataRelation("ParentChild", dt.Columns("ID"), dt.Columns("IDPadre"), False)
-      ds.Relations.Add(relation)
-      'Menu.Items.Clear()
-      Me.CaricaMenu(ds)
+      'Form.Controls.Add(michele2)
 
-    Else
+      '  Dim parametri() As SqlParameter = New SqlParameter() _
+      '{
+      '  New SqlParameter("@IDSysProfilo", SqlDbType.Int) With {.Value = 1}}
+      '  'New SqlParameter("@developer", SqlDbType.Bit) With {.Value = False}
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> 1dbf0b41ced2bd58aac1b0d3d47a53812548188d
       '  Dim dt As DataTable = New DataTable()
       '  Dim ds As DataSet = New DataSet()
       '  ' dt = SelectQuery(conString, K_SP_MENU, parametri)
@@ -63,14 +51,20 @@ Public Class WebForm1
 
       '  End If
 
+<<<<<<< HEAD
       'mic123.DataSource = dt
       'mic123.DataBind()
 >>>>>>> Stashed changes
+=======
+      mic123.DataSource = dt
+      mic123.DataBind()
+>>>>>>> 1dbf0b41ced2bd58aac1b0d3d47a53812548188d
     End If
-
-
-
   End Sub
+
+
+
+
 
 #Region "Private Sub CaricaMenu(ByVal ds As DataSet)"
   Private Sub CaricaMenu(ByVal ds As DataSet)
@@ -116,8 +110,10 @@ Public Class WebForm1
     Using sda As SqlDataAdapter = New SqlDataAdapter()
 
       Using command = New SqlCommand(commandText, conn)
-        command.CommandType = CommandType.StoredProcedure
-        command.Parameters.AddRange(commandParameters)
+        command.CommandType = CommandType.Text
+        If commandParameters IsNot Nothing Then
+          command.Parameters.AddRange(commandParameters)
+        End If
         sda.SelectCommand = command
 
         Using dt As DataTable = New DataTable()
@@ -128,27 +124,26 @@ Public Class WebForm1
     End Using
   End Function
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   Protected Sub ciao_CheckBoxClicked(sender As Object, e As EventArgs)
+=======
+  Protected Sub chk_CheckSelezionata(sender As Object, e As MTCheckbox.MTCheckboxCHKEventArgs)
+>>>>>>> 1dbf0b41ced2bd58aac1b0d3d47a53812548188d
 
   End Sub
 
+  Protected Sub chk_bottoneCliccato(sender As Object, e As EventArgs)
 
-
-  Protected Sub a_DataBinding(sender As Object, e As EventArgs)
 
   End Sub
 
-  Protected Sub ab_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxMenuEventArgs)
-    If e.ValoreRestituito = "1" Then
+  Protected Sub chk_Checked(sender As Object, e As EventArgs)
 
-    End If
   End Sub
 
-  Protected Sub ab_CheckSelezionata(sender As Object, e As MTCheckbox.MTCheckboxCHKEventArgs)
-    If e.CheckSelezionata = False Then
+  Protected Sub chk_ValoreRestituito(sender As Object, e As MTCheckbox.MTCheckboxMenuEventArgs)
 
-    End If
   End Sub
 =======
 

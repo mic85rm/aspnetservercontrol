@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$CustomAuthor$</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/mic85rm/aspnetservercontrol/tree/master/MTCheckbox</projectUrl>
+    <description>checkbox simile a quella gmail</description>
+    <releaseNotes>Segnalate Bug per Favore</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <!-- <tags></tags>-->
+  </metadata>
+</package>

@@ -24,12 +24,13 @@ Partial Public Class WebForm1
   Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
   '''<summary>
-  '''SM control.
+  '''mic123 control.
   '''</summary>
   '''<remarks>
   '''Auto-generated field.
   '''To modify move field declaration from designer file to code-behind file.
   '''</remarks>
+<<<<<<< HEAD
   Protected WithEvents SM As Global.System.Web.UI.ScriptManager
 
   '''<summary>
@@ -42,4 +43,7 @@ Partial Public Class WebForm1
   Protected WithEvents ab As Global.MTCheckbox.MTCheckbox
 =======
 >>>>>>> Stashed changes
+=======
+  Protected WithEvents mic123 As Global.System.Web.UI.WebControls.GridView
+>>>>>>> 1dbf0b41ced2bd58aac1b0d3d47a53812548188d
 End Class
