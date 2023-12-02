@@ -15,8 +15,9 @@
     <script src="Scripts/jquery-ui-1.13.2.js"></script>
     <script type="text/javascript">
         
-        function MTcallFormatting(sFormatString) {
-            document.execCommand(sFormatString,true,sFormatString);
+        function MTcallFormatting(sFormatString, showui = false, valore = '') {
+           
+            document.execCommand(sFormatString,showui,valore);
         }
 
         function htmlEntities(str) {
@@ -58,6 +59,43 @@
             }
             
         }
+
+
+        //let contentTarget = document.getElementById("imageUpload");                           // Target our DIV's DOM node.
+
+        //contentTarget.onpaste = (e) => {                                                      // When there's an paste event on our target DIV:
+        //    let cbPayload = [...(e.clipboardData || e.originalEvent.clipboardData).items];     // Capture the ClipboardEvent's eventData payload as an array
+        //    cbPayload = cbPayload.filter(i => /image/.test(i.type));                       // Strip out the non-image bits
+
+        //    if (!cbPayload.length || cbPayload.length === 0) return false;                      // If no image was present in the collection, bail.
+
+        //    let reader = new FileReader();                                                     // Instantiate a FileReader...
+        //    reader.onload = (e) => contentTarget.innerHTML = `<img src="${e.target.result}">`; // ... set its onLoad to render the event target's payload
+        //    reader.readAsDataURL(cbPayload[0].getAsFile());                                    // ... then read in the pasteboard image data as Base64
+        //};
+
+
+        function MTIncollaFoto(e, id) {
+           
+            var clipboardData = e.clipboardData;
+            clipboardData.types.forEach((type, i) => {
+                const fileType = clipboardData.items[i].type;
+                if (fileType.match(/image.*/)) {
+                    const file = clipboardData.items[i].getAsFile();
+                    const reader = new FileReader();
+                    reader.onload = function (evt) {
+                        const dataURL = evt.target.result;
+                        const img = document.createElement("img");
+                        img.src = dataURL;
+                        document.execCommand('insertHTML', true, img.outerHTML);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+        }
+
+
 
 
         function MTToggleButton(me) {
@@ -124,12 +162,19 @@ body {font-family: Arial;}
   color: #333;
   background-color: #ccc;
 }
+
+.class1:hover {
+  border:2px solid red;
+}
+
 .class2 {
   color: #ccc;
   background-color: #333;
 }
 
-
+.class2:hover {
+  border:2px solid red;
+}
 
 </style>
 </head>

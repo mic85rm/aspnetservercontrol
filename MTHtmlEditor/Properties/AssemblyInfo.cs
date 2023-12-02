@@ -37,6 +37,11 @@ using System.Web.UI;
 
 
 [assembly: WebResource("MTHtmlEditor.immagini.bold.png", "image/png")]
-
-
+[assembly: WebResource("MTHtmlEditor.immagini.italic.png", "image/png")]
+[assembly: WebResource("MTHtmlEditor.immagini.redo.png", "image/png")]
+[assembly: WebResource("MTHtmlEditor.immagini.undo.png", "image/png")]
+[assembly: WebResource("MTHtmlEditor.immagini.underline.png", "image/png")]
+[assembly: WebResource("MTHtmlEditor.immagini.strikethrough.png", "image/png")]
+[assembly: WebResource("MTHtmlEditor.immagini.subscript.png", "image/png")]
+[assembly: WebResource("MTHtmlEditor.immagini.superscript.png", "image/png")]
 [assembly: AssemblyFileVersion("1.0.0.1")]

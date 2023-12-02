@@ -42,49 +42,57 @@ namespace MTHtmlEditor
     HtmlGenericControl MTEditorContentEditableHTML;
     HtmlButton buttonTabDesign;
     HtmlButton buttonTabHTML;
+    HtmlSelect dropdownToolbar;
 
     //comandi presi da questo link
     //https://www.w3schools.com/jsref/met_document_execcommand.asp
+    //https://instructobit.com/tutorial/36/Using-the-document.execCommand-function-in-Javascript-to-style%2C-modify-and-insert-content-within-a-content-editable-container
     public enum EComandi
     {
-      backColor,
-      bold,
-      createLink,
-      copy,
-      cut,
-      defaultParagraphSeparator,
-      delete,
-      fontName,
-      fontSize,
-      foreColor,
-      formatBlock,
-      forwardDelete,
-      insertHorizontalRule,
-      insertHTML,
-      insertImage,
-      insertLineBreak,
-      insertOrderedList,
-      insertParagraph,
-      insertText,
-      insertUnorderedList,
-      justifyCenter,
-      justifyFull,
-      justifyLeft,
-      justifyRight,
-      outdent,
-      paste,
-      redo,
-      selectAll,
-      strikethrough,
-      styleWithCss,
-      subscript,
-      superscript,
       undo,
-      unlink,
-      useCSS
+      redo,
+      bold,
+      italic,
+      underline,
+      strikethrough,
+      subscript,
+      superscript
+      //createLink,
+      //copy,
+      //cut,
+      //defaultParagraphSeparator,
+      //delete,
+      //fontName,
+      //fontSize,
+      //foreColor,
+      //formatBlock,
+      //forwardDelete,
+      //insertHorizontalRule,
+      //insertHTML,
+      //insertImage,
+      //insertLineBreak,
+      //insertOrderedList,
+      //insertParagraph,
+      //insertText,
+      //insertUnorderedList,
+      //justifyCenter,
+      //justifyFull,
+      //justifyLeft,
+      //justifyRight,
+      //outdent,
+      //paste, 
+      //selectAll,
+      //styleWithCss,
+      //unlink,
+      //useCSS
     }
 
-
+    public enum EComandiDrop
+    {
+      
+     fontSize
+     
+    }
 
     //public MTHtmlEditor()
     //{
@@ -186,15 +194,19 @@ namespace MTHtmlEditor
       divEditorContenitore.Style.Add("width", Width.ToString());
 
 
+
       MTEditorContentEditableDesign = new HtmlGenericControl();
       MTEditorContentEditableDesign.TagName = "div";
       MTEditorContentEditableDesign.ID = idDaCambiare.Remove(0, 1) + "EditorContentEditableDesign";
       MTEditorContentEditableDesign.Style.Add("display", "block");
       MTEditorContentEditableDesign.Style.Add("height", "calc(100% - 100px)");
       MTEditorContentEditableDesign.Style.Add("width", "calc(100% - 2px)");
-      MTEditorContentEditableDesign.Style.Add("border", "1px solid #cccccc");
+      MTEditorContentEditableDesign.Style.Add("border-top", "1px solid #cccccc");
+      MTEditorContentEditableDesign.Style.Add("overflow-x", "scroll");
+      MTEditorContentEditableDesign.Style.Add("overflow-y", "scroll");
       MTEditorContentEditableDesign.Attributes.Add("contenteditable", "true");
       MTEditorContentEditableDesign.Attributes.Add("oninput", $"MTMoveTextFromDivToHiddenField('{this.ClientID}_')");
+      MTEditorContentEditableDesign.Attributes.Add("onpaste", $"MTIncollaFoto(event,'{this.ClientID}_{MTEditorContentEditableDesign.ID}')");
 
 
       MTEditorContentEditableHTML = new HtmlGenericControl();
@@ -203,6 +215,8 @@ namespace MTHtmlEditor
       MTEditorContentEditableHTML.Style.Add("display", "none");
       MTEditorContentEditableHTML.Style.Add("height", "calc(100%)");
       MTEditorContentEditableHTML.Style.Add("width", "calc(100% - 2px)");
+      MTEditorContentEditableHTML.Style.Add("overflow-x", "scroll");
+      MTEditorContentEditableHTML.Style.Add("overflow-y", "scroll");
       MTEditorContentEditableHTML.Attributes.Add("contenteditable", "true");
       MTEditorContentEditableHTML.Attributes.Add("oninput", $"MTMoveTextFromDivToHiddenField('{this.ClientID}_')");
 
@@ -222,14 +236,64 @@ namespace MTHtmlEditor
         bottoniToolbar.ID = $"MT{comandi}";
         bottoniToolbar.Style.Add("height", "32px");
         bottoniToolbar.Style.Add("width", "32px");
-        bottoniToolbar.Style.Add("background",$"url({this.Page.ClientScript.GetWebResourceUrl(this.GetType(), "MTHtmlEditor.immagini.bold.png")})");
+        bottoniToolbar.Style.Add("background",$"url({this.Page.ClientScript.GetWebResourceUrl(this.GetType(), $"MTHtmlEditor.immagini.{comandi}.png")})");
         bottoniToolbar.Style.Add("background-repeat", "no-repeat");
         bottoniToolbar.Style.Add("background-position", "center");
-        bottoniToolbar.Attributes.Add("class", "class1");
-        bottoniToolbar.Attributes.Add("type", "button");
-        bottoniToolbar.Attributes.Add("onclick", $"MTcallFormatting(\"{comandi.ToString()}\");MTToggleButton({this.ClientID}_MT{comandi});");
+       
+        if (comandi.ToString().Contains("Color"))
+        {
+          bottoniToolbar.Attributes.Add("type", "color");
+        }
+        else {
+          bottoniToolbar.Attributes.Add("class", "class1");
+          bottoniToolbar.Attributes.Add("type", "button");
+          bottoniToolbar.Attributes.Add("onclick", $"MTcallFormatting(\"{comandi.ToString()}\",false,'');MTToggleButton({this.ClientID}_MT{comandi});");
+        }
+        
+        
         MTToolbar.Controls.Add(bottoniToolbar);
       }
+
+
+      foreach (EComandiDrop comandi in (EComandiDrop[])Enum.GetValues(typeof(EComandiDrop)))
+      {
+        dropdownToolbar = new HtmlSelect();
+        
+        dropdownToolbar.ID = $"MT{comandi}";
+        dropdownToolbar.Style.Add("height", "32px");
+        dropdownToolbar.Style.Add("width", "auto");
+        dropdownToolbar.Style.Add("vertical-align", "top");
+        dropdownToolbar.Items.Add(new ListItem($"Default", ""));
+        dropdownToolbar.Items.Add(new ListItem($"1 (8pt)","1"));
+        dropdownToolbar.Items.Add(new ListItem($"2 (10pt)", "2"));
+        dropdownToolbar.Items.Add(new ListItem($"3 (12pt)", "3"));
+        dropdownToolbar.Items.Add(new ListItem($"4 (14pt)", "4"));
+        dropdownToolbar.Items.Add(new ListItem($"5 (18pt)", "5"));
+        dropdownToolbar.Items.Add(new ListItem($"6 (24pt)", "6"));
+        dropdownToolbar.Items.Add(new ListItem($"7 (36pt)", "7"));
+
+
+        //dropdownToolbar.Style.Add("width", "32px");
+        //dropdownToolbar.Style.Add("background", $"url({this.Page.ClientScript.GetWebResourceUrl(this.GetType(), $"MTHtmlEditor.immagini.{comandi}.png")})");
+        //dropdownToolbar.Style.Add("background-repeat", "no-repeat");
+        //dropdownToolbar.Style.Add("background-position", "center");
+
+        //if (comandi.ToString().Contains("Color"))
+        //{
+        //  bottoniToolbar.Attributes.Add("type", "color");
+        //}
+        //else
+        //{
+        //  bottoniToolbar.Attributes.Add("class", "class1");
+        //  bottoniToolbar.Attributes.Add("type", "button");
+        dropdownToolbar.Attributes.Add("onchange", $"MTcallFormatting(\"{comandi.ToString()}\",false,this.value);MTToggleButton({this.ClientID}_MT{comandi});");
+        //}
+
+
+        MTToolbar.Controls.Add(dropdownToolbar);
+      }
+
+
 
 
       MTTabs = new HtmlGenericControl();

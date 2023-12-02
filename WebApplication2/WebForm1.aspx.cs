@@ -14,13 +14,17 @@ namespace WebApplication2
     if(!IsPostBack) { 
       michele.Text = "prova";
       }
+      else
+      {
+        michele.Text = "azz";
+      }
 
     }
 
     protected void michele2_Click(object sender, EventArgs e)
     {
-      michele.Text = "<b>grande</b>";
-      //michele.Text = "grande";
+      string ciao = michele.Text;
+      michele.Text = "grande";
     }
   }
 }

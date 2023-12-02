@@ -52,5 +52,13 @@
   <ItemGroup>
     <EmbeddedResource Include="immagini\italic.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="immagini\redo.png" />
+    <EmbeddedResource Include="immagini\strikethrough.png" />
+    <EmbeddedResource Include="immagini\subscript.png" />
+    <EmbeddedResource Include="immagini\superscript.png" />
+    <EmbeddedResource Include="immagini\underline.png" />
+    <EmbeddedResource Include="immagini\undo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
