@@ -14,10 +14,96 @@
     <link href="Content/themes/base/jquery-ui.css" rel="stylesheet" />
     <script src="Scripts/jquery-ui-1.13.2.js"></script>
     <script type="text/javascript">
-        
-        function MTcallFormatting(sFormatString, showui = false, valore = '') {
+
+
+        //var selection = '';
+        //document.getElementById('ce').onmouseup = function () {
+        //    selection = window.getSelection().toString();
+        //};
+
+        //mshtml.IHTMLTxtRange range = _dom.selection.createRange() as mshtml.IHTMLTxtRange;
+        //if (range != null) {
+        //    mshtml.IHTMLElement2 elem = range.parentElement() as mshtml.IHTMLElement2;
+        //    fontSize.Text = elem.currentStyle.fontSize.ToString()
+        //}
+
+
+
+
+        function MTtestoSelezionato(id) {
+             selectionIsBold(id);
+        }
+
+        function selectionIsBold(id) {
+            
+            var isBold = false;
+            var isItalic = false;
+            var isFont = -1;
+
+            if (document.queryCommandState) {
+                isBold = document.queryCommandState("bold");
+            }
+            if (document.queryCommandState) {
+                isItalic = document.queryCommandState("italic");
+            }
+            if (document.queryCommandState) {
+                isFont=document.queryCommandValue("FontSize");
+                
+            }
            
-            document.execCommand(sFormatString,showui,valore);
+
+            MTCambiaStatoBottone(id + 'MTbold', isBold);
+            MTCambiaStatoBottone(id + 'MTitalic', isItalic);
+            
+        }
+
+
+
+        function MTCambiaStatoBottone(me, isBold) {
+         var button=   document.getElementById(me);
+           
+            if (isBold === true) {
+                if (button != undefined) { 
+               
+                if (button.classList.length > 0) { 
+                if (button.classList.contains("class1")) { 
+                  
+                    button.classList.replace("class1", "class2");
+                    }
+                }
+                else {
+                    button.classList.add("class2");
+                    }
+                }
+            }
+            else {
+                if (button != undefined) { 
+                    
+                    if (button.classList.length > 0) {
+                        
+                    if (button.classList.contains("class2")) {
+                       
+                        button.classList.replace("class2", "class1");
+                    }
+                }
+                else {
+                    button.classList.add("class1");
+                }
+            }
+            }
+        }
+
+
+        function MTcallFormatting(sFormatString, showui = false, valore = '') {
+            if (valore === '-1') {
+                var fontElements = document.getElementsByTagName("font");
+                alert(fontElements.length);
+                     
+                
+            }
+            else { 
+                document.execCommand(sFormatString, showui, valore);
+            }
         }
 
         function htmlEntities(str) {
@@ -33,46 +119,34 @@
 
         function MTToggleTabs(me, altro,clientid) {
             if (me.id == clientid+'MTTABDESIGN') {
-                if (me.classList == "class1") {
+                if (me.classList == "MTTabDisattivo") {
                     
-                    altro.classList.toggle("class1");
+                    altro.classList.toggle("MTTabDisattivo");
                 }
                 else {
                     
-                    altro.classList.toggle("class2");
-                    me.classList.toggle("class2");
-                    me.classList.toggle("class1");
+                    altro.classList.toggle("MTTabDisattivo");
+                    me.classList.toggle("MTTabAttivo");
+                    me.classList.toggle("MTTabDisattivo");
                 }
             }
             else {
              
-                if (me.classList == "class1") {
+                if (me.classList == "MTTabDisattivo") {
                     
-                    altro.classList.toggle("class1");
+                    altro.classList.toggle("MTTabDisattivo");
                 }
                 else {
                     
-                    altro.classList.toggle("class2");
-                    me.classList.toggle("class2");
-                    me.classList.toggle("class1");
+                    altro.classList.toggle("MTTabDisattivo");
+                    me.classList.toggle("MTTabAttivo");
+                    me.classList.toggle("MTTabDisattivo");
                 }
             }
             
         }
 
 
-        //let contentTarget = document.getElementById("imageUpload");                           // Target our DIV's DOM node.
-
-        //contentTarget.onpaste = (e) => {                                                      // When there's an paste event on our target DIV:
-        //    let cbPayload = [...(e.clipboardData || e.originalEvent.clipboardData).items];     // Capture the ClipboardEvent's eventData payload as an array
-        //    cbPayload = cbPayload.filter(i => /image/.test(i.type));                       // Strip out the non-image bits
-
-        //    if (!cbPayload.length || cbPayload.length === 0) return false;                      // If no image was present in the collection, bail.
-
-        //    let reader = new FileReader();                                                     // Instantiate a FileReader...
-        //    reader.onload = (e) => contentTarget.innerHTML = `<img src="${e.target.result}">`; // ... set its onLoad to render the event target's payload
-        //    reader.readAsDataURL(cbPayload[0].getAsFile());                                    // ... then read in the pasteboard image data as Base64
-        //};
 
 
         function MTIncollaFoto(e, id) {
@@ -99,7 +173,10 @@
 
 
         function MTToggleButton(me) {
-         
+            
+      
+
+
                     me.classList.toggle("class2");
                     me.classList.toggle("class1");
          
@@ -165,16 +242,46 @@ body {font-family: Arial;}
 
 .class1:hover {
   border:2px solid red;
+  background-color: #333;
+   cursor: pointer;
 }
 
 .class2 {
   color: #ccc;
-  background-color: #333;
+  background-color: lightgrey !important;
 }
 
 .class2:hover {
   border:2px solid red;
+   cursor: pointer;
 }
+
+
+.MTTabAttivo {
+  color: #333;
+  background-color: #ccc;
+}
+
+.MTTabAttivo:hover {
+  /*border:2px solid red;*/
+  background-color: #333;
+   cursor: pointer;
+}
+
+.MTTabDisattivo {
+  color: #ccc;
+  background-color: #333!important;
+}
+
+.MTTabDisattivo:hover {
+  /*border:2px solid red;*/
+   cursor: pointer;
+}
+
+[contenteditable]:focus {
+    outline: 0px solid transparent;
+}
+
 
 </style>
 </head>

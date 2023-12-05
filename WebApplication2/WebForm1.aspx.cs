@@ -11,20 +11,13 @@ namespace WebApplication2
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-    if(!IsPostBack) { 
-      michele.Text = "prova";
-      }
-      else
-      {
-        michele.Text = "azz";
-      }
+    
 
     }
 
     protected void michele2_Click(object sender, EventArgs e)
     {
-      string ciao = michele.Text;
-      michele.Text = "grande";
+      var ciao = michele.ClientID;
     }
   }
 }
